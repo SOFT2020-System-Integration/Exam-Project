@@ -10,22 +10,26 @@ import java.util.List;
 public class Game {
     @Id
     private String id;
-    @NonNull
     private String title;
-    @NonNull
     private float currentPrice;
-    @NonNull
     private float retailPrice;
-    @NonNull
     private float savingsPercentage;
-    @NonNull
     private float rating;
-    @NonNull
     private int inStock;
-    @NonNull
     private List<GameType> type;
 
     public Game() {
+    }
+
+    public Game(String id, String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, List<GameType> type) {
+        this.id = id;
+        this.title = title;
+        this.currentPrice = currentPrice;
+        this.retailPrice = retailPrice;
+        this.savingsPercentage = savingsPercentage;
+        this.rating = rating;
+        this.inStock = inStock;
+        this.type = type;
     }
 
     public String getId() {

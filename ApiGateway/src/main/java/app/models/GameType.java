@@ -11,8 +11,39 @@ import java.util.List;
 public class GameType implements Serializable {
     @Id
     private String id;
-    @NonNull
     private Type types;
-    @NonNull
     private String description;
+
+    public GameType() {
+    }
+
+    public GameType(String id, Type types, String description) {
+        this.id = id;
+        this.types = types;
+        this.description = description;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Type getTypes() {
+        return types;
+    }
+
+    public void setTypes(Type types) {
+        this.types = types;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

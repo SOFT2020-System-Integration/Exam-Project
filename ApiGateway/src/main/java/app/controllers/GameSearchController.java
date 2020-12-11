@@ -39,7 +39,7 @@ public class GameSearchController {
     @ResponseBody
     @CrossOrigin(origins = "*") // allow request from any client
 
-    public Collection<Game> myUser()
+    public Collection<Game> myGame()
     {
         List<Game> collect = client.readGames()
                 .getContent()
