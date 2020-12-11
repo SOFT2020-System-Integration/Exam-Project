@@ -1,5 +1,6 @@
 package app.carcatalog.models;
 
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import java.io.Serializable;
 import java.util.List;
-
 
 @Data
 @Document(collection = "games")
@@ -23,12 +23,9 @@ public class Game implements Serializable {
     private float savingsPercentage;
     private float rating;
     private int inStock;
-    private List<Type> types;
+    private List<GameType> types;
 
-    public Game() {
-    }
-
-    public Game(String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, List<Type> types) {
+    public Game(String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, List<GameType> types) {
         this.title = title;
         this.currentPrice = currentPrice;
         this.retailPrice = retailPrice;
@@ -36,6 +33,9 @@ public class Game implements Serializable {
         this.rating = rating;
         this.inStock = inStock;
         this.types = types;
+    }
+
+    public Game() {
     }
 
     public String getId() {
@@ -94,11 +94,11 @@ public class Game implements Serializable {
         this.inStock = inStock;
     }
 
-    public List<Type> getTypes() {
+    public List<GameType> getTypes() {
         return types;
     }
 
-    public void setTypes(List<Type> types) {
+    public void setTypes(List<GameType> types) {
         this.types = types;
     }
 

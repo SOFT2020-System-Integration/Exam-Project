@@ -8,41 +8,24 @@ import java.util.List;
 
 @Data
 public class Game {
+    @Id
     private String id;
+    @NonNull
     private String title;
+    @NonNull
     private float currentPrice;
+    @NonNull
     private float retailPrice;
-    @NonNull  private float savingsPercentage;
-    @NonNull  private float rating;
-    @NonNull  private int inStock;
-    @NonNull  private List<Type> type;
+    @NonNull
+    private float savingsPercentage;
+    @NonNull
+    private float rating;
+    @NonNull
+    private int inStock;
+    @NonNull
+    private List<GameType> type;
 
     public Game() {
-    }
-
-    public Game(@NonNull String id, @NonNull String title, @NonNull float currentPrice, @NonNull float retailPrice, @NonNull float savingsPercentage, @NonNull float rating, int inStock, @NonNull List<Type> type) {
-        this.id = id;
-        this.title = title;
-        this.currentPrice = currentPrice;
-        this.retailPrice = retailPrice;
-        this.savingsPercentage = savingsPercentage;
-        this.rating = rating;
-        this.inStock = inStock;
-        this.type = type;
-    }
-
-    @Override
-    public String toString() {
-        return "Game{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", currentPrice=" + currentPrice +
-                ", retailPrice=" + retailPrice +
-                ", savingsPercentage=" + savingsPercentage +
-                ", rating=" + rating +
-                ", inStock=" + inStock +
-                ", type=" + type +
-                '}';
     }
 
     public String getId() {
@@ -101,11 +84,11 @@ public class Game {
         this.inStock = inStock;
     }
 
-    public List<Type> getType() {
+    public List<GameType> getType() {
         return type;
     }
 
-    public void setType(List<Type> type) {
+    public void setType(List<GameType> type) {
         this.type = type;
     }
 }

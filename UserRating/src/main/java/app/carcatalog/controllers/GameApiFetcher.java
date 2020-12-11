@@ -1,6 +1,7 @@
 package app.carcatalog.controllers;
 
 import app.carcatalog.models.Game;
+import app.carcatalog.models.GameType;
 import app.carcatalog.models.Type;
 import app.carcatalog.repositories.GameCatalogRepository;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -91,16 +92,16 @@ public class GameApiFetcher {
         return Math.round(newPrice + 100.0f) / 100.0f;
     }
 
-    private List<Type> fakeTypeList() {
+    private List<GameType> fakeTypeList() {
         int rnd = ThreadLocalRandom.current().nextInt(1, 3 + 1);
         if(rnd == 1) {
-            return Arrays.asList(Type.DIGITAL, Type.PHYSICAL);
+            return Arrays.asList(new GameType("1", Type.DIGITAL,"Digital copy of the game"), new GameType("2",Type.PHYSICAL, "Physical copy of the game"));
         }
         else if(rnd == 2) {
-            return Arrays.asList(Type.DIGITAL);
+            return Arrays.asList(new GameType("1", Type.DIGITAL, "Digital copy of the game"));
         }
         else if(rnd == 3) {
-            return Arrays.asList(Type.PHYSICAL);
+            return Arrays.asList(new GameType("2", Type.PHYSICAL, "Physical copy of the game"));
         } else {
             return null;
         }
