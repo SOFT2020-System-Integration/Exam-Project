@@ -12,10 +12,10 @@ public class Game {
     private String title;
     private float currentPrice;
     private float retailPrice;
-    private float savingsPercentage;
-    private float rating;
-    private int inStock;
-    private List<Type> type;
+    @NonNull  private float savingsPercentage;
+    @NonNull  private float rating;
+    @NonNull  private int inStock;
+    @NonNull  private List<Type> type;
 
     public Game() {
     }

@@ -1,6 +1,5 @@
 package app.repositories;
 
-import app.models.Car;
 import app.config.RibbonConfig;
 import app.models.Game;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;

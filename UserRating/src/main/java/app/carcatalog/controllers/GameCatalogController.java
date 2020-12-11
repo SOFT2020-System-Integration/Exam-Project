@@ -22,7 +22,7 @@ public class GameCatalogController
     @Autowired
     private GameCatalogRepository repo;
 
-    @GetMapping("/all")
+    @GetMapping("/")
     public List<Game> retrieveAll() {
         return repo.findAll();
     }
@@ -45,7 +45,7 @@ public class GameCatalogController
         }
     }
 
-    @PostMapping("")
+    @PostMapping("/")
     public Game createProduct(@RequestBody Game game) {
         try {
             return repo.save(game);

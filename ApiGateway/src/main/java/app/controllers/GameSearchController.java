@@ -17,7 +17,7 @@ public class GameSearchController {
         this.client = client;
     }
 
-    @GetMapping("games//title/{title}")
+    @GetMapping("games/title/{title}")
     @ResponseBody
     @CrossOrigin(origins = "*") // allow request from any client
 
@@ -31,7 +31,7 @@ public class GameSearchController {
         return collect;
     }
 
-    @GetMapping("games//all")
+    @GetMapping("games/all")
     @ResponseBody
     @CrossOrigin(origins = "*") // allow request from any client
 
