@@ -16,20 +16,19 @@ public class Game {
     private float savingsPercentage;
     private float rating;
     private int inStock;
-    private List<GameType> type;
+    private List<GameType> types;
 
     public Game() {
     }
 
-    public Game(String id, String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, List<GameType> type) {
-        this.id = id;
+    public Game(String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, List<GameType> types) {
         this.title = title;
         this.currentPrice = currentPrice;
         this.retailPrice = retailPrice;
         this.savingsPercentage = savingsPercentage;
         this.rating = rating;
         this.inStock = inStock;
-        this.type = type;
+        this.types = types;
     }
 
     public String getId() {
@@ -88,11 +87,11 @@ public class Game {
         this.inStock = inStock;
     }
 
-    public List<GameType> getType() {
-        return type;
+    public List<GameType> getTypes() {
+        return types;
     }
 
-    public void setType(List<GameType> type) {
-        this.type = type;
+    public void setTypes(List<GameType> types) {
+        this.types = types;
     }
 }

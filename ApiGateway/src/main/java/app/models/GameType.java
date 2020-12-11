@@ -11,15 +11,14 @@ import java.util.List;
 public class GameType implements Serializable {
     @Id
     private String id;
-    private Type types;
+    private Type type;
     private String description;
 
     public GameType() {
     }
 
-    public GameType(String id, Type types, String description) {
-        this.id = id;
-        this.types = types;
+    public GameType(Type type, String description) {
+        this.type = type;
         this.description = description;
     }
 
@@ -31,12 +30,12 @@ public class GameType implements Serializable {
         this.id = id;
     }
 
-    public Type getTypes() {
-        return types;
+    public Type getType() {
+        return type;
     }
 
-    public void setTypes(Type types) {
-        this.types = types;
+    public void setType(Type type) {
+        this.type = type;
     }
 
     public String getDescription() {
