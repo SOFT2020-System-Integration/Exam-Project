@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9f3ac64e-74d2-486e-9990-13857189f00a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ApiGateway/src/main/java/app/models/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ApiGateway/src/main/java/app/models/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_squareup_okio_okio_1_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_60.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_60.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_loadbalancer_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_hystrix_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_loadbalancer_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/out/artifacts/MicroServicesMongoDBTasks_jar/MicroServicesMongoDBTasks.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/java/com/example/demo/controllers/GameApiFetcherController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/java/com/example/demo/controllers/GameCatalogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/java/com/example/demo/exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/java/com/example/demo/helper/DiscountCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/java/com/example/demo/models/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/java/com/example/demo/models/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/java/com/example/demo/repositories/GameCatalogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Game-Catalog-Microservice/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/src/main/java/dk/dd/discover/DiscoverApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Microservices/src/test/java/dk/dd/discover/DiscoverApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_fasterxml_classmate_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_h2database_h2_1_4_199.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_squareup_okio_okio_1_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__commons_codec_commons_codec_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__io_micrometer_micrometer_core_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__joda_time_joda_time_2_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_assertj_assertj_core_3_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_atteo_evo_inflector_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_60.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_60.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_hamcrest_hamcrest_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_6_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_17_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_mockito_mockito_core_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_mongodb_bson_3_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_rest_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_loadbalancer_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_hystrix_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_loadbalancer_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_2_0_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_2_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_data_spring_data_rest_core_3_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_data_spring_data_rest_webmvc_3_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_hateoas_spring_hateoas_1_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_aop_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_beans_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_context_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_core_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_expression_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_orm_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_test_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_tx_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_web_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/main/java/app/carcatalog/GameCatalogApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/main/java/app/carcatalog/controllers/GameApiFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/main/java/app/carcatalog/controllers/GameCatalogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/main/java/app/carcatalog/exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/main/java/app/carcatalog/models/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/main/java/app/carcatalog/models/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/main/java/app/carcatalog/repositories/GameCatalogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/src/test/java/app/carcatalog/CarCatalogApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserRating/user-ratings.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/src/main/java/com/example/demo/SpringMongoMicroservicesDockerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootMongoDBMicroServicesDocker/src/test/java/com/example/demo/SpringMongoMicroservicesDockerApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\thoma\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lQ4LGZ2GKRUp3XXtjmRypc1oUD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ApiGateway" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="MicroServicesMongoDBGameCatalog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f3ac64e-74d2-486e-9990-13857189f00a" name="Default Changelist" comment="" />
+      <created>1607515927794</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607515927794</updated>
+      <workItem from="1607515929413" duration="30619000" />
+      <workItem from="1607676766257" duration="5728000" />
+      <workItem from="1607684707417" duration="782000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="694" y="32" key="#Auto_Import" timestamp="1607601726440">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="694" y="32" key="#Auto_Import/0.0.1825.987@0.0.1825.987" timestamp="1607601726440" />
+    <state x="689" y="295" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607519127459">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="689" y="295" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1825.987@0.0.1825.987" timestamp="1607519127459" />
+    <state x="717" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1607678627874">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="717" y="177" key="#com.intellij.ide.util.MemberChooser/0.0.1825.987@0.0.1825.987" timestamp="1607678627874" />
+    <state x="640" y="283" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1607519318649">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="640" y="283" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1825.987@0.0.1825.987" timestamp="1607519318649" />
+    <state x="697" y="362" width="429" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1607679125851">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="697" y="362" width="429" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1825.987@0.0.1825.987" timestamp="1607679125851" />
+    <state x="642" y="240" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607678903884">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="642" y="240" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1825.987@0.0.1825.987" timestamp="1607678903884" />
+    <state x="690" y="248" key="FileChooserDialogImpl" timestamp="1607689056810">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="690" y="248" key="FileChooserDialogImpl/0.0.1825.987@0.0.1825.987" timestamp="1607689056810" />
+    <state width="1781" height="244" key="GridCell.Tab.0.bottom" timestamp="1607689058153">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="244" key="GridCell.Tab.0.bottom/0.0.1825.987@0.0.1825.987" timestamp="1607689058153" />
+    <state width="1781" height="244" key="GridCell.Tab.0.center" timestamp="1607689058153">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="244" key="GridCell.Tab.0.center/0.0.1825.987@0.0.1825.987" timestamp="1607689058153" />
+    <state width="1781" height="244" key="GridCell.Tab.0.left" timestamp="1607689058153">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="244" key="GridCell.Tab.0.left/0.0.1825.987@0.0.1825.987" timestamp="1607689058153" />
+    <state width="1781" height="244" key="GridCell.Tab.0.right" timestamp="1607689058153">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="244" key="GridCell.Tab.0.right/0.0.1825.987@0.0.1825.987" timestamp="1607689058153" />
+    <state width="1781" height="244" key="GridCell.Tab.1.bottom" timestamp="1607689058154">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="244" key="GridCell.Tab.1.bottom/0.0.1825.987@0.0.1825.987" timestamp="1607689058154" />
+    <state width="1781" height="244" key="GridCell.Tab.1.center" timestamp="1607689058153">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="244" key="GridCell.Tab.1.center/0.0.1825.987@0.0.1825.987" timestamp="1607689058153" />
+    <state width="1781" height="244" key="GridCell.Tab.1.left" timestamp="1607689058153">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="244" key="GridCell.Tab.1.left/0.0.1825.987@0.0.1825.987" timestamp="1607689058153" />
+    <state width="1781" height="244" key="GridCell.Tab.1.right" timestamp="1607689058153">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="244" key="GridCell.Tab.1.right/0.0.1825.987@0.0.1825.987" timestamp="1607689058153" />
+    <state width="1781" height="329" key="GridCell.Tab.2.bottom" timestamp="1607682774730">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="329" key="GridCell.Tab.2.bottom/0.0.1825.987@0.0.1825.987" timestamp="1607682774730" />
+    <state width="1781" height="329" key="GridCell.Tab.2.center" timestamp="1607682774730">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="329" key="GridCell.Tab.2.center/0.0.1825.987@0.0.1825.987" timestamp="1607682774730" />
+    <state width="1781" height="329" key="GridCell.Tab.2.left" timestamp="1607682774730">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="329" key="GridCell.Tab.2.left/0.0.1825.987@0.0.1825.987" timestamp="1607682774730" />
+    <state width="1781" height="329" key="GridCell.Tab.2.right" timestamp="1607682774730">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state width="1781" height="329" key="GridCell.Tab.2.right/0.0.1825.987@0.0.1825.987" timestamp="1607682774730" />
+    <state x="704" y="147" key="Maven.ArtifactSearchDialog" timestamp="1607682447007">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="704" y="147" key="Maven.ArtifactSearchDialog/0.0.1825.987@0.0.1825.987" timestamp="1607682447007" />
+    <state x="392" y="67" key="SettingsEditor" timestamp="1607588949952">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="392" y="67" key="SettingsEditor/0.0.1825.987@0.0.1825.987" timestamp="1607588949952" />
+    <state x="370" y="222" width="1084" height="592" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607679870552">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="370" y="222" width="1084" height="592" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1825.987@0.0.1825.987" timestamp="1607679870552" />
+    <state x="906" y="0" width="926" height="993" key="dock-window-1" timestamp="1607587901528">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="906" y="0" width="926" height="993" key="dock-window-1/0.0.1825.987@0.0.1825.987" timestamp="1607587901528" />
+    <state x="568" y="227" key="run.anything.popup" timestamp="1607681169408">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="568" y="227" key="run.anything.popup/0.0.1825.987@0.0.1825.987" timestamp="1607681169408" />
+    <state x="575" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1607596078043">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="575" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1825.987@0.0.1825.987" timestamp="1607596078043" />
+  </component>
+</project>
