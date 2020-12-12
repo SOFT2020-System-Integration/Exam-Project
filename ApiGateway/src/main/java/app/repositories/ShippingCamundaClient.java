@@ -13,11 +13,6 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient("shipping-camunda")
 @RibbonClient(name = "shipping-camunda", configuration = RibbonConfig.class)
 public interface ShippingCamundaClient {
-    /*
-    @GetMapping("/shipping")
-    String greetApi();
-    */
-
     @PostMapping("/shipping/create-process")
     String camundaPost(@RequestBody CamundaGame shipment);
 }
