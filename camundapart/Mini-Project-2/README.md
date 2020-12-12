@@ -24,6 +24,7 @@ What you'll need:
 8. In `item`, write anything containing with alcohol, e.g.: `Beer 10 Alcohol` and in `Amount`write any amount.
 9. If done correctly, you should be able to claim the process in the Camunda [Tasklist](http://localhost:8080/camunda/app/tasklist/default/#/?searchQuery=%5B%5D&filter=b2c99c5b-1384-11eb-a56f-0242ac110002&sorting=%5B%7B%22sortBy%22:%22created%22,%22sortOrder%22:%22desc%22%7D%5D). Write in the customers age and complete the process.
 10. Once completed, you should be able to see a new message in the java programs console.
+11. Open http://localhost:8080/camunda-welcome/index.html to gain access to the cockpit
 
 ## How to REST API Start process
 1. Call endpoint http://localhost:8080/engine-rest/process-definition/key/GameShipment/start with Header: Content-type: application/json and body:
