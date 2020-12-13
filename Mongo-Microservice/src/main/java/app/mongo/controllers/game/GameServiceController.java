@@ -44,7 +44,7 @@ public class GameServiceController
         }
     }
 
-    @PostMapping("/")
+    @PostMapping("/create")
     public Game createProduct(@RequestBody Game game) {
         try {
             return repo.save(game);
@@ -53,7 +53,7 @@ public class GameServiceController
         }
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteGame(@PathVariable String id) {
         try {
             repo.deleteById(id);

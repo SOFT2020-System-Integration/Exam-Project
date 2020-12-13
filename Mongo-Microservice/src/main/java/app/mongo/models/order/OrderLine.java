@@ -1,13 +1,18 @@
 package app.mongo.models.order;
 
 import app.mongo.models.game.Game;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
+@Data
+@Document(collection ="orderlines")
 public class OrderLine {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     String id;
     Status status;
     Game game;
