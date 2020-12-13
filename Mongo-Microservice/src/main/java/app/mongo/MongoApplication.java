@@ -35,15 +35,21 @@ public class MongoApplication implements CommandLineRunner {
 
     @Override
     public void run(String ...args) throws Exception{
-        /*
-        GameApiFetcher apiFetcher = new GameApiFetcher(repo);
+        GameApiFetcher apiFetcher = new GameApiFetcher(gameRepo);
         apiFetcher.clearMongoDbAndSaveNewGames();
-        */
+        orderRepo.deleteAll();
+
         List<Game> gameList = gameRepo.findAll();
 
         List<OrderLine> orderLines = Arrays.asList(new OrderLine(Status.IN_PROGRESS, gameList.get(0)), new OrderLine(Status.IN_PROGRESS, gameList.get(1)), new OrderLine(Status.IN_PROGRESS, gameList.get(2)));
+        List<OrderLine> orderLines2 = Arrays.asList(new OrderLine(Status.IN_PROGRESS, gameList.get(0)), new OrderLine(Status.IN_PROGRESS, gameList.get(3)), new OrderLine(Status.IN_PROGRESS, gameList.get(5)));
+        List<OrderLine> orderLines3 = Arrays.asList(new OrderLine(Status.IN_PROGRESS, gameList.get(0)), new OrderLine(Status.IN_PROGRESS, gameList.get(6)), new OrderLine(Status.IN_PROGRESS, gameList.get(8)));
         Order order = new Order(new Date(), Status.IN_PROGRESS, orderLines);
+        Order order2 = new Order(new Date(), Status.IN_PROGRESS, orderLines2);
+        Order order3 = new Order(new Date(), Status.IN_PROGRESS, orderLines3);
         orderRepo.save(order);
+        orderRepo.save(order2);
+        orderRepo.save(order3);
     }
 
     private Game toGame(Game g) {

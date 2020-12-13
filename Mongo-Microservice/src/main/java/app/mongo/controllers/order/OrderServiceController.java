@@ -28,7 +28,10 @@ public class OrderServiceController
         return repo.findAll();
     }
 
-
+    @PostMapping("/create")
+    public Order saveOrder(@RequestBody Order order) {
+       return repo.save(order);
+    }
 
 
 }
