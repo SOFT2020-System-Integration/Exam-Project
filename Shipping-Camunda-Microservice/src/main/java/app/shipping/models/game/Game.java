@@ -1,8 +1,9 @@
-package app.models.game;
+package app.shipping.models.game;
 
-import lombok.Data;
 import org.springframework.data.annotation.Id;
-
+import lombok.Data;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.io.Serializable;
 import java.util.List;
 
@@ -16,19 +17,19 @@ public class Game implements Serializable {
     private float savingsPercentage;
     private float rating;
     private int inStock;
-    private GameType types;
+    private GameType type;
 
     public Game() {
     }
 
-    public Game(String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, GameType types) {
+    public Game(String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, GameType type) {
         this.title = title;
         this.currentPrice = currentPrice;
         this.retailPrice = retailPrice;
         this.savingsPercentage = savingsPercentage;
         this.rating = rating;
         this.inStock = inStock;
-        this.types = types;
+        this.type = type;
     }
 
     @Override
@@ -41,7 +42,7 @@ public class Game implements Serializable {
                 ", savingsPercentage=" + savingsPercentage +
                 ", rating=" + rating +
                 ", inStock=" + inStock +
-                ", types=" + types +
+                ", types=" + type +
                 '}';
     }
 
@@ -101,11 +102,11 @@ public class Game implements Serializable {
         this.inStock = inStock;
     }
 
-    public GameType getTypes() {
-        return types;
+    public GameType getType() {
+        return type;
     }
 
-    public void setTypes(GameType types) {
-        this.types = types;
+    public void setType(GameType type) {
+        this.type = type;
     }
 }

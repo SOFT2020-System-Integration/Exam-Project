@@ -1,13 +1,15 @@
-package app.models.game;
+package app.mongo.models.game;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.io.Serializable;
 
 @Data
 public class GameType implements Serializable {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     private Type type;
     private String description;

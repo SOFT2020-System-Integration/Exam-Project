@@ -1,8 +1,10 @@
-package app.models.game;
+package app.shipping.models.game;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.io.Serializable;
 
 @Data
