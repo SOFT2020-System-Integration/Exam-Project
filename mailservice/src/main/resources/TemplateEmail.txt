@@ -1,0 +1,1 @@
+Dear {title} {name} Here is a mail sent from our middleware
