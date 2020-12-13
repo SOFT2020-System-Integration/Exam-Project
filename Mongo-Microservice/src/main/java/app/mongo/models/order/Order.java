@@ -17,15 +17,15 @@ public class Order {
     private String id;
     private Date createdAt;
     private Status status;
-    private List<Game> games;
+    private List<OrderLine> orderLines;
 
     public Order() {
     }
 
-    public Order(Date createdAt, Status status, List<Game> games) {
+    public Order(Date createdAt, Status status, List<OrderLine> orderLines) {
         this.createdAt = createdAt;
         this.status = status;
-        this.games = games;
+        this.orderLines = orderLines;
     }
 
     public String getId() {
@@ -52,12 +52,12 @@ public class Order {
         this.status = status;
     }
 
-    public List<Game> getGames() {
-        return games;
+    public List<OrderLine> getOrderLines() {
+        return orderLines;
     }
 
-    public void setGames(List<Game> games) {
-        this.games = games;
+    public void setOrderLines(List<OrderLine> orderLines) {
+        this.orderLines = orderLines;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Order {
                 "id='" + id + '\'' +
                 ", createdAt=" + createdAt +
                 ", status=" + status +
-                ", games=" + games +
+                ", orderLines=" + orderLines +
                 '}';
     }
 }
