@@ -1,0 +1,9 @@
+[2020-11-11T10:57:50.576+0100][gc,heap] Heap region size: 1M
+[2020-11-11T10:57:50.576+0100][gc,heap,coops] Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: 32-bit
+[2020-11-11T10:57:50.583+0100][gc           ] Using G1
+[2020-11-11T10:57:50.615+0100][gc           ] Periodic GC disabled
+[2020-11-11T10:57:51.145+0100][gc,heap,exit ] Heap
+[2020-11-11T10:57:51.145+0100][gc,heap,exit ]  garbage-first heap   total 524288K, used 5120K [0x00000000e0000000, 0x0000000100000000)
+[2020-11-11T10:57:51.145+0100][gc,heap,exit ]   region size 1024K, 6 young (6144K), 0 survivors (0K)
+[2020-11-11T10:57:51.147+0100][gc,heap,exit ]  Metaspace       used 4416K, capacity 4914K, committed 4992K, reserved 1056768K
+[2020-11-11T10:57:51.147+0100][gc,heap,exit ]   class space    used 512K, capacity 584K, committed 640K, reserved 1048576K

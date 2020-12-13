@@ -1,0 +1,922 @@
+[2020-11-16 08:30:09,052] INFO Reading configuration from: ../../config/zookeeper.properties (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+[2020-11-16 08:30:09,084] WARN ..\..\config\zookeeper.properties is relative. Prepend .\ to indicate that you're sure! (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+[2020-11-16 08:30:09,094] INFO clientPortAddress is 0.0.0.0:2181 (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+[2020-11-16 08:30:09,099] INFO secureClientPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+[2020-11-16 08:30:09,114] INFO autopurge.snapRetainCount set to 3 (org.apache.zookeeper.server.DatadirCleanupManager)
+[2020-11-16 08:30:09,125] INFO autopurge.purgeInterval set to 0 (org.apache.zookeeper.server.DatadirCleanupManager)
+[2020-11-16 08:30:09,126] INFO Purge task is not scheduled. (org.apache.zookeeper.server.DatadirCleanupManager)
+[2020-11-16 08:30:09,126] WARN Either no config or no quorum defined in config, running  in standalone mode (org.apache.zookeeper.server.quorum.QuorumPeerMain)
+[2020-11-16 08:30:09,136] INFO Log4j 1.2 jmx support found and enabled. (org.apache.zookeeper.jmx.ManagedUtil)
+[2020-11-16 08:30:09,157] INFO Reading configuration from: ../../config/zookeeper.properties (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+[2020-11-16 08:30:09,158] WARN ..\..\config\zookeeper.properties is relative. Prepend .\ to indicate that you're sure! (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+[2020-11-16 08:30:09,159] INFO clientPortAddress is 0.0.0.0:2181 (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+[2020-11-16 08:30:09,160] INFO secureClientPort is not set (org.apache.zookeeper.server.quorum.QuorumPeerConfig)
+[2020-11-16 08:30:09,160] INFO Starting server (org.apache.zookeeper.server.ZooKeeperServerMain)
+[2020-11-16 08:30:09,172] INFO zookeeper.snapshot.trust.empty : false (org.apache.zookeeper.server.persistence.FileTxnSnapLog)
+[2020-11-16 08:30:09,203] INFO Server environment:zookeeper.version=3.5.8-f439ca583e70862c3068a1f2a7d4d068eec33315, built on 05/04/2020 15:53 GMT (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,204] INFO Server environment:host.name=LAPTOP-CCEFSH80.mshome.net (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,205] INFO Server environment:java.version=14.0.2 (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,205] INFO Server environment:java.vendor=Oracle Corporation (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,206] INFO Server environment:java.home=C:\Program Files\Java\jdk-14.0.2 (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,207] INFO Server environment:java.class.path=C:\Users\thoma\Documents\kafka\libs\activation-1.1.1.jar;C:\Users\thoma\Documents\kafka\libs\aopalliance-repackaged-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\argparse4j-0.7.0.jar;C:\Users\thoma\Documents\kafka\libs\audience-annotations-0.5.0.jar;C:\Users\thoma\Documents\kafka\libs\commons-cli-1.4.jar;C:\Users\thoma\Documents\kafka\libs\commons-lang3-3.8.1.jar;C:\Users\thoma\Documents\kafka\libs\connect-api-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-basic-auth-extension-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-file-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-json-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-mirror-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-mirror-client-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-runtime-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-transforms-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\hk2-api-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\hk2-locator-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\hk2-utils-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\jackson-annotations-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-core-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-databind-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-dataformat-csv-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-datatype-jdk8-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-jaxrs-base-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-jaxrs-json-provider-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-module-jaxb-annotations-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-module-paranamer-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-module-scala_2.13-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.activation-api-1.2.1.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.annotation-api-1.3.4.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.inject-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.ws.rs-api-2.1.5.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.xml.bind-api-2.3.2.jar;C:\Users\thoma\Documents\kafka\libs\javassist-3.22.0-CR2.jar;C:\Users\thoma\Documents\kafka\libs\javassist-3.26.0-GA.jar;C:\Users\thoma\Documents\kafka\libs\javax.servlet-api-3.1.0.jar;C:\Users\thoma\Documents\kafka\libs\javax.ws.rs-api-2.1.1.jar;C:\Users\thoma\Documents\kafka\libs\jaxb-api-2.3.0.jar;C:\Users\thoma\Documents\kafka\libs\jersey-client-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-common-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-container-servlet-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-container-servlet-core-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-hk2-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-media-jaxb-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-server-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jetty-client-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-continuation-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-http-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-io-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-security-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-server-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-servlet-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-servlets-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-util-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jopt-simple-5.0.4.jar;C:\Users\thoma\Documents\kafka\libs\kafka-clients-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-log4j-appender-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-streams-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-streams-examples-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-streams-scala_2.13-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-streams-test-utils-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-tools-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-javadoc.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-javadoc.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-scaladoc.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-scaladoc.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-sources.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-sources.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-test-sources.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-test-sources.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-test.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-test.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0.jar.asc;C:\Users\thoma\Documents\kafka\libs\log4j-1.2.17.jar;C:\Users\thoma\Documents\kafka\libs\lz4-java-1.7.1.jar;C:\Users\thoma\Documents\kafka\libs\maven-artifact-3.6.3.jar;C:\Users\thoma\Documents\kafka\libs\metrics-core-2.2.0.jar;C:\Users\thoma\Documents\kafka\libs\netty-buffer-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-codec-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-common-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-handler-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-resolver-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-transport-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-transport-native-epoll-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-transport-native-unix-common-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\osgi-resource-locator-1.0.1.jar;C:\Users\thoma\Documents\kafka\libs\paranamer-2.8.jar;C:\Users\thoma\Documents\kafka\libs\plexus-utils-3.2.1.jar;C:\Users\thoma\Documents\kafka\libs\reflections-0.9.12.jar;C:\Users\thoma\Documents\kafka\libs\rocksdbjni-5.18.4.jar;C:\Users\thoma\Documents\kafka\libs\scala-collection-compat_2.13-2.1.6.jar;C:\Users\thoma\Documents\kafka\libs\scala-java8-compat_2.13-0.9.1.jar;C:\Users\thoma\Documents\kafka\libs\scala-library-2.13.2.jar;C:\Users\thoma\Documents\kafka\libs\scala-logging_2.13-3.9.2.jar;C:\Users\thoma\Documents\kafka\libs\scala-reflect-2.13.2.jar;C:\Users\thoma\Documents\kafka\libs\slf4j-api-1.7.30.jar;C:\Users\thoma\Documents\kafka\libs\slf4j-log4j12-1.7.30.jar;C:\Users\thoma\Documents\kafka\libs\snappy-java-1.1.7.3.jar;C:\Users\thoma\Documents\kafka\libs\validation-api-2.0.1.Final.jar;C:\Users\thoma\Documents\kafka\libs\zookeeper-3.5.8.jar;C:\Users\thoma\Documents\kafka\libs\zookeeper-jute-3.5.8.jar;C:\Users\thoma\Documents\kafka\libs\zstd-jni-1.4.4-7.jar (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,209] INFO Server environment:java.library.path=C:\Program Files\Java\jdk-14.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\HashiCorp\Vagrant\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\apache-maven-3.6.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\thoma\AppData\Local\Microsoft\WindowsApps;C:\Users\thoma\AppData\Roaming\npm;C:\Users\thoma\AppData\Local\GitHubDesktop\bin;C:\Users\thoma\AppData\Local\Microsoft\WindowsApps;C:\Users\thoma\.dotnet\tools;. (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,209] INFO Server environment:java.io.tmpdir=C:\Users\thoma\AppData\Local\Temp\ (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,210] INFO Server environment:java.compiler=<NA> (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,210] INFO Server environment:os.name=Windows 10 (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,210] INFO Server environment:os.arch=amd64 (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,211] INFO Server environment:os.version=10.0 (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,211] INFO Server environment:user.name=thoma (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,212] INFO Server environment:user.home=C:\Users\thoma (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,221] INFO Server environment:user.dir=C:\Users\thoma\Documents\kafka\bin\windows (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,221] INFO Server environment:os.memory.free=495MB (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,224] INFO Server environment:os.memory.max=512MB (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,225] INFO Server environment:os.memory.total=512MB (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,227] INFO minSessionTimeout set to 6000 (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,228] INFO maxSessionTimeout set to 60000 (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,232] INFO Created server with tickTime 3000 minSessionTimeout 6000 maxSessionTimeout 60000 datadir C:\Users\thoma\Documents\kafka\data\zookeeper\version-2 snapdir C:\Users\thoma\Documents\kafka\data\zookeeper\version-2 (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:09,327] INFO Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory (org.apache.zookeeper.server.ServerCnxnFactory)
+[2020-11-16 08:30:09,335] INFO Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 8 worker threads, and 64 kB direct buffers. (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2020-11-16 08:30:09,339] INFO binding to port 0.0.0.0/0.0.0.0:2181 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2020-11-16 08:30:09,369] INFO zookeeper.snapshotSizeFactor = 0.33 (org.apache.zookeeper.server.ZKDatabase)
+[2020-11-16 08:30:09,375] INFO Reading snapshot C:\Users\thoma\Documents\kafka\data\zookeeper\version-2\snapshot.0 (org.apache.zookeeper.server.persistence.FileSnap)
+[2020-11-16 08:30:09,436] INFO Snapshotting: 0x9d to C:\Users\thoma\Documents\kafka\data\zookeeper\version-2\snapshot.9d (org.apache.zookeeper.server.persistence.FileTxnSnapLog)
+[2020-11-16 08:30:09,489] INFO Using checkIntervalMs=60000 maxPerMinute=10000 (org.apache.zookeeper.server.ContainerManager)
+[2020-11-16 08:30:28,152] INFO Expiring session 0x1002de63b3d0008, timeout of 18000ms exceeded (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:30:28,156] INFO Creating new log file: log.9e (org.apache.zookeeper.server.persistence.FileTxnLog)
+[2020-11-16 08:30:59,748] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+[2020-11-16 08:31:00,080] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+[2020-11-16 08:31:00,136] INFO starting (kafka.server.KafkaServer)
+[2020-11-16 08:31:00,137] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
+[2020-11-16 08:31:00,161] INFO [ZooKeeperClient Kafka server] Initializing a new session to localhost:2181. (kafka.zookeeper.ZooKeeperClient)
+[2020-11-16 08:31:00,168] INFO Client environment:zookeeper.version=3.5.8-f439ca583e70862c3068a1f2a7d4d068eec33315, built on 05/04/2020 15:53 GMT (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,168] INFO Client environment:host.name=LAPTOP-CCEFSH80.mshome.net (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,168] INFO Client environment:java.version=14.0.2 (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,169] INFO Client environment:java.vendor=Oracle Corporation (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,169] INFO Client environment:java.home=C:\Program Files\Java\jdk-14.0.2 (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,169] INFO Client environment:java.class.path=C:\Users\thoma\Documents\kafka\libs\activation-1.1.1.jar;C:\Users\thoma\Documents\kafka\libs\aopalliance-repackaged-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\argparse4j-0.7.0.jar;C:\Users\thoma\Documents\kafka\libs\audience-annotations-0.5.0.jar;C:\Users\thoma\Documents\kafka\libs\commons-cli-1.4.jar;C:\Users\thoma\Documents\kafka\libs\commons-lang3-3.8.1.jar;C:\Users\thoma\Documents\kafka\libs\connect-api-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-basic-auth-extension-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-file-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-json-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-mirror-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-mirror-client-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-runtime-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\connect-transforms-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\hk2-api-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\hk2-locator-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\hk2-utils-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\jackson-annotations-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-core-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-databind-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-dataformat-csv-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-datatype-jdk8-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-jaxrs-base-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-jaxrs-json-provider-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-module-jaxb-annotations-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-module-paranamer-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jackson-module-scala_2.13-2.10.2.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.activation-api-1.2.1.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.annotation-api-1.3.4.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.inject-2.5.0.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.ws.rs-api-2.1.5.jar;C:\Users\thoma\Documents\kafka\libs\jakarta.xml.bind-api-2.3.2.jar;C:\Users\thoma\Documents\kafka\libs\javassist-3.22.0-CR2.jar;C:\Users\thoma\Documents\kafka\libs\javassist-3.26.0-GA.jar;C:\Users\thoma\Documents\kafka\libs\javax.servlet-api-3.1.0.jar;C:\Users\thoma\Documents\kafka\libs\javax.ws.rs-api-2.1.1.jar;C:\Users\thoma\Documents\kafka\libs\jaxb-api-2.3.0.jar;C:\Users\thoma\Documents\kafka\libs\jersey-client-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-common-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-container-servlet-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-container-servlet-core-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-hk2-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-media-jaxb-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jersey-server-2.28.jar;C:\Users\thoma\Documents\kafka\libs\jetty-client-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-continuation-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-http-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-io-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-security-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-server-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-servlet-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-servlets-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jetty-util-9.4.24.v20191120.jar;C:\Users\thoma\Documents\kafka\libs\jopt-simple-5.0.4.jar;C:\Users\thoma\Documents\kafka\libs\kafka-clients-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-log4j-appender-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-streams-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-streams-examples-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-streams-scala_2.13-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-streams-test-utils-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka-tools-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-javadoc.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-javadoc.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-scaladoc.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-scaladoc.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-sources.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-sources.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-test-sources.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-test-sources.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-test.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0-test.jar.asc;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0.jar;C:\Users\thoma\Documents\kafka\libs\kafka_2.13-2.6.0.jar.asc;C:\Users\thoma\Documents\kafka\libs\log4j-1.2.17.jar;C:\Users\thoma\Documents\kafka\libs\lz4-java-1.7.1.jar;C:\Users\thoma\Documents\kafka\libs\maven-artifact-3.6.3.jar;C:\Users\thoma\Documents\kafka\libs\metrics-core-2.2.0.jar;C:\Users\thoma\Documents\kafka\libs\netty-buffer-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-codec-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-common-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-handler-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-resolver-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-transport-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-transport-native-epoll-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\netty-transport-native-unix-common-4.1.50.Final.jar;C:\Users\thoma\Documents\kafka\libs\osgi-resource-locator-1.0.1.jar;C:\Users\thoma\Documents\kafka\libs\paranamer-2.8.jar;C:\Users\thoma\Documents\kafka\libs\plexus-utils-3.2.1.jar;C:\Users\thoma\Documents\kafka\libs\reflections-0.9.12.jar;C:\Users\thoma\Documents\kafka\libs\rocksdbjni-5.18.4.jar;C:\Users\thoma\Documents\kafka\libs\scala-collection-compat_2.13-2.1.6.jar;C:\Users\thoma\Documents\kafka\libs\scala-java8-compat_2.13-0.9.1.jar;C:\Users\thoma\Documents\kafka\libs\scala-library-2.13.2.jar;C:\Users\thoma\Documents\kafka\libs\scala-logging_2.13-3.9.2.jar;C:\Users\thoma\Documents\kafka\libs\scala-reflect-2.13.2.jar;C:\Users\thoma\Documents\kafka\libs\slf4j-api-1.7.30.jar;C:\Users\thoma\Documents\kafka\libs\slf4j-log4j12-1.7.30.jar;C:\Users\thoma\Documents\kafka\libs\snappy-java-1.1.7.3.jar;C:\Users\thoma\Documents\kafka\libs\validation-api-2.0.1.Final.jar;C:\Users\thoma\Documents\kafka\libs\zookeeper-3.5.8.jar;C:\Users\thoma\Documents\kafka\libs\zookeeper-jute-3.5.8.jar;C:\Users\thoma\Documents\kafka\libs\zstd-jni-1.4.4-7.jar (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,172] INFO Client environment:java.library.path=C:\Program Files\Java\jdk-14.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\HashiCorp\Vagrant\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\apache-maven-3.6.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\thoma\AppData\Local\Microsoft\WindowsApps;C:\Users\thoma\AppData\Roaming\npm;C:\Users\thoma\AppData\Local\GitHubDesktop\bin;C:\Users\thoma\AppData\Local\Microsoft\WindowsApps;C:\Users\thoma\.dotnet\tools;. (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,172] INFO Client environment:java.io.tmpdir=C:\Users\thoma\AppData\Local\Temp\ (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,173] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,175] INFO Client environment:os.name=Windows 10 (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,175] INFO Client environment:os.arch=amd64 (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,176] INFO Client environment:os.version=10.0 (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,176] INFO Client environment:user.name=thoma (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,177] INFO Client environment:user.home=C:\Users\thoma (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,177] INFO Client environment:user.dir=C:\Users\thoma\Documents\kafka\bin\windows (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,178] INFO Client environment:os.memory.free=977MB (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,179] INFO Client environment:os.memory.max=1024MB (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,179] INFO Client environment:os.memory.total=1024MB (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,183] INFO Initiating client connection, connectString=localhost:2181 sessionTimeout=18000 watcher=kafka.zookeeper.ZooKeeperClient$ZooKeeperClientWatcher$@13df2a8c (org.apache.zookeeper.ZooKeeper)
+[2020-11-16 08:31:00,204] INFO jute.maxbuffer value is 4194304 Bytes (org.apache.zookeeper.ClientCnxnSocket)
+[2020-11-16 08:31:00,212] INFO zookeeper.request.timeout value is 0. feature enabled= (org.apache.zookeeper.ClientCnxn)
+[2020-11-16 08:31:00,216] INFO [ZooKeeperClient Kafka server] Waiting until connected. (kafka.zookeeper.ZooKeeperClient)
+[2020-11-16 08:31:00,227] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2020-11-16 08:31:00,231] INFO Socket connection established, initiating session, client: /127.0.0.1:62679, server: localhost/127.0.0.1:2181 (org.apache.zookeeper.ClientCnxn)
+[2020-11-16 08:31:00,253] INFO Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x100471295b40000, negotiated timeout = 18000 (org.apache.zookeeper.ClientCnxn)
+[2020-11-16 08:31:00,256] INFO [ZooKeeperClient Kafka server] Connected. (kafka.zookeeper.ZooKeeperClient)
+[2020-11-16 08:31:00,517] INFO Cluster ID = TpuPPFfjS0ui1g7xnggXXg (kafka.server.KafkaServer)
+[2020-11-16 08:31:00,576] INFO KafkaConfig values: 
+	advertised.host.name = null
+	advertised.listeners = null
+	advertised.port = null
+	alter.config.policy.class.name = null
+	alter.log.dirs.replication.quota.window.num = 11
+	alter.log.dirs.replication.quota.window.size.seconds = 1
+	authorizer.class.name = 
+	auto.create.topics.enable = true
+	auto.leader.rebalance.enable = true
+	background.threads = 10
+	broker.id = 0
+	broker.id.generation.enable = true
+	broker.rack = null
+	client.quota.callback.class = null
+	compression.type = producer
+	connection.failed.authentication.delay.ms = 100
+	connections.max.idle.ms = 600000
+	connections.max.reauth.ms = 0
+	control.plane.listener.name = null
+	controlled.shutdown.enable = true
+	controlled.shutdown.max.retries = 3
+	controlled.shutdown.retry.backoff.ms = 5000
+	controller.socket.timeout.ms = 30000
+	create.topic.policy.class.name = null
+	default.replication.factor = 1
+	delegation.token.expiry.check.interval.ms = 3600000
+	delegation.token.expiry.time.ms = 86400000
+	delegation.token.master.key = null
+	delegation.token.max.lifetime.ms = 604800000
+	delete.records.purgatory.purge.interval.requests = 1
+	delete.topic.enable = true
+	fetch.max.bytes = 57671680
+	fetch.purgatory.purge.interval.requests = 1000
+	group.initial.rebalance.delay.ms = 0
+	group.max.session.timeout.ms = 1800000
+	group.max.size = 2147483647
+	group.min.session.timeout.ms = 6000
+	host.name = 
+	inter.broker.listener.name = null
+	inter.broker.protocol.version = 2.6-IV0
+	kafka.metrics.polling.interval.secs = 10
+	kafka.metrics.reporters = []
+	leader.imbalance.check.interval.seconds = 300
+	leader.imbalance.per.broker.percentage = 10
+	listener.security.protocol.map = PLAINTEXT:PLAINTEXT,SSL:SSL,SASL_PLAINTEXT:SASL_PLAINTEXT,SASL_SSL:SASL_SSL
+	listeners = null
+	log.cleaner.backoff.ms = 15000
+	log.cleaner.dedupe.buffer.size = 134217728
+	log.cleaner.delete.retention.ms = 86400000
+	log.cleaner.enable = true
+	log.cleaner.io.buffer.load.factor = 0.9
+	log.cleaner.io.buffer.size = 524288
+	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+	log.cleaner.max.compaction.lag.ms = 9223372036854775807
+	log.cleaner.min.cleanable.ratio = 0.5
+	log.cleaner.min.compaction.lag.ms = 0
+	log.cleaner.threads = 1
+	log.cleanup.policy = [delete]
+	log.dir = /tmp/kafka-logs
+	log.dirs = C:/Users/thoma/Documents/kafka/data/kafka
+	log.flush.interval.messages = 9223372036854775807
+	log.flush.interval.ms = null
+	log.flush.offset.checkpoint.interval.ms = 60000
+	log.flush.scheduler.interval.ms = 9223372036854775807
+	log.flush.start.offset.checkpoint.interval.ms = 60000
+	log.index.interval.bytes = 4096
+	log.index.size.max.bytes = 10485760
+	log.message.downconversion.enable = true
+	log.message.format.version = 2.6-IV0
+	log.message.timestamp.difference.max.ms = 9223372036854775807
+	log.message.timestamp.type = CreateTime
+	log.preallocate = false
+	log.retention.bytes = -1
+	log.retention.check.interval.ms = 300000
+	log.retention.hours = 168
+	log.retention.minutes = null
+	log.retention.ms = null
+	log.roll.hours = 168
+	log.roll.jitter.hours = 0
+	log.roll.jitter.ms = null
+	log.roll.ms = null
+	log.segment.bytes = 1073741824
+	log.segment.delete.delay.ms = 60000
+	max.connections = 2147483647
+	max.connections.per.ip = 2147483647
+	max.connections.per.ip.overrides = 
+	max.incremental.fetch.session.cache.slots = 1000
+	message.max.bytes = 1048588
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	min.insync.replicas = 1
+	num.io.threads = 8
+	num.network.threads = 3
+	num.partitions = 1
+	num.recovery.threads.per.data.dir = 1
+	num.replica.alter.log.dirs.threads = null
+	num.replica.fetchers = 1
+	offset.metadata.max.bytes = 4096
+	offsets.commit.required.acks = -1
+	offsets.commit.timeout.ms = 5000
+	offsets.load.buffer.size = 5242880
+	offsets.retention.check.interval.ms = 600000
+	offsets.retention.minutes = 10080
+	offsets.topic.compression.codec = 0
+	offsets.topic.num.partitions = 50
+	offsets.topic.replication.factor = 1
+	offsets.topic.segment.bytes = 104857600
+	password.encoder.cipher.algorithm = AES/CBC/PKCS5Padding
+	password.encoder.iterations = 4096
+	password.encoder.key.length = 128
+	password.encoder.keyfactory.algorithm = null
+	password.encoder.old.secret = null
+	password.encoder.secret = null
+	port = 9092
+	principal.builder.class = null
+	producer.purgatory.purge.interval.requests = 1000
+	queued.max.request.bytes = -1
+	queued.max.requests = 500
+	quota.consumer.default = 9223372036854775807
+	quota.producer.default = 9223372036854775807
+	quota.window.num = 11
+	quota.window.size.seconds = 1
+	replica.fetch.backoff.ms = 1000
+	replica.fetch.max.bytes = 1048576
+	replica.fetch.min.bytes = 1
+	replica.fetch.response.max.bytes = 10485760
+	replica.fetch.wait.max.ms = 500
+	replica.high.watermark.checkpoint.interval.ms = 5000
+	replica.lag.time.max.ms = 30000
+	replica.selector.class = null
+	replica.socket.receive.buffer.bytes = 65536
+	replica.socket.timeout.ms = 30000
+	replication.quota.window.num = 11
+	replication.quota.window.size.seconds = 1
+	request.timeout.ms = 30000
+	reserved.broker.max.id = 1000
+	sasl.client.callback.handler.class = null
+	sasl.enabled.mechanisms = [GSSAPI]
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism.inter.broker.protocol = GSSAPI
+	sasl.server.callback.handler.class = null
+	security.inter.broker.protocol = PLAINTEXT
+	security.providers = null
+	socket.receive.buffer.bytes = 102400
+	socket.request.max.bytes = 104857600
+	socket.send.buffer.bytes = 102400
+	ssl.cipher.suites = []
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.principal.mapping.rules = DEFAULT
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.abort.timed.out.transaction.cleanup.interval.ms = 10000
+	transaction.max.timeout.ms = 900000
+	transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+	transaction.state.log.load.buffer.size = 5242880
+	transaction.state.log.min.isr = 1
+	transaction.state.log.num.partitions = 50
+	transaction.state.log.replication.factor = 1
+	transaction.state.log.segment.bytes = 104857600
+	transactional.id.expiration.ms = 604800000
+	unclean.leader.election.enable = false
+	zookeeper.clientCnxnSocket = null
+	zookeeper.connect = localhost:2181
+	zookeeper.connection.timeout.ms = 18000
+	zookeeper.max.in.flight.requests = 10
+	zookeeper.session.timeout.ms = 18000
+	zookeeper.set.acl = false
+	zookeeper.ssl.cipher.suites = null
+	zookeeper.ssl.client.enable = false
+	zookeeper.ssl.crl.enable = false
+	zookeeper.ssl.enabled.protocols = null
+	zookeeper.ssl.endpoint.identification.algorithm = HTTPS
+	zookeeper.ssl.keystore.location = null
+	zookeeper.ssl.keystore.password = null
+	zookeeper.ssl.keystore.type = null
+	zookeeper.ssl.ocsp.enable = false
+	zookeeper.ssl.protocol = TLSv1.2
+	zookeeper.ssl.truststore.location = null
+	zookeeper.ssl.truststore.password = null
+	zookeeper.ssl.truststore.type = null
+	zookeeper.sync.time.ms = 2000
+ (kafka.server.KafkaConfig)
+[2020-11-16 08:31:00,591] INFO KafkaConfig values: 
+	advertised.host.name = null
+	advertised.listeners = null
+	advertised.port = null
+	alter.config.policy.class.name = null
+	alter.log.dirs.replication.quota.window.num = 11
+	alter.log.dirs.replication.quota.window.size.seconds = 1
+	authorizer.class.name = 
+	auto.create.topics.enable = true
+	auto.leader.rebalance.enable = true
+	background.threads = 10
+	broker.id = 0
+	broker.id.generation.enable = true
+	broker.rack = null
+	client.quota.callback.class = null
+	compression.type = producer
+	connection.failed.authentication.delay.ms = 100
+	connections.max.idle.ms = 600000
+	connections.max.reauth.ms = 0
+	control.plane.listener.name = null
+	controlled.shutdown.enable = true
+	controlled.shutdown.max.retries = 3
+	controlled.shutdown.retry.backoff.ms = 5000
+	controller.socket.timeout.ms = 30000
+	create.topic.policy.class.name = null
+	default.replication.factor = 1
+	delegation.token.expiry.check.interval.ms = 3600000
+	delegation.token.expiry.time.ms = 86400000
+	delegation.token.master.key = null
+	delegation.token.max.lifetime.ms = 604800000
+	delete.records.purgatory.purge.interval.requests = 1
+	delete.topic.enable = true
+	fetch.max.bytes = 57671680
+	fetch.purgatory.purge.interval.requests = 1000
+	group.initial.rebalance.delay.ms = 0
+	group.max.session.timeout.ms = 1800000
+	group.max.size = 2147483647
+	group.min.session.timeout.ms = 6000
+	host.name = 
+	inter.broker.listener.name = null
+	inter.broker.protocol.version = 2.6-IV0
+	kafka.metrics.polling.interval.secs = 10
+	kafka.metrics.reporters = []
+	leader.imbalance.check.interval.seconds = 300
+	leader.imbalance.per.broker.percentage = 10
+	listener.security.protocol.map = PLAINTEXT:PLAINTEXT,SSL:SSL,SASL_PLAINTEXT:SASL_PLAINTEXT,SASL_SSL:SASL_SSL
+	listeners = null
+	log.cleaner.backoff.ms = 15000
+	log.cleaner.dedupe.buffer.size = 134217728
+	log.cleaner.delete.retention.ms = 86400000
+	log.cleaner.enable = true
+	log.cleaner.io.buffer.load.factor = 0.9
+	log.cleaner.io.buffer.size = 524288
+	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+	log.cleaner.max.compaction.lag.ms = 9223372036854775807
+	log.cleaner.min.cleanable.ratio = 0.5
+	log.cleaner.min.compaction.lag.ms = 0
+	log.cleaner.threads = 1
+	log.cleanup.policy = [delete]
+	log.dir = /tmp/kafka-logs
+	log.dirs = C:/Users/thoma/Documents/kafka/data/kafka
+	log.flush.interval.messages = 9223372036854775807
+	log.flush.interval.ms = null
+	log.flush.offset.checkpoint.interval.ms = 60000
+	log.flush.scheduler.interval.ms = 9223372036854775807
+	log.flush.start.offset.checkpoint.interval.ms = 60000
+	log.index.interval.bytes = 4096
+	log.index.size.max.bytes = 10485760
+	log.message.downconversion.enable = true
+	log.message.format.version = 2.6-IV0
+	log.message.timestamp.difference.max.ms = 9223372036854775807
+	log.message.timestamp.type = CreateTime
+	log.preallocate = false
+	log.retention.bytes = -1
+	log.retention.check.interval.ms = 300000
+	log.retention.hours = 168
+	log.retention.minutes = null
+	log.retention.ms = null
+	log.roll.hours = 168
+	log.roll.jitter.hours = 0
+	log.roll.jitter.ms = null
+	log.roll.ms = null
+	log.segment.bytes = 1073741824
+	log.segment.delete.delay.ms = 60000
+	max.connections = 2147483647
+	max.connections.per.ip = 2147483647
+	max.connections.per.ip.overrides = 
+	max.incremental.fetch.session.cache.slots = 1000
+	message.max.bytes = 1048588
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	min.insync.replicas = 1
+	num.io.threads = 8
+	num.network.threads = 3
+	num.partitions = 1
+	num.recovery.threads.per.data.dir = 1
+	num.replica.alter.log.dirs.threads = null
+	num.replica.fetchers = 1
+	offset.metadata.max.bytes = 4096
+	offsets.commit.required.acks = -1
+	offsets.commit.timeout.ms = 5000
+	offsets.load.buffer.size = 5242880
+	offsets.retention.check.interval.ms = 600000
+	offsets.retention.minutes = 10080
+	offsets.topic.compression.codec = 0
+	offsets.topic.num.partitions = 50
+	offsets.topic.replication.factor = 1
+	offsets.topic.segment.bytes = 104857600
+	password.encoder.cipher.algorithm = AES/CBC/PKCS5Padding
+	password.encoder.iterations = 4096
+	password.encoder.key.length = 128
+	password.encoder.keyfactory.algorithm = null
+	password.encoder.old.secret = null
+	password.encoder.secret = null
+	port = 9092
+	principal.builder.class = null
+	producer.purgatory.purge.interval.requests = 1000
+	queued.max.request.bytes = -1
+	queued.max.requests = 500
+	quota.consumer.default = 9223372036854775807
+	quota.producer.default = 9223372036854775807
+	quota.window.num = 11
+	quota.window.size.seconds = 1
+	replica.fetch.backoff.ms = 1000
+	replica.fetch.max.bytes = 1048576
+	replica.fetch.min.bytes = 1
+	replica.fetch.response.max.bytes = 10485760
+	replica.fetch.wait.max.ms = 500
+	replica.high.watermark.checkpoint.interval.ms = 5000
+	replica.lag.time.max.ms = 30000
+	replica.selector.class = null
+	replica.socket.receive.buffer.bytes = 65536
+	replica.socket.timeout.ms = 30000
+	replication.quota.window.num = 11
+	replication.quota.window.size.seconds = 1
+	request.timeout.ms = 30000
+	reserved.broker.max.id = 1000
+	sasl.client.callback.handler.class = null
+	sasl.enabled.mechanisms = [GSSAPI]
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism.inter.broker.protocol = GSSAPI
+	sasl.server.callback.handler.class = null
+	security.inter.broker.protocol = PLAINTEXT
+	security.providers = null
+	socket.receive.buffer.bytes = 102400
+	socket.request.max.bytes = 104857600
+	socket.send.buffer.bytes = 102400
+	ssl.cipher.suites = []
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.principal.mapping.rules = DEFAULT
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.abort.timed.out.transaction.cleanup.interval.ms = 10000
+	transaction.max.timeout.ms = 900000
+	transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+	transaction.state.log.load.buffer.size = 5242880
+	transaction.state.log.min.isr = 1
+	transaction.state.log.num.partitions = 50
+	transaction.state.log.replication.factor = 1
+	transaction.state.log.segment.bytes = 104857600
+	transactional.id.expiration.ms = 604800000
+	unclean.leader.election.enable = false
+	zookeeper.clientCnxnSocket = null
+	zookeeper.connect = localhost:2181
+	zookeeper.connection.timeout.ms = 18000
+	zookeeper.max.in.flight.requests = 10
+	zookeeper.session.timeout.ms = 18000
+	zookeeper.set.acl = false
+	zookeeper.ssl.cipher.suites = null
+	zookeeper.ssl.client.enable = false
+	zookeeper.ssl.crl.enable = false
+	zookeeper.ssl.enabled.protocols = null
+	zookeeper.ssl.endpoint.identification.algorithm = HTTPS
+	zookeeper.ssl.keystore.location = null
+	zookeeper.ssl.keystore.password = null
+	zookeeper.ssl.keystore.type = null
+	zookeeper.ssl.ocsp.enable = false
+	zookeeper.ssl.protocol = TLSv1.2
+	zookeeper.ssl.truststore.location = null
+	zookeeper.ssl.truststore.password = null
+	zookeeper.ssl.truststore.type = null
+	zookeeper.sync.time.ms = 2000
+ (kafka.server.KafkaConfig)
+[2020-11-16 08:31:00,630] INFO [ThrottledChannelReaper-Fetch]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2020-11-16 08:31:00,631] INFO [ThrottledChannelReaper-Produce]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2020-11-16 08:31:00,633] INFO [ThrottledChannelReaper-Request]: Starting (kafka.server.ClientQuotaManager$ThrottledChannelReaper)
+[2020-11-16 08:31:00,675] INFO Loading logs from log dirs ArraySeq(C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:00,679] INFO Attempting recovery for all logs in C:\Users\thoma\Documents\kafka\data\kafka since no clean shutdown file was found (kafka.log.LogManager)
+[2020-11-16 08:31:00,761] INFO [Log partition=message-topic-0, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:00,764] INFO [Log partition=message-topic-0, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,809] INFO [ProducerStateManager partition=message-topic-0] Writing producer snapshot at offset 6 (kafka.log.ProducerStateManager)
+[2020-11-16 08:31:00,826] INFO [Log partition=message-topic-0, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 6 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,831] INFO [ProducerStateManager partition=message-topic-0] Loading producer state from snapshot file 'C:\Users\thoma\Documents\kafka\data\kafka\message-topic-0\00000000000000000006.snapshot' (kafka.log.ProducerStateManager)
+[2020-11-16 08:31:00,842] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\message-topic-0, topic=message-topic, partition=0, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=6) with 1 segments in 141ms (1/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:00,847] INFO [Log partition=__consumer_offsets-0, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:00,848] INFO [Log partition=__consumer_offsets-0, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,860] INFO [Log partition=__consumer_offsets-0, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,864] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-0, topic=__consumer_offsets, partition=0, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 20ms (2/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:00,868] INFO [Log partition=__consumer_offsets-1, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:00,869] INFO [Log partition=__consumer_offsets-1, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,879] INFO [Log partition=__consumer_offsets-1, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,882] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-1, topic=__consumer_offsets, partition=1, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (3/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:00,887] INFO [Log partition=__consumer_offsets-10, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:00,888] INFO [Log partition=__consumer_offsets-10, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,896] INFO [Log partition=__consumer_offsets-10, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,901] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-10, topic=__consumer_offsets, partition=10, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (4/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:00,906] INFO [Log partition=__consumer_offsets-11, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:00,906] INFO [Log partition=__consumer_offsets-11, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,914] INFO [Log partition=__consumer_offsets-11, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,920] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-11, topic=__consumer_offsets, partition=11, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 19ms (5/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:00,924] INFO [Log partition=__consumer_offsets-12, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:00,925] INFO [Log partition=__consumer_offsets-12, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,931] INFO [ProducerStateManager partition=__consumer_offsets-12] Writing producer snapshot at offset 18 (kafka.log.ProducerStateManager)
+[2020-11-16 08:31:00,941] INFO [Log partition=__consumer_offsets-12, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 18 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,942] INFO [ProducerStateManager partition=__consumer_offsets-12] Loading producer state from snapshot file 'C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-12\00000000000000000018.snapshot' (kafka.log.ProducerStateManager)
+[2020-11-16 08:31:00,945] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-12, topic=__consumer_offsets, partition=12, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=18) with 1 segments in 24ms (6/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:00,949] INFO [Log partition=__consumer_offsets-13, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:00,950] INFO [Log partition=__consumer_offsets-13, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,961] INFO [Log partition=__consumer_offsets-13, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,965] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-13, topic=__consumer_offsets, partition=13, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 20ms (7/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:00,969] INFO [Log partition=__consumer_offsets-14, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:00,970] INFO [Log partition=__consumer_offsets-14, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,979] INFO [Log partition=__consumer_offsets-14, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:00,983] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-14, topic=__consumer_offsets, partition=14, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (8/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:00,987] INFO [Log partition=__consumer_offsets-15, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:00,988] INFO [Log partition=__consumer_offsets-15, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,001] INFO [Log partition=__consumer_offsets-15, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,005] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-15, topic=__consumer_offsets, partition=15, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 22ms (9/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,010] INFO [Log partition=__consumer_offsets-16, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,010] INFO [Log partition=__consumer_offsets-16, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,020] INFO [Log partition=__consumer_offsets-16, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,025] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-16, topic=__consumer_offsets, partition=16, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (10/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,031] INFO [Log partition=__consumer_offsets-17, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,031] INFO [Log partition=__consumer_offsets-17, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,048] INFO [Log partition=__consumer_offsets-17, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,055] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-17, topic=__consumer_offsets, partition=17, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 29ms (11/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,072] INFO [Log partition=__consumer_offsets-18, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,077] INFO [Log partition=__consumer_offsets-18, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,091] INFO [Log partition=__consumer_offsets-18, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,095] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-18, topic=__consumer_offsets, partition=18, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 37ms (12/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,100] INFO [Log partition=__consumer_offsets-19, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,100] INFO [Log partition=__consumer_offsets-19, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,111] INFO [Log partition=__consumer_offsets-19, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,114] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-19, topic=__consumer_offsets, partition=19, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 19ms (13/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,119] INFO [Log partition=__consumer_offsets-2, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,121] INFO [Log partition=__consumer_offsets-2, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,130] INFO [Log partition=__consumer_offsets-2, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,134] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-2, topic=__consumer_offsets, partition=2, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 19ms (14/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,140] INFO [Log partition=__consumer_offsets-20, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,140] INFO [Log partition=__consumer_offsets-20, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,148] INFO [Log partition=__consumer_offsets-20, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,154] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-20, topic=__consumer_offsets, partition=20, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 19ms (15/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,158] INFO [Log partition=__consumer_offsets-21, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,158] INFO [Log partition=__consumer_offsets-21, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,167] INFO [Log partition=__consumer_offsets-21, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,172] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-21, topic=__consumer_offsets, partition=21, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (16/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,176] INFO [Log partition=__consumer_offsets-22, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,176] INFO [Log partition=__consumer_offsets-22, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,185] INFO [Log partition=__consumer_offsets-22, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,189] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-22, topic=__consumer_offsets, partition=22, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (17/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,193] INFO [Log partition=__consumer_offsets-23, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,194] INFO [Log partition=__consumer_offsets-23, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,203] INFO [Log partition=__consumer_offsets-23, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,207] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-23, topic=__consumer_offsets, partition=23, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (18/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,210] INFO [Log partition=__consumer_offsets-24, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,211] INFO [Log partition=__consumer_offsets-24, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,221] INFO [Log partition=__consumer_offsets-24, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,224] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-24, topic=__consumer_offsets, partition=24, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (19/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,228] INFO [Log partition=__consumer_offsets-25, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,228] INFO [Log partition=__consumer_offsets-25, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,238] INFO [Log partition=__consumer_offsets-25, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,241] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-25, topic=__consumer_offsets, partition=25, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 16ms (20/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,244] INFO [Log partition=__consumer_offsets-26, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,245] INFO [Log partition=__consumer_offsets-26, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,254] INFO [Log partition=__consumer_offsets-26, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,257] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-26, topic=__consumer_offsets, partition=26, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 16ms (21/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,261] INFO [Log partition=__consumer_offsets-27, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,261] INFO [Log partition=__consumer_offsets-27, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,271] INFO [Log partition=__consumer_offsets-27, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,274] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-27, topic=__consumer_offsets, partition=27, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (22/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,278] INFO [Log partition=__consumer_offsets-28, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,279] INFO [Log partition=__consumer_offsets-28, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,289] INFO [Log partition=__consumer_offsets-28, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,292] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-28, topic=__consumer_offsets, partition=28, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (23/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,295] INFO [Log partition=__consumer_offsets-29, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,296] INFO [Log partition=__consumer_offsets-29, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,307] INFO [Log partition=__consumer_offsets-29, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,309] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-29, topic=__consumer_offsets, partition=29, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (24/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,313] INFO [Log partition=__consumer_offsets-3, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,314] INFO [Log partition=__consumer_offsets-3, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,324] INFO [Log partition=__consumer_offsets-3, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,327] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-3, topic=__consumer_offsets, partition=3, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (25/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,331] INFO [Log partition=__consumer_offsets-30, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,331] INFO [Log partition=__consumer_offsets-30, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,341] INFO [Log partition=__consumer_offsets-30, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,344] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-30, topic=__consumer_offsets, partition=30, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (26/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,348] INFO [Log partition=__consumer_offsets-31, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,348] INFO [Log partition=__consumer_offsets-31, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,358] INFO [Log partition=__consumer_offsets-31, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,362] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-31, topic=__consumer_offsets, partition=31, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (27/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,365] INFO [Log partition=__consumer_offsets-32, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,366] INFO [Log partition=__consumer_offsets-32, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,376] INFO [Log partition=__consumer_offsets-32, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,379] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-32, topic=__consumer_offsets, partition=32, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (28/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,384] INFO [Log partition=__consumer_offsets-33, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,385] INFO [Log partition=__consumer_offsets-33, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,395] INFO [Log partition=__consumer_offsets-33, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,398] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-33, topic=__consumer_offsets, partition=33, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (29/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,403] INFO [Log partition=__consumer_offsets-34, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,404] INFO [Log partition=__consumer_offsets-34, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,412] INFO [Log partition=__consumer_offsets-34, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,415] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-34, topic=__consumer_offsets, partition=34, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (30/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,420] INFO [Log partition=__consumer_offsets-35, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,420] INFO [Log partition=__consumer_offsets-35, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,430] INFO [Log partition=__consumer_offsets-35, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,433] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-35, topic=__consumer_offsets, partition=35, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (31/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,438] INFO [Log partition=__consumer_offsets-36, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,438] INFO [Log partition=__consumer_offsets-36, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,448] INFO [Log partition=__consumer_offsets-36, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,451] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-36, topic=__consumer_offsets, partition=36, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (32/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,456] INFO [Log partition=__consumer_offsets-37, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,456] INFO [Log partition=__consumer_offsets-37, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,464] INFO [Log partition=__consumer_offsets-37, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,469] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-37, topic=__consumer_offsets, partition=37, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (33/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,473] INFO [Log partition=__consumer_offsets-38, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,473] INFO [Log partition=__consumer_offsets-38, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,483] INFO [Log partition=__consumer_offsets-38, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,486] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-38, topic=__consumer_offsets, partition=38, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (34/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,490] INFO [Log partition=__consumer_offsets-39, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,490] INFO [Log partition=__consumer_offsets-39, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,503] INFO [Log partition=__consumer_offsets-39, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,506] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-39, topic=__consumer_offsets, partition=39, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 19ms (35/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,510] INFO [Log partition=__consumer_offsets-4, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,511] INFO [Log partition=__consumer_offsets-4, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,521] INFO [Log partition=__consumer_offsets-4, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,524] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-4, topic=__consumer_offsets, partition=4, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (36/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,529] INFO [Log partition=__consumer_offsets-40, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,529] INFO [Log partition=__consumer_offsets-40, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,539] INFO [Log partition=__consumer_offsets-40, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,541] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-40, topic=__consumer_offsets, partition=40, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 16ms (37/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,545] INFO [Log partition=__consumer_offsets-41, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,546] INFO [Log partition=__consumer_offsets-41, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,556] INFO [Log partition=__consumer_offsets-41, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,559] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-41, topic=__consumer_offsets, partition=41, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (38/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,563] INFO [Log partition=__consumer_offsets-42, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,563] INFO [Log partition=__consumer_offsets-42, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,573] INFO [Log partition=__consumer_offsets-42, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,576] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-42, topic=__consumer_offsets, partition=42, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (39/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,580] INFO [Log partition=__consumer_offsets-43, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,581] INFO [Log partition=__consumer_offsets-43, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,591] INFO [Log partition=__consumer_offsets-43, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,595] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-43, topic=__consumer_offsets, partition=43, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (40/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,599] INFO [Log partition=__consumer_offsets-44, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,599] INFO [Log partition=__consumer_offsets-44, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,608] INFO [Log partition=__consumer_offsets-44, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,611] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-44, topic=__consumer_offsets, partition=44, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 16ms (41/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,614] INFO [Log partition=__consumer_offsets-45, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,615] INFO [Log partition=__consumer_offsets-45, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,625] INFO [Log partition=__consumer_offsets-45, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,628] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-45, topic=__consumer_offsets, partition=45, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (42/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,633] INFO [Log partition=__consumer_offsets-46, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,633] INFO [Log partition=__consumer_offsets-46, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,643] INFO [Log partition=__consumer_offsets-46, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,647] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-46, topic=__consumer_offsets, partition=46, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 18ms (43/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,652] INFO [Log partition=__consumer_offsets-47, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,653] INFO [Log partition=__consumer_offsets-47, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,663] INFO [Log partition=__consumer_offsets-47, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,665] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-47, topic=__consumer_offsets, partition=47, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 19ms (44/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,670] INFO [Log partition=__consumer_offsets-48, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,671] INFO [Log partition=__consumer_offsets-48, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,679] INFO [Log partition=__consumer_offsets-48, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,681] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-48, topic=__consumer_offsets, partition=48, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 16ms (45/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,686] INFO [Log partition=__consumer_offsets-49, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,687] INFO [Log partition=__consumer_offsets-49, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,695] INFO [Log partition=__consumer_offsets-49, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,697] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-49, topic=__consumer_offsets, partition=49, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 15ms (46/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,702] INFO [Log partition=__consumer_offsets-5, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,702] INFO [Log partition=__consumer_offsets-5, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,710] INFO [Log partition=__consumer_offsets-5, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,712] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-5, topic=__consumer_offsets, partition=5, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 15ms (47/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,718] INFO [Log partition=__consumer_offsets-6, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,718] INFO [Log partition=__consumer_offsets-6, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,727] INFO [Log partition=__consumer_offsets-6, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,729] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-6, topic=__consumer_offsets, partition=6, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (48/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,734] INFO [Log partition=__consumer_offsets-7, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,735] INFO [Log partition=__consumer_offsets-7, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,744] INFO [Log partition=__consumer_offsets-7, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,746] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-7, topic=__consumer_offsets, partition=7, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 17ms (49/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,750] INFO [Log partition=__consumer_offsets-8, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,751] INFO [Log partition=__consumer_offsets-8, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,760] INFO [Log partition=__consumer_offsets-8, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,763] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-8, topic=__consumer_offsets, partition=8, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 16ms (50/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,768] INFO [Log partition=__consumer_offsets-9, dir=C:\Users\thoma\Documents\kafka\data\kafka] Recovering unflushed segment 0 (kafka.log.Log)
+[2020-11-16 08:31:01,768] INFO [Log partition=__consumer_offsets-9, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,776] INFO [Log partition=__consumer_offsets-9, dir=C:\Users\thoma\Documents\kafka\data\kafka] Loading producer state till offset 0 with message format version 2 (kafka.log.Log)
+[2020-11-16 08:31:01,778] INFO Completed load of Log(dir=C:\Users\thoma\Documents\kafka\data\kafka\__consumer_offsets-9, topic=__consumer_offsets, partition=9, highWatermark=0, lastStableOffset=0, logStartOffset=0, logEndOffset=0) with 1 segments in 14ms (51/51 loaded in C:\Users\thoma\Documents\kafka\data\kafka) (kafka.log.LogManager)
+[2020-11-16 08:31:01,780] INFO Loaded 51 logs in 1105ms. (kafka.log.LogManager)
+[2020-11-16 08:31:01,792] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
+[2020-11-16 08:31:01,793] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
+[2020-11-16 08:31:02,193] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.Acceptor)
+[2020-11-16 08:31:02,228] INFO [SocketServer brokerId=0] Created data-plane acceptor and processors for endpoint : ListenerName(PLAINTEXT) (kafka.network.SocketServer)
+[2020-11-16 08:31:02,248] INFO [ExpirationReaper-0-Produce]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2020-11-16 08:31:02,249] INFO [ExpirationReaper-0-Fetch]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2020-11-16 08:31:02,249] INFO [ExpirationReaper-0-DeleteRecords]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2020-11-16 08:31:02,251] INFO [ExpirationReaper-0-ElectLeader]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2020-11-16 08:31:02,263] INFO [LogDirFailureHandler]: Starting (kafka.server.ReplicaManager$LogDirFailureHandler)
+[2020-11-16 08:31:02,310] INFO Creating /brokers/ids/0 (is it secure? false) (kafka.zk.KafkaZkClient)
+[2020-11-16 08:31:02,332] INFO Stat of the created znode at /brokers/ids/0 is: 173,173,1605511862324,1605511862324,1,0,0,72135739184513024,222,0,173
+ (kafka.zk.KafkaZkClient)
+[2020-11-16 08:31:02,333] INFO Registered broker 0 at path /brokers/ids/0 with addresses: PLAINTEXT://LAPTOP-CCEFSH80.mshome.net:9092, czxid (broker epoch): 173 (kafka.zk.KafkaZkClient)
+[2020-11-16 08:31:02,393] INFO [ExpirationReaper-0-topic]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2020-11-16 08:31:02,407] INFO [ExpirationReaper-0-Heartbeat]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2020-11-16 08:31:02,417] INFO [ExpirationReaper-0-Rebalance]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2020-11-16 08:31:02,453] INFO [GroupCoordinator 0]: Starting up. (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:31:02,458] INFO [GroupCoordinator 0]: Startup complete. (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:31:02,486] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 8 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:02,486] INFO [ProducerId Manager 0]: Acquired new producerId block (brokerId:0,blockStartProducerId:1000,blockEndProducerId:1999) by writing to Zk with path version 2 (kafka.coordinator.transaction.ProducerIdManager)
+[2020-11-16 08:31:02,565] INFO [TransactionCoordinator id=0] Starting up. (kafka.coordinator.transaction.TransactionCoordinator)
+[2020-11-16 08:31:02,568] INFO [TransactionCoordinator id=0] Startup complete. (kafka.coordinator.transaction.TransactionCoordinator)
+[2020-11-16 08:31:02,570] INFO [Transaction Marker Channel Manager 0]: Starting (kafka.coordinator.transaction.TransactionMarkerChannelManager)
+[2020-11-16 08:31:02,609] INFO [ExpirationReaper-0-AlterAcls]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2020-11-16 08:31:02,634] INFO [/config/changes-event-process-thread]: Starting (kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread)
+[2020-11-16 08:31:02,784] INFO [SocketServer brokerId=0] Starting socket server acceptors and processors (kafka.network.SocketServer)
+[2020-11-16 08:31:02,853] INFO [SocketServer brokerId=0] Started data-plane acceptor and processor(s) for endpoint : ListenerName(PLAINTEXT) (kafka.network.SocketServer)
+[2020-11-16 08:31:02,940] INFO [SocketServer brokerId=0] Started socket server acceptors and processors (kafka.network.SocketServer)
+[2020-11-16 08:31:02,961] INFO Kafka version: 2.6.0 (org.apache.kafka.common.utils.AppInfoParser)
+[2020-11-16 08:31:02,963] INFO Kafka commitId: 62abe01bee039651 (org.apache.kafka.common.utils.AppInfoParser)
+[2020-11-16 08:31:02,964] INFO Kafka startTimeMs: 1605511862951 (org.apache.kafka.common.utils.AppInfoParser)
+[2020-11-16 08:31:02,969] INFO [KafkaServer id=0] started (kafka.server.KafkaServer)
+[2020-11-16 08:31:02,977] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions HashSet(__consumer_offsets-22, __consumer_offsets-30, __consumer_offsets-25, __consumer_offsets-35, __consumer_offsets-37, __consumer_offsets-38, __consumer_offsets-13, __consumer_offsets-8, __consumer_offsets-21, __consumer_offsets-4, __consumer_offsets-27, __consumer_offsets-7, __consumer_offsets-9, __consumer_offsets-46, __consumer_offsets-41, __consumer_offsets-33, __consumer_offsets-23, __consumer_offsets-49, __consumer_offsets-47, __consumer_offsets-16, __consumer_offsets-28, __consumer_offsets-31, __consumer_offsets-36, __consumer_offsets-42, __consumer_offsets-3, __consumer_offsets-18, __consumer_offsets-15, __consumer_offsets-24, __consumer_offsets-17, __consumer_offsets-48, __consumer_offsets-19, __consumer_offsets-11, __consumer_offsets-2, __consumer_offsets-43, __consumer_offsets-6, __consumer_offsets-14, __consumer_offsets-20, __consumer_offsets-0, __consumer_offsets-44, __consumer_offsets-39, __consumer_offsets-12, __consumer_offsets-45, __consumer_offsets-1, __consumer_offsets-5, __consumer_offsets-26, message-topic-0, __consumer_offsets-29, __consumer_offsets-34, __consumer_offsets-10, __consumer_offsets-32, __consumer_offsets-40) (kafka.server.ReplicaFetcherManager)
+[2020-11-16 08:31:02,991] INFO [Partition __consumer_offsets-3 broker=0] Log loaded for partition __consumer_offsets-3 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,010] INFO [Partition __consumer_offsets-18 broker=0] Log loaded for partition __consumer_offsets-18 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,019] INFO [Partition __consumer_offsets-41 broker=0] Log loaded for partition __consumer_offsets-41 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,025] INFO [Partition __consumer_offsets-10 broker=0] Log loaded for partition __consumer_offsets-10 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,029] INFO [Partition __consumer_offsets-33 broker=0] Log loaded for partition __consumer_offsets-33 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,037] INFO [Partition __consumer_offsets-48 broker=0] Log loaded for partition __consumer_offsets-48 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,046] INFO [Partition __consumer_offsets-19 broker=0] Log loaded for partition __consumer_offsets-19 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,056] INFO [Partition __consumer_offsets-34 broker=0] Log loaded for partition __consumer_offsets-34 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,065] INFO [Partition __consumer_offsets-4 broker=0] Log loaded for partition __consumer_offsets-4 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,074] INFO [Partition __consumer_offsets-11 broker=0] Log loaded for partition __consumer_offsets-11 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,096] INFO [Partition __consumer_offsets-26 broker=0] Log loaded for partition __consumer_offsets-26 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,103] INFO [Partition __consumer_offsets-49 broker=0] Log loaded for partition __consumer_offsets-49 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,108] INFO [Partition __consumer_offsets-39 broker=0] Log loaded for partition __consumer_offsets-39 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,114] INFO [Partition __consumer_offsets-9 broker=0] Log loaded for partition __consumer_offsets-9 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,120] INFO [Partition __consumer_offsets-24 broker=0] Log loaded for partition __consumer_offsets-24 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,125] INFO [Partition __consumer_offsets-31 broker=0] Log loaded for partition __consumer_offsets-31 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,134] INFO [Partition __consumer_offsets-46 broker=0] Log loaded for partition __consumer_offsets-46 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,138] INFO [Partition __consumer_offsets-1 broker=0] Log loaded for partition __consumer_offsets-1 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,142] INFO [Partition __consumer_offsets-16 broker=0] Log loaded for partition __consumer_offsets-16 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,152] INFO [Partition __consumer_offsets-2 broker=0] Log loaded for partition __consumer_offsets-2 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,159] INFO [Partition __consumer_offsets-25 broker=0] Log loaded for partition __consumer_offsets-25 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,163] INFO [Partition __consumer_offsets-40 broker=0] Log loaded for partition __consumer_offsets-40 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,170] INFO [Partition __consumer_offsets-47 broker=0] Log loaded for partition __consumer_offsets-47 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,174] INFO [Partition __consumer_offsets-17 broker=0] Log loaded for partition __consumer_offsets-17 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,179] INFO [Partition __consumer_offsets-32 broker=0] Log loaded for partition __consumer_offsets-32 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,184] INFO [Partition __consumer_offsets-37 broker=0] Log loaded for partition __consumer_offsets-37 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,189] INFO [Partition __consumer_offsets-7 broker=0] Log loaded for partition __consumer_offsets-7 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,192] INFO [Partition __consumer_offsets-22 broker=0] Log loaded for partition __consumer_offsets-22 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,196] INFO [Partition __consumer_offsets-29 broker=0] Log loaded for partition __consumer_offsets-29 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,201] INFO [Partition __consumer_offsets-44 broker=0] Log loaded for partition __consumer_offsets-44 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,205] INFO [Partition __consumer_offsets-14 broker=0] Log loaded for partition __consumer_offsets-14 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,209] INFO [Partition __consumer_offsets-23 broker=0] Log loaded for partition __consumer_offsets-23 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,212] INFO [Partition __consumer_offsets-38 broker=0] Log loaded for partition __consumer_offsets-38 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,217] INFO [Partition __consumer_offsets-8 broker=0] Log loaded for partition __consumer_offsets-8 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,224] INFO [Partition __consumer_offsets-45 broker=0] Log loaded for partition __consumer_offsets-45 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,229] INFO [Partition __consumer_offsets-15 broker=0] Log loaded for partition __consumer_offsets-15 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,233] INFO [Partition __consumer_offsets-30 broker=0] Log loaded for partition __consumer_offsets-30 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,237] INFO [Partition __consumer_offsets-0 broker=0] Log loaded for partition __consumer_offsets-0 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,240] INFO [Partition message-topic-0 broker=0] Log loaded for partition message-topic-0 with initial high watermark 6 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,241] INFO [Partition __consumer_offsets-35 broker=0] Log loaded for partition __consumer_offsets-35 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,245] INFO [Partition __consumer_offsets-5 broker=0] Log loaded for partition __consumer_offsets-5 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,249] INFO [Partition __consumer_offsets-20 broker=0] Log loaded for partition __consumer_offsets-20 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,254] INFO [Partition __consumer_offsets-27 broker=0] Log loaded for partition __consumer_offsets-27 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,258] INFO [Partition __consumer_offsets-42 broker=0] Log loaded for partition __consumer_offsets-42 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,261] INFO [Partition __consumer_offsets-12 broker=0] Log loaded for partition __consumer_offsets-12 with initial high watermark 18 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,262] INFO [Partition __consumer_offsets-21 broker=0] Log loaded for partition __consumer_offsets-21 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,268] INFO [Partition __consumer_offsets-36 broker=0] Log loaded for partition __consumer_offsets-36 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,271] INFO [Partition __consumer_offsets-6 broker=0] Log loaded for partition __consumer_offsets-6 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,275] INFO [Partition __consumer_offsets-43 broker=0] Log loaded for partition __consumer_offsets-43 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,278] INFO [Partition __consumer_offsets-13 broker=0] Log loaded for partition __consumer_offsets-13 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,283] INFO [Partition __consumer_offsets-28 broker=0] Log loaded for partition __consumer_offsets-28 with initial high watermark 0 (kafka.cluster.Partition)
+[2020-11-16 08:31:03,292] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-3 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,293] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-18 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,294] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-41 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,295] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-10 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,296] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-33 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,296] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-48 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,297] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-19 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,299] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-3 in 7 milliseconds, of which 1 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,301] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-34 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,302] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-18 in 8 milliseconds, of which 8 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,303] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-4 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,303] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-11 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,303] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-41 in 8 milliseconds, of which 8 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,304] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-26 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,304] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-10 in 8 milliseconds, of which 8 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,305] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-49 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,305] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-33 in 9 milliseconds, of which 9 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,306] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-39 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,306] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-48 in 9 milliseconds, of which 9 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,306] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-9 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,307] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-19 in 6 milliseconds, of which 6 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,308] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-24 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,309] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-34 in 7 milliseconds, of which 7 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,309] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-31 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,309] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-4 in 6 milliseconds, of which 6 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,310] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-46 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,310] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-11 in 6 milliseconds, of which 6 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,311] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-1 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,311] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-26 in 6 milliseconds, of which 6 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,312] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-16 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,312] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-2 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,312] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-49 in 6 milliseconds, of which 6 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,313] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-25 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,318] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-40 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,318] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-39 in 12 milliseconds, of which 12 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,319] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-47 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,319] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-9 in 11 milliseconds, of which 11 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,320] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-17 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,320] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-24 in 11 milliseconds, of which 11 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,321] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-32 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,321] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-31 in 11 milliseconds, of which 11 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,321] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-37 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,322] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-46 in 11 milliseconds, of which 11 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,322] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-7 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,324] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-22 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,324] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-29 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,324] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-1 in 12 milliseconds, of which 12 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,325] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-44 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,325] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-16 in 13 milliseconds, of which 13 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,325] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-14 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,326] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-2 in 13 milliseconds, of which 13 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,326] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-23 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,327] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-25 in 9 milliseconds, of which 9 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,327] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-38 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,328] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-40 in 9 milliseconds, of which 9 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,328] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-8 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,329] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-47 in 8 milliseconds, of which 8 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,329] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-45 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,333] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-15 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,334] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-30 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,334] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-0 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,333] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-17 in 12 milliseconds, of which 11 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,335] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-35 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,335] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-32 in 14 milliseconds, of which 14 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,336] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-5 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,336] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-37 in 14 milliseconds, of which 14 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,336] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-20 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,337] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-7 in 13 milliseconds, of which 13 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,337] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-27 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,338] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-22 in 14 milliseconds, of which 14 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,339] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-42 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,339] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-29 in 14 milliseconds, of which 14 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,340] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-12 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,340] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-44 in 15 milliseconds, of which 15 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,341] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-21 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,341] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-14 in 15 milliseconds, of which 15 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,341] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-36 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,342] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-23 in 15 milliseconds, of which 15 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,342] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-6 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,343] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-38 in 15 milliseconds, of which 15 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,343] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-43 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,344] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-8 in 15 milliseconds, of which 14 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,344] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-13 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,344] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-45 in 11 milliseconds, of which 11 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,346] INFO [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-28 (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,351] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-15 in 17 milliseconds, of which 17 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,352] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-30 in 18 milliseconds, of which 18 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,353] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-0 in 18 milliseconds, of which 17 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,354] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-35 in 19 milliseconds, of which 19 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,355] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-5 in 19 milliseconds, of which 19 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,355] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-20 in 18 milliseconds, of which 18 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,356] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-27 in 17 milliseconds, of which 17 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,357] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-42 in 17 milliseconds, of which 17 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,379] INFO Static member MemberMetadata(memberId=consumer-my-group-1-58438a8e-a38f-458a-a395-dc7d9c1a1e8f, groupInstanceId=Some(null), clientId=consumer-my-group-1, clientHost=/172.28.16.1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range), ).groupInstanceId of group my-group loaded with member id consumer-my-group-1-58438a8e-a38f-458a-a395-dc7d9c1a1e8f at generation 1. (kafka.coordinator.group.GroupMetadata$)
+[2020-11-16 08:31:03,386] INFO Static member MemberMetadata(memberId=consumer-my-group-1-a7836b38-65b5-44a3-862b-b5594a7c4810, groupInstanceId=Some(null), clientId=consumer-my-group-1, clientHost=/172.28.16.1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range), ).groupInstanceId of group my-group loaded with member id consumer-my-group-1-a7836b38-65b5-44a3-862b-b5594a7c4810 at generation 3. (kafka.coordinator.group.GroupMetadata$)
+[2020-11-16 08:31:03,387] INFO Static member MemberMetadata(memberId=consumer-my-group-1-064a88c2-2038-4aff-ad73-2e51425b6bbc, groupInstanceId=Some(null), clientId=consumer-my-group-1, clientHost=/172.28.16.1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range), ).groupInstanceId of group my-group loaded with member id consumer-my-group-1-064a88c2-2038-4aff-ad73-2e51425b6bbc at generation 5. (kafka.coordinator.group.GroupMetadata$)
+[2020-11-16 08:31:03,387] INFO Static member MemberMetadata(memberId=consumer-my-group-1-b8384f6f-3a1f-4ed8-8405-ac56fb9f3b14, groupInstanceId=Some(null), clientId=consumer-my-group-1, clientHost=/172.28.16.1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range), ).groupInstanceId of group my-group loaded with member id consumer-my-group-1-b8384f6f-3a1f-4ed8-8405-ac56fb9f3b14 at generation 6. (kafka.coordinator.group.GroupMetadata$)
+[2020-11-16 08:31:03,390] INFO Static member MemberMetadata(memberId=consumer-my-group-1-37168feb-2fcd-4382-90da-6fb9b70ea2d1, groupInstanceId=Some(null), clientId=consumer-my-group-1, clientHost=/172.28.16.1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range), ).groupInstanceId of group my-group loaded with member id consumer-my-group-1-37168feb-2fcd-4382-90da-6fb9b70ea2d1 at generation 8. (kafka.coordinator.group.GroupMetadata$)
+[2020-11-16 08:31:03,392] INFO Static member MemberMetadata(memberId=consumer-my-group-1-d8dc6359-8e23-4a57-8bdc-4bfa8833025d, groupInstanceId=Some(null), clientId=consumer-my-group-1, clientHost=/172.28.16.1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range), ).groupInstanceId of group my-group loaded with member id consumer-my-group-1-d8dc6359-8e23-4a57-8bdc-4bfa8833025d at generation 10. (kafka.coordinator.group.GroupMetadata$)
+[2020-11-16 08:31:03,395] INFO Static member MemberMetadata(memberId=consumer-my-group-1-d48643cd-2b7b-4c47-a255-04b871ad9acf, groupInstanceId=Some(null), clientId=consumer-my-group-1, clientHost=/172.28.16.1, sessionTimeoutMs=10000, rebalanceTimeoutMs=300000, supportedProtocols=List(range), ).groupInstanceId of group my-group loaded with member id consumer-my-group-1-d48643cd-2b7b-4c47-a255-04b871ad9acf at generation 12. (kafka.coordinator.group.GroupMetadata$)
+[2020-11-16 08:31:03,398] INFO [GroupCoordinator 0]: Loading group metadata for my-group with generation 12 (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:31:03,403] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-12 in 63 milliseconds, of which 18 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,404] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-21 in 63 milliseconds, of which 63 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,404] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-36 in 62 milliseconds, of which 62 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,405] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-6 in 62 milliseconds, of which 62 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,405] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-43 in 61 milliseconds, of which 61 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,406] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-13 in 60 milliseconds, of which 60 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:03,406] INFO [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-28 in 55 milliseconds, of which 55 milliseconds was spent in the scheduler. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:31:13,425] INFO [GroupCoordinator 0]: Member consumer-my-group-1-d48643cd-2b7b-4c47-a255-04b871ad9acf in group my-group has failed, removing it from the group (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:31:13,430] INFO [GroupCoordinator 0]: Preparing to rebalance group my-group in state PreparingRebalance with old generation 12 (__consumer_offsets-12) (reason: removing member consumer-my-group-1-d48643cd-2b7b-4c47-a255-04b871ad9acf on heartbeat expiration) (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:31:13,432] INFO [GroupCoordinator 0]: Group my-group with generation 13 is now empty (__consumer_offsets-12) (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:31:24,151] WARN Unable to read additional data from client sessionid 0x0, likely client has closed socket (org.apache.zookeeper.server.NIOServerCnxn)
+[2020-11-16 08:31:27,483] WARN Connection request from old client /127.0.0.1:62698; will be dropped if server is in r-o mode (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:31:38,532] WARN Connection request from old client /[0:0:0:0:0:0:0:1]:62709; will be dropped if server is in r-o mode (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:32:45,106] INFO [GroupCoordinator 0]: Preparing to rebalance group my-group in state PreparingRebalance with old generation 13 (__consumer_offsets-12) (reason: Adding new member consumer-my-group-1-9fe6101d-00cc-4b5a-a1a2-40877b24cb8b with group instance id None) (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:32:45,110] INFO [GroupCoordinator 0]: Stabilized group my-group generation 14 (__consumer_offsets-12) (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:32:45,121] INFO [GroupCoordinator 0]: Assignment received from leader for group my-group for generation 14 (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:33:00,325] WARN Connection request from old client /127.0.0.1:62788; will be dropped if server is in r-o mode (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:33:06,940] WARN Connection request from old client /127.0.0.1:62794; will be dropped if server is in r-o mode (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:33:07,100] WARN Connection request from old client /[0:0:0:0:0:0:0:1]:62797; will be dropped if server is in r-o mode (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:36:05,123] INFO [GroupCoordinator 0]: Preparing to rebalance group my-group in state PreparingRebalance with old generation 14 (__consumer_offsets-12) (reason: Adding new member consumer-my-group-1-da03c215-4634-4b46-bcbb-8ee151fb738d with group instance id None) (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:36:07,637] INFO [GroupCoordinator 0]: Member consumer-my-group-1-9fe6101d-00cc-4b5a-a1a2-40877b24cb8b in group my-group has failed, removing it from the group (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:36:07,638] INFO [GroupCoordinator 0]: Stabilized group my-group generation 15 (__consumer_offsets-12) (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:36:07,652] INFO [GroupCoordinator 0]: Assignment received from leader for group my-group for generation 15 (kafka.coordinator.group.GroupCoordinator)
+[2020-11-16 08:41:02,465] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 3 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2020-11-16 08:47:01,891] WARN Connection request from old client /[0:0:0:0:0:0:0:1]:58051; will be dropped if server is in r-o mode (org.apache.zookeeper.server.ZooKeeperServer)
+[2020-11-16 08:51:02,460] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
