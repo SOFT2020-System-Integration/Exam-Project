@@ -1,0 +1,32 @@
+{
+  "Customers": [
+    {
+      "name": "Jonathan",
+      "mail": "jonatan@mail.com"
+    },
+    {
+      "name": "Thomas",
+      "mail": "thomas@mail.com"
+    },
+    {
+      "name": "Jonas",
+      "mail": "jonas@mail.com"
+    },
+    {
+      "name": "Andreas",
+      "mail": "andreas@mail.com"
+    },
+    {
+      "name": "Dora",
+      "mail": "dora@mail.com"
+    },
+    {
+      "name": "Carina",
+      "mail": "Carina@mail.com"
+    },
+    {
+      "name": "Kim",
+      "mail": "Kim@mail.com"
+    }
+  ]
+}

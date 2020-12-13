@@ -1,4 +1,4 @@
-package Kafka.mailservice.controller;
+package app.mailservice.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Service
 public class MailService {
     private final List<String> messages = new ArrayList<>();
@@ -18,13 +19,12 @@ public class MailService {
     private static final Logger logger = LoggerFactory.getLogger(MailService.class);
 
 
-    @KafkaListener(topics = "email-broker", groupId = "mail-group")
+    @KafkaListener(topics = "message-topic", groupId = "my-group")
     public void listenToMessages(String message) throws IOException {
         synchronized (messages) {
             messages.add(message);
         }
         logger.info("&&& Message Consumed: [" + message + "]");
-
     }
 
     public List<String> getMessages() {
