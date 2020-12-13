@@ -7,6 +7,15 @@
 ## Info
 Open http://localhost:8080/camunda-welcome/index.html to gain access to the cockpit
 
+## BPMN 
+Visualises business processes
+Provides common language for all stakeholders in a company
+non-technical; business analysts and managers can follow what is happening
+technical; easier for software engineer to define operation and also makes it easier to maintain
+
+BPMN is readable and understandable by humans and is self-explanatory when done correctly.
+BPMN can be described in standard XML formant for machine use .bpmn
+
 ## Setup
 What you'll need:
 1. Docker to set up a virtual tomcat server with camunda.
