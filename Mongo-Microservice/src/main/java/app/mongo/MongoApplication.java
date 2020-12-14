@@ -9,6 +9,8 @@ import app.mongo.models.order.Status;
 import app.mongo.repositories.game.GameService;
 import app.mongo.repositories.order.OrderLineService;
 import app.mongo.repositories.order.OrderService;
+import io.github.kaiso.relmongo.annotation.RelMongoAnnotation;
+import io.github.kaiso.relmongo.config.EnableRelMongo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,12 +24,14 @@ import java.util.List;
 
 @EnableDiscoveryClient
 @SpringBootApplication
+@EnableRelMongo
 public class MongoApplication implements CommandLineRunner {
 
     @Autowired
     private GameService gameRepo;
     private OrderService orderRepo;
     private OrderLineService orderLineRepo;
+
 
     MongoApplication(GameService gameRepo, OrderService orderRepo, OrderLineService orderLineRepo){
         this.gameRepo = gameRepo;
