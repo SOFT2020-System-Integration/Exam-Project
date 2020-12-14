@@ -47,3 +47,18 @@ What you'll need:
   }
 }
 
+2. how to post a game http://localhost:25003/shipping/create-process {
+        "id": "5fd5efe21469952de5af1bd6",
+        "title": "Grand Theft Auto V",
+        "currentPrice": 37.2,
+        "retailPrice": 47.26,
+        "savingsPercentage": 21.29,
+        "rating": 3.0,
+        "inStock": 783,
+        "type": {
+            "id": "2",
+            "type": "DIGITAL",
+            "description": "Physical copy of the game"
+        }
+    }
+
