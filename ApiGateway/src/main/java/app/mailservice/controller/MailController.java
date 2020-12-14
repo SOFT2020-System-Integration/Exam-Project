@@ -15,7 +15,7 @@ public class MailController {
     private MailService service;
 
     // Option 1:
-    @GetMapping("/hey")
+    @GetMapping("/all")
     public List<String> sendMyMessageToKafka()
     {
         return service.getMessages();

@@ -1,12 +1,17 @@
 package app.shipping;
 
+
 import app.shipping.controllers.ShippingCamundaController;
 import org.camunda.bpm.client.ExternalTaskClient;
+import org.json.simple.parser.ParseException;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

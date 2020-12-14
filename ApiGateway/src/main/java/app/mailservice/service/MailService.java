@@ -19,7 +19,7 @@ public class MailService {
     private static final Logger logger = LoggerFactory.getLogger(MailService.class);
 
 
-    @KafkaListener(topics = "message-topic", groupId = "my-group")
+    @KafkaListener(topics = "email-broker", groupId = "my-group")
     public void listenToMessages(String message) throws IOException {
         synchronized (messages) {
             messages.add(message);
