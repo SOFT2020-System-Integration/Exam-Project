@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public class ProducerService {
-    private static final String TOPIC = "message-topic";
+    private static final String TOPIC = "email-broker";
     private static Logger logger = LoggerFactory.getLogger(ProducerService.class);
 
     @Autowired
