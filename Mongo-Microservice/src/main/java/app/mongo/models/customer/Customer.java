@@ -1,9 +1,7 @@
 package app.mongo.models.customer;
 
-import app.mongo.helpers.Encrypt;
 import app.mongo.models.game.GameType;
 import lombok.Data;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -20,6 +18,7 @@ public class Customer implements Serializable {
     private String id;
     private String firstName;
     private String lastName;
+    @Indexed(unique = true, direction = IndexDirection.DESCENDING)
     private String mail;
     private String password;
 
@@ -27,12 +26,10 @@ public class Customer implements Serializable {
     }
 
     public Customer(String firstName, String lastName, String mail, String password) {
-        String x = firstName.toLowerCase();
-        String y = firstName.toLowerCase();
-        this.firstName = StringUtils.capitalize(x);
-        this.lastName = StringUtils.capitalize(y);
-        this.mail = mail.toLowerCase();
-        this.password = Encrypt.hashPassword(password);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.mail = mail;
+        this.password = password;
     }
 
     public String getId() {
@@ -44,21 +41,19 @@ public class Customer implements Serializable {
     }
 
     public String getFirstName() {
-        String x = firstName.toLowerCase();
-        return StringUtils.capitalize(x);
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = StringUtils.capitalize(firstName);
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        String x = lastName.toLowerCase();
-        return StringUtils.capitalize(x);
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = StringUtils.capitalize(lastName);
+        this.lastName = lastName;
     }
 
     public String getMail() {
@@ -66,7 +61,7 @@ public class Customer implements Serializable {
     }
 
     public void setMail(String mail) {
-        this.mail = mail.toLowerCase();
+        this.mail = mail;
     }
 
     public String getPassword() {
@@ -74,7 +69,7 @@ public class Customer implements Serializable {
     }
 
     public void setPassword(String password) {
-        this.password = Encrypt.hashPassword(password);
+        this.password = password;
     }
 
     @Override

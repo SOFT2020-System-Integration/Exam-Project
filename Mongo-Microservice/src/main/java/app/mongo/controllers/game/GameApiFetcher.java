@@ -35,7 +35,7 @@ public class GameApiFetcher {
             List<Game> gameList = getGamesFromApi();
             for (Game g : gameList) {
                 repo.save(g);
-                LOGGER.info("[LOGGER] ::: SAVED GAME ::: " + g);
+                LOGGER.info("[LOGGER] ::: Saved Game ::: " + g);
             }
         } catch(MongoException ex) {
             throw ex;
