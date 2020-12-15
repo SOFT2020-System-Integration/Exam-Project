@@ -19,7 +19,9 @@ public class MongoController {
     }
 
     @GetMapping("/title/{title}")
+    @ResponseBody
     @CrossOrigin(origins = "*") // allow request from any client
+
     public Collection<Game> myGame(@PathVariable String title)
     {
         List<Game> collect = client.readGames()
@@ -30,6 +32,7 @@ public class MongoController {
     }
 
     @GetMapping("")
+    @ResponseBody
     @CrossOrigin(origins = "*") // allow request from any client
 
     public Collection<Game> myGame()

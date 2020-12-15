@@ -7,31 +7,15 @@ import java.io.Serializable;
 
 @Data
 public class GameType implements Serializable {
-    @Id
-    private String id;
     private Type type;
     private String description;
 
     public GameType() {
     }
 
-    public GameType(String id, Type type, String description) {
-        this.id = id;
-        this.type = type;
-        this.description = description;
-    }
-
     public GameType(Type type, String description) {
         this.type = type;
         this.description = description;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public Type getType() {
@@ -53,8 +37,7 @@ public class GameType implements Serializable {
     @Override
     public String toString() {
         return "GameType{" +
-                "id='" + id + '\'' +
-                ", type=" + type +
+                "type=" + type +
                 ", description='" + description + '\'' +
                 '}';
     }

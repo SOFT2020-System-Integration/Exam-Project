@@ -6,13 +6,14 @@ import app.mongo.repositories.game.GameService;
 import com.mongodb.MongoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 //@RepositoryRestController
-@RepositoryRestResource
+//@RepositoryRestResource
 @ResponseBody
 @RestController
 @RequestMapping("/games")
@@ -21,7 +22,7 @@ public class GameServiceController
     @Autowired
     private GameService repo;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<Game> retrieveAll() {
         return repo.findAll();
     }

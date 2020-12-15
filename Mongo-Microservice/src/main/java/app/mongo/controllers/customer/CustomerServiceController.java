@@ -8,13 +8,14 @@ import app.mongo.repositories.game.GameService;
 import com.mongodb.MongoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 //@RepositoryRestController
-@RepositoryRestResource
+//@RepositoryRestResource
 @ResponseBody
 @RestController
 @RequestMapping("/customers")
@@ -23,12 +24,12 @@ public class CustomerServiceController
     @Autowired
     private CustomerService repo;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<Customer> retrieveAll() {
         return repo.findAll();
     }
 
-    @GetMapping("/id/{id}")
+    @GetMapping("/{id}")
     public Optional<Customer> retrieveCustomerById(@PathVariable String id) throws NotFoundException, MongoException {
         try {
             return repo.findById(id);
