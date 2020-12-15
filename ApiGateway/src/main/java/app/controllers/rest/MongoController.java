@@ -18,15 +18,15 @@ public class MongoController {
         this.client = client;
     }
 
-    @GetMapping("/title/{title}")
+    @GetMapping("/id/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Collection<Game> myGame(@PathVariable String title)
+    public Game myGame(@PathVariable String id)
     {
-        List<Game> collect = client.readGames()
+        List<Game> collect = client.gameCollection()
                 .stream()
-                .filter(Game -> Game.getTitle().equals(title))
+                .filter(Game -> Game.getId().equals(id))
                 .collect(Collectors.toList());
-        return collect;
+        return collect.get(0);
     }
 
     @GetMapping("")
@@ -34,7 +34,7 @@ public class MongoController {
 
     public Collection<Game> myGame()
     {
-        List<Game> collect = client.readGames()
+        List<Game> collect = client.gameCollection()
                 .stream()
                 .collect(Collectors.toList());
         return collect;

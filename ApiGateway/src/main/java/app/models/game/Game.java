@@ -8,6 +8,7 @@ import java.util.List;
 
 @Data
 public class Game implements Serializable {
+    @Id
     private String id;
     private String title;
     private float currentPrice;
@@ -15,33 +16,31 @@ public class Game implements Serializable {
     private float savingsPercentage;
     private float rating;
     private int inStock;
-    private GameType types;
+    private GameType type;
+
 
     public Game() {
     }
 
-    public Game(String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, GameType types) {
+    public Game(String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, GameType type) {
         this.title = title;
         this.currentPrice = currentPrice;
         this.retailPrice = retailPrice;
         this.savingsPercentage = savingsPercentage;
         this.rating = rating;
         this.inStock = inStock;
-        this.types = types;
+        this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "Game{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", currentPrice=" + currentPrice +
-                ", retailPrice=" + retailPrice +
-                ", savingsPercentage=" + savingsPercentage +
-                ", rating=" + rating +
-                ", inStock=" + inStock +
-                ", types=" + types +
-                '}';
+    public Game(String id, String title, float currentPrice, float retailPrice, float savingsPercentage, float rating, int inStock, GameType type) {
+        this.id = id;
+        this.title = title;
+        this.currentPrice = currentPrice;
+        this.retailPrice = retailPrice;
+        this.savingsPercentage = savingsPercentage;
+        this.rating = rating;
+        this.inStock = inStock;
+        this.type = type;
     }
 
     public String getId() {
@@ -100,11 +99,25 @@ public class Game implements Serializable {
         this.inStock = inStock;
     }
 
-    public GameType getTypes() {
-        return types;
+    public GameType getType() {
+        return type;
     }
 
-    public void setTypes(GameType types) {
-        this.types = types;
+    public void setType(GameType type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", currentPrice=" + currentPrice +
+                ", retailPrice=" + retailPrice +
+                ", savingsPercentage=" + savingsPercentage +
+                ", rating=" + rating +
+                ", inStock=" + inStock +
+                ", type=" + type +
+                '}';
     }
 }
