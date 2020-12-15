@@ -1,6 +1,8 @@
 package app.mongo.models.order;
 
+import app.mongo.models.customer.Customer;
 import app.mongo.models.game.Game;
+import io.github.kaiso.relmongo.annotation.*;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,14 +19,28 @@ public class Order {
     private String id;
     private Date createdAt;
     private Status status;
+    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.NONE)
+    @JoinProperty(name = "customers")
+    private Customer customer;
+    @OneToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinProperty(name = "orderlines")
     private List<OrderLine> orderLines;
 
     public Order() {
     }
 
-    public Order(Date createdAt, Status status, List<OrderLine> orderLines) {
+    public Order(String id, Date createdAt, Status status, Customer customer, List<OrderLine> orderLines) {
+        this.id = id;
         this.createdAt = createdAt;
         this.status = status;
+        this.customer = customer;
+        this.orderLines = orderLines;
+    }
+
+    public Order(Date createdAt, Status status, Customer customer, List<OrderLine> orderLines) {
+        this.createdAt = createdAt;
+        this.status = status;
+        this.customer = customer;
         this.orderLines = orderLines;
     }
 
@@ -52,6 +68,14 @@ public class Order {
         this.status = status;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
     public List<OrderLine> getOrderLines() {
         return orderLines;
     }
@@ -66,6 +90,7 @@ public class Order {
                 "id='" + id + '\'' +
                 ", createdAt=" + createdAt +
                 ", status=" + status +
+                ", customer=" + customer +
                 ", orderLines=" + orderLines +
                 '}';
     }

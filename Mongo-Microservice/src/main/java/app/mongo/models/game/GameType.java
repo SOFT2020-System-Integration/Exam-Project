@@ -9,18 +9,10 @@ import java.io.Serializable;
 
 @Data
 public class GameType implements Serializable {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
     private Type type;
     private String description;
 
     public GameType() {
-    }
-
-    public GameType(String id, Type type, String description) {
-        this.id = id;
-        this.type = type;
-        this.description = description;
     }
 
     public GameType(Type type, String description) {
@@ -28,12 +20,12 @@ public class GameType implements Serializable {
         this.description = description;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "GameType{" +
+                "type=" + type +
+                ", description='" + description + '\'' +
+                '}';
     }
 
     public Type getType() {
@@ -50,14 +42,5 @@ public class GameType implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "GameType{" +
-                "id='" + id + '\'' +
-                ", type=" + type +
-                ", description='" + description + '\'' +
-                '}';
     }
 }

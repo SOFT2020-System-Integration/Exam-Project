@@ -94,10 +94,10 @@ public class GameApiFetcher {
     private GameType randomiseType() {
         int rnd = ThreadLocalRandom.current().nextInt(1, 2 + 1);
         if(rnd == 1) {
-            return new GameType("1", Type.DIGITAL, "Digital copy of the game");
+            return new GameType(Type.DIGITAL, "Digital copy of the game");
         }
         else if(rnd == 2) {
-            return new GameType("2", Type.PHYSICAL, "Physical copy of the game");
+            return new GameType(Type.PHYSICAL, "Physical copy of the game");
         } else {
             return null;
         }
