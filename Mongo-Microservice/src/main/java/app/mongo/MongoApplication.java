@@ -1,6 +1,7 @@
 package app.mongo;
 
 import app.mongo.controllers.game.GameApiFetcher;
+import app.mongo.helpers.Encrypt;
 import app.mongo.models.customer.Customer;
 import app.mongo.models.game.Game;
 import app.mongo.models.order.Order;
@@ -20,11 +21,14 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
 
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableRelMongo
 public class MongoApplication implements CommandLineRunner {
+
+    private static final java.util.logging.Logger LOGGER = java.util.logging.Logger.getLogger(String.valueOf(MongoApplication.class));
 
     @Autowired
     private final GameService gameRepo;
@@ -48,16 +52,16 @@ public class MongoApplication implements CommandLineRunner {
         apiFetcher.clearMongoDbAndSaveNewGames();
 
         customerRepo.deleteAll();
-        Customer c1 = new Customer("john", "Doe", "john@doe.com", "1234");
-        Customer c2 = new Customer("John", "Doe", "JaNe@doe.com", "abcd");
+        Customer c1 = new Customer("joHn", "Doe", "john@doe.com", "1234");
+        Customer c2 = new Customer("jANe", "Doe", "JaNe@doe.com", "abcd");
         customerRepo.save(c1);
         customerRepo.save(c2);
 
         orderRepo.deleteAll();
         List<Game> productList = gameRepo.findAll();
-        OrderLine ld1 = new OrderLine(productList.get(0).getId(),2, Status.IN_PROGRESS);
-        OrderLine ld2 = new OrderLine(productList.get(1).getId(),2, Status.IN_PROGRESS);
-        OrderLine ld3 = new OrderLine(productList.get(2).getId(),2, Status.IN_PROGRESS);
+        OrderLine ld1 = new OrderLine(productList.get(0),2, Status.IN_PROGRESS);
+        OrderLine ld2 = new OrderLine(productList.get(1),2, Status.IN_PROGRESS);
+        OrderLine ld3 = new OrderLine(productList.get(2),2, Status.IN_PROGRESS);
 
 
         List<OrderLine> orderLines = Arrays.asList(ld1, ld2);
@@ -65,10 +69,18 @@ public class MongoApplication implements CommandLineRunner {
         List<OrderLine> orderLines3 = Arrays.asList(ld1, ld2, ld3);
         Customer cust1 = customerRepo.findByMail("john@doe.com");
         Customer cust2 = customerRepo.findByMail("jane@doe.com");
-        Order order = new Order(cust1.getId(), new Date(), Status.IN_PROGRESS, orderLines);
-        Order order2 = new Order(cust2.getId(), new Date(), Status.IN_PROGRESS, orderLines2);
+        Order order = new Order(cust1, new Date(), Status.IN_PROGRESS, orderLines);
+        Order order2 = new Order(cust2, new Date(), Status.IN_PROGRESS, orderLines2);
         orderRepo.save(order);
         orderRepo.save(order2);
+
+        for (Customer c : customerRepo.findAll()) {
+            LOGGER.log(Level.INFO, "[LOGGER] ::: SAVED CUSTOMERS ::: " + c);
+        }
+
+        for (Order o: orderRepo.findAll()) {
+            LOGGER.log(Level.INFO, "[LOGGER] ::: SAVED ORDER ::: " + o);
+        }
     }
 
 
