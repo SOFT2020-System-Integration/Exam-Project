@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 //@RepositoryRestController
 @RepositoryRestResource
@@ -66,7 +68,30 @@ public class OrderServiceController
                 _orderOpt.get().setStatus(status);
                 return orderRepo.save(_orderOpt.get());
             } else {
-                throw new MongoException("yeet?");
+                throw new MongoException("Something went wrong.");
+            }
+        } catch (MongoException ex) {
+            throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
+        }
+    }
+
+    @PutMapping("/id/{orderId}/orderlines/{orderlineId}/status/set/{status}")
+    public Order updateOrderLineStatusByOrderAndOrderLineId(@PathVariable String orderId, @PathVariable String orderlineId, @PathVariable Status status) throws MongoException {
+        Optional<Order> _orderOpt;
+        OrderLine orderLineToUpdate;
+        try {
+            _orderOpt = orderRepo.findById(orderId);
+            System.out.println(_orderOpt);
+            if(status.equals(Status.IN_PROGRESS) || status.equals(Status.COMPLETED)) {
+                List<OrderLine> list = _orderOpt.get().getOrderLines().stream()
+                        .filter(orderLine -> orderLine.getId().equals(orderlineId))
+                        .collect(Collectors.toList());
+                System.out.println(list);
+                orderLineToUpdate = list.get(0);
+                orderLineToUpdate.setStatus(status);
+                return orderRepo.save(_orderOpt.get());
+            } else {
+                throw new MongoException("Something went wrong.");
             }
         } catch (MongoException ex) {
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
