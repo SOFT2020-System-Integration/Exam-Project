@@ -23,8 +23,11 @@ public interface MongoClient {
     @GetMapping("/orders")
     Collection<Order> orderCollection();
 
-    @PostMapping("/create")
-    Order orderPost(@RequestBody Order order);
+    @PostMapping("orders/create")
+    String orderPost(@RequestBody Order order);
+
+    @DeleteMapping("orders/delete/{id}")
+    String orderDelete(@PathVariable String id);
 
     /* CUSTOMER */
 }

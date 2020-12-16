@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/orders")
 public class OrderMongoController {
-    private final MongoClient client;
+    MongoClient client;
     public OrderMongoController(MongoClient client) {
         this.client = client;
     }
@@ -55,9 +55,26 @@ public class OrderMongoController {
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @CrossOrigin(origins = "*") // allow request from any client
-    public Order createOrder(@RequestBody Order order)
+    public String orderPost(@RequestBody Order order)
     {
-        Order o = order;
-        return client.orderPost(order);
+        client.orderPost(order);
+        return "Created order with id: " + order.getId();
+    }
+
+    @RequestMapping(value = "/test", method = RequestMethod.POST)
+    @CrossOrigin(origins = "*") // allow request from any client
+    public String orderTest(@RequestBody String test)
+    {
+        client.orderTest(test);
+        return "It works? " + test;
+    }
+
+    @DeleteMapping("/delete/{id}")
+    @CrossOrigin(origins = "*") // allow request from any client
+    public String orderDelete(@PathVariable String id)
+    {
+        String xx = id;
+        client.orderDelete(id);
+        return id;
     }
 }

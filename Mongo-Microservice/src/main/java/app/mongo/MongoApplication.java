@@ -57,8 +57,10 @@ public class MongoApplication implements CommandLineRunner {
 
         Customer c1 = new Customer("joHn", "Doe", "john@doe.com", "1234");
         Customer c2 = new Customer("jANe", "Doe", "JaNe@doe.com", "abcd");
+        Customer c3 = new Customer("Thomas", "Ebsen", "thomas@doe.com", "abcd");
         customerRepo.save(c1);
         customerRepo.save(c2);
+        customerRepo.save(c3);
 
         List<Game> productList = gameRepo.findAll();
         OrderLine ld1 = new OrderLine(productList.get(0),2, Status.IN_PROGRESS);
@@ -71,10 +73,13 @@ public class MongoApplication implements CommandLineRunner {
         List<OrderLine> orderLines3 = Arrays.asList(ld1, ld2, ld3);
         Customer cust1 = customerRepo.findByMail("john@doe.com");
         Customer cust2 = customerRepo.findByMail("jane@doe.com");
+        Customer cust3 = customerRepo.findByMail("thomas@doe.com");
         Order order = new Order(new Date(), Status.IN_PROGRESS, cust1, orderLines);
         Order order2 = new Order(new Date(), Status.IN_PROGRESS, cust2, orderLines2);
+        Order order3 = new Order(new Date(), Status.IN_PROGRESS, cust3, orderLines3);
         orderRepo.save(order);
         orderRepo.save(order2);
+        orderRepo.save(order3);
 
         for (Customer c : customerRepo.findAll()) {
             LOGGER.log(Level.INFO, "[LOGGER] ::: SAVED CUSTOMERS ::: " + c);

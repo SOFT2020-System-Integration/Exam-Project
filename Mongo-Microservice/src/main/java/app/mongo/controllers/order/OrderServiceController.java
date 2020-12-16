@@ -52,9 +52,6 @@ public class OrderServiceController
     @PostMapping("/create")
     public Order createOrder(@RequestBody Order order) {
         try {
-            /*for (OrderLine ol : order.getOrderLines()) {
-                orderLineRepo.save(ol);
-            }*/
             return orderRepo.save(order);
         } catch (MongoException ex) {
             throw ex;
@@ -75,8 +72,6 @@ public class OrderServiceController
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
-
-    @PutMapping("")
 
     @DeleteMapping("/delete/{id}")
     public String deleteOrder(@PathVariable String id) {

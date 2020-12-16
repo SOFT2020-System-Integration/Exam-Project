@@ -19,7 +19,7 @@ public class Order {
     private String id;
     private Date createdAt;
     private Status status;
-    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.NONE)
+    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinProperty(name = "customers")
     private Customer customer;
     @OneToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL)

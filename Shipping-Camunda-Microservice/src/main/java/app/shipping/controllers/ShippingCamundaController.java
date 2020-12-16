@@ -56,7 +56,6 @@ public class ShippingCamundaController {
     @Autowired
 
 
-
     private static final String TOPIC = "email-broker";
 
 

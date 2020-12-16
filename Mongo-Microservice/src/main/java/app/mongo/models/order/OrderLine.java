@@ -18,7 +18,7 @@ public class OrderLine {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
-    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinProperty(name = "games")
     private Game game;
     private int amount;
