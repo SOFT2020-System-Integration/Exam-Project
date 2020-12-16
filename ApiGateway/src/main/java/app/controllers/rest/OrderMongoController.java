@@ -60,7 +60,7 @@ public class OrderMongoController {
         client.orderPost(order);
         return "Created order with id: " + order.getId();
     }
-    
+
     @DeleteMapping("/delete/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
     public String orderDelete(@PathVariable String id)
