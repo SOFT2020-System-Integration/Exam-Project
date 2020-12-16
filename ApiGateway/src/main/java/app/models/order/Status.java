@@ -1,4 +1,4 @@
-package app.mongo.models.order;
+package app.models.order;
 
 public enum Status {
     COMPLETED,

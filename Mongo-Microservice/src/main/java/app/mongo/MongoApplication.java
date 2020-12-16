@@ -47,17 +47,19 @@ public class MongoApplication implements CommandLineRunner {
 
     @Override
     public void run(String ...args) throws Exception{
+        customerRepo.deleteAll();
+        orderRepo.deleteAll();
+        orderLineRepo.deleteAll();
+        gameRepo.deleteAll();
 
         GameApiFetcher apiFetcher = new GameApiFetcher(gameRepo);
         apiFetcher.clearMongoDbAndSaveNewGames();
 
-        customerRepo.deleteAll();
         Customer c1 = new Customer("joHn", "Doe", "john@doe.com", "1234");
         Customer c2 = new Customer("jANe", "Doe", "JaNe@doe.com", "abcd");
         customerRepo.save(c1);
         customerRepo.save(c2);
 
-        orderRepo.deleteAll();
         List<Game> productList = gameRepo.findAll();
         OrderLine ld1 = new OrderLine(productList.get(0),2, Status.IN_PROGRESS);
         OrderLine ld2 = new OrderLine(productList.get(1),2, Status.IN_PROGRESS);

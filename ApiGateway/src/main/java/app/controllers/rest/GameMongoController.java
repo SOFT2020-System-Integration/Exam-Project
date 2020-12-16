@@ -1,6 +1,7 @@
 package app.controllers.rest;
 
 import app.models.game.Game;
+import app.models.shipment.CamundaGame;
 import app.repositories.MongoClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +12,20 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/games")
-public class MongoController {
-    MongoClient client;
-
-    public MongoController(MongoClient client) {
+public class GameMongoController {
+    private final MongoClient client;
+    public GameMongoController(MongoClient client) {
         this.client = client;
+    }
+
+    @GetMapping("")
+    @CrossOrigin(origins = "*") // allow request from any client
+    public Collection<Game> myGame()
+    {
+        List<Game> collect = client.gameCollection()
+                .stream()
+                .collect(Collectors.toList());
+        return collect;
     }
 
     @GetMapping("/id/{id}")
@@ -27,16 +37,5 @@ public class MongoController {
                 .filter(Game -> Game.getId().equals(id))
                 .collect(Collectors.toList());
         return collect.get(0);
-    }
-
-    @GetMapping("")
-    @CrossOrigin(origins = "*") // allow request from any client
-
-    public Collection<Game> myGame()
-    {
-        List<Game> collect = client.gameCollection()
-                .stream()
-                .collect(Collectors.toList());
-        return collect;
     }
 }

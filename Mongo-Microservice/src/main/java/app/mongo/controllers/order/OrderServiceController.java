@@ -25,7 +25,7 @@ public class OrderServiceController
     private OrderService orderRepo;
     private OrderLineService orderLineRepo;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<Order> retrieveAll() {
         return orderRepo.findAll();
     }
@@ -52,9 +52,9 @@ public class OrderServiceController
     @PostMapping("/create")
     public Order createOrder(@RequestBody Order order) {
         try {
-            for (OrderLine ol : order.getOrderLines()) {
+            /*for (OrderLine ol : order.getOrderLines()) {
                 orderLineRepo.save(ol);
-            }
+            }*/
             return orderRepo.save(order);
         } catch (MongoException ex) {
             throw ex;
