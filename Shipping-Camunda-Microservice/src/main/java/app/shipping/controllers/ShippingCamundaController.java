@@ -5,6 +5,7 @@ import app.shipping.models.CamundaDataDefiner;
 import app.shipping.models.CamundaDataObject;
 import app.shipping.models.CamundaDataVariables;
 import app.shipping.models.game.Game;
+import app.shipping.models.orderline.OrderLine;
 import com.google.gson.Gson;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -56,9 +57,7 @@ public class ShippingCamundaController {
     @Autowired
 
 
-    private static final String TOPIC = "email-broker";
-
-
+    private static final String TOPIC = "order-broker";
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(ShippingCamundaController.class));
 
     @GetMapping("/")
@@ -76,7 +75,7 @@ public class ShippingCamundaController {
         LOGGER.log(Level.INFO, "[LOGGER] ::: TEST ::: STRING! " + entity);
         return entity;
     }
-
+/*
     @PostMapping("/create-process")
     public String createProcess2(@RequestBody Game game) {
 
@@ -93,17 +92,38 @@ public class ShippingCamundaController {
             return "Error, something went wrong, check the console.";
         }
     }
+*/
+    @PostMapping("/create-order")
+    public String createOrder(@RequestBody OrderLine orderline) {
 
-    public CloseableHttpResponse makeCamundaCreateProcessRequestGame(Game game) {
+        try {
+            CloseableHttpResponse call = makeCamundaCreateProcessRequestGame(orderline);
+            if (call != null) {
+                createMails(orderline);
+                LOGGER.log(Level.INFO, "[LOGGER] ::: SHIPMENT ::: createProcess");
+                return "Successfully sent object to Camunda.";
+            }
+            return "Something went wrong.";
+        } catch (Exception e) {
+            LOGGER.log(Level.SEVERE, "[LOGGER] ::: Error occur in createProcess ::: ", e.getMessage());
+            return "Error, something went wrong, check the console.";
+        }
+    }
+
+    public CloseableHttpResponse makeCamundaCreateProcessRequestGame(OrderLine orderline) {
         CloseableHttpResponse response;
         CamundaDataDefiner camundDataGame;
         CamundaDataDefiner camundDataShipType;
         CamundaDataVariables camundVars;
         CamundaDataObject camundObj;
+        CamundaDataDefiner camundaDataStatus;
+        CamundaDataDefiner camundaDataOrderLineId;
         try {
-            camundDataGame = new CamundaDataDefiner(game.getId(), "String");
-            camundDataShipType = new CamundaDataDefiner(game.getType().getType().toString(), "String");
-            camundVars = new CamundaDataVariables(camundDataGame, camundDataShipType);
+            camundDataGame = new CamundaDataDefiner(orderline.getId(), "String");
+            camundDataShipType = new CamundaDataDefiner(orderline.getGame().getType().getType().toString(), "String");
+            camundaDataStatus = new CamundaDataDefiner(orderline.getStatus().toString(),"String");
+            camundaDataOrderLineId = new CamundaDataDefiner(orderline.getId(),"String");
+            camundVars = new CamundaDataVariables(camundDataGame, camundDataShipType,camundaDataStatus,camundaDataOrderLineId);
             camundObj = new CamundaDataObject(camundVars);
 
             CloseableHttpClient client = HttpClients.createDefault();
@@ -123,13 +143,11 @@ public class ShippingCamundaController {
         }
     }
 
-    public void createMails(Game game) throws SAXException, ParserConfigurationException, IOException, ParseException {
+    public void createMails(OrderLine orderLine) throws SAXException, ParserConfigurationException, IOException, ParseException {
         String message = getEmailTemplate();
-        message = message.replace("{title}", game.getTitle());
-        message = message.replace("{id}", game.getId());
-
+        message = message.replace("{title}", orderLine.getGame().getTitle());
+        message = message.replace("{id}", orderLine.getId());
         sendMessage(message);
-
     }
 
     public String getEmailTemplate() throws IOException {

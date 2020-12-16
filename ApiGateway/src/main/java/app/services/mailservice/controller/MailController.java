@@ -1,6 +1,6 @@
-package app.mailservice.controller;
+package app.services.mailservice.controller;
 
-import app.mailservice.service.MailService;
+import app.services.mailservice.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

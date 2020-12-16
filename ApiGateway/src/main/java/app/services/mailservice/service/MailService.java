@@ -1,4 +1,4 @@
-package app.mailservice.service;
+package app.services.mailservice.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ public class MailService {
     private static final Logger logger = LoggerFactory.getLogger(MailService.class);
 
 
-    @KafkaListener(topics = "email-broker", groupId = "my-group")
+    @KafkaListener(topics = "order-broker", groupId = "my-group")
     public void listenToMessages(String message) throws IOException {
         synchronized (messages) {
             messages.add(message);
