@@ -65,8 +65,13 @@ public class OrderMongoController {
     @CrossOrigin(origins = "*") // allow request from any client
     public String orderDelete(@PathVariable String id)
     {
-        String xx = id;
         client.orderDelete(id);
-        return id;
+        return "Deleted record of " + id;
+    }
+
+    @PutMapping("/orders/test/{test}")
+    @CrossOrigin(origins = "*") // allow request from any client
+    public String putTest(@PathVariable String test) {
+        return client.orderPutTest(test);
     }
 }

@@ -23,10 +23,13 @@ public interface MongoClient {
     @GetMapping("/orders")
     Collection<Order> orderCollection();
 
-    @PostMapping("orders/create")
+    @PostMapping("/orders/create")
     String orderPost(@RequestBody Order order);
 
-    @DeleteMapping("orders/delete/{id}")
+    @PutMapping("/orders/test/{test}")
+    String orderPutTest(@PathVariable String test);
+
+    @DeleteMapping("/orders/delete/{id}")
     String orderDelete(@PathVariable String id);
 
     /* CUSTOMER */

@@ -98,6 +98,12 @@ public class OrderServiceController
         }
     }
 
+    @PutMapping("/test/{test}")
+    public String testPut(@PathVariable String test) {
+        String x = test;
+        return "We cant put! " + x;
+    }
+
     @DeleteMapping("/delete/{id}")
     public String deleteOrder(@PathVariable String id) {
         try {
