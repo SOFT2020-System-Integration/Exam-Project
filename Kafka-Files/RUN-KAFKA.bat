@@ -6,17 +6,18 @@ SET "condition=true"
 if EXIST "%MY_PATH%" (
     SET "condition=true"
 ) else (
-    @echo -----------------------------------------------------------------
+    @echo --------------------------------------------------------------------
     @echo Kafka not found under %MY_PATH%
-    @echo Running Kafka Setup, please wait (This might take a few minutes)
-    @echo -----------------------------------------------------------------
+    @echo Running Kafka Setup, please wait, this might take a few minutes...
+    @echo WARNING: Do not close the program while it's running setup
+    @echo --------------------------------------------------------------------
     START "runas /user:administrator" /WAIT _unzip.bat
     SET "condition=true"
 )
 
 
 :PROMPT
-set /P c="Do you want to clear kafka and zookeeper data before continuing? [Y/N] : "
+set /P c="Do you want to clear kafka and zookeeper data before running the service? [Y/N] : "
 
 if /I "%c%" EQU "Y" goto :run-with-log-clear
 if /I "%c%" EQU "N" goto :run-without-log-clear
