@@ -42,7 +42,7 @@ public class MailService {
             client.orderLineUpdateStatusPut(orderId, orderLineId, Status.COMPLETED);
             Order order = controller.retrieveOrderById(orderId);
             boolean inProgress = false;
-            for(OrderLine ol = order.getOrderLines())
+            for(OrderLine ol : order.getOrderLines())
             {
                 if(ol.getStatus() == Status.IN_PROGRESS)
                 {
@@ -51,8 +51,7 @@ public class MailService {
             }
             if(!inProgress)
             {
-                order.setStatus(Status.COMPLETED);
-                client.orderPost(order);
+                controller.updateOrderStatus(orderId, Status.COMPLETED);
             }
         }
 
