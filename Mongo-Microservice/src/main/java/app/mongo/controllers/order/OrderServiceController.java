@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 //@RepositoryRestController
-@RepositoryRestResource
+//@RepositoryRestResource
 @ResponseBody
 @RestController
 @RequestMapping("/orders")

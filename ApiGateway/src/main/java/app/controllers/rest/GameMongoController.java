@@ -1,12 +1,14 @@
 package app.controllers.rest;
 
 import app.models.game.Game;
+import app.models.order.OrderLine;
 import app.models.shipment.CamundaGame;
 import app.repositories.MongoClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 
@@ -20,7 +22,7 @@ public class GameMongoController {
 
     @GetMapping("")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Collection<Game> myGame()
+    public Collection<Game> retrieveAllOrders()
     {
         List<Game> collect = client.gameCollection()
                 .stream()
@@ -30,7 +32,7 @@ public class GameMongoController {
 
     @GetMapping("/id/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Game myGame(@PathVariable String id)
+    public Game retrieveOrder(@PathVariable String id)
     {
         List<Game> collect = client.gameCollection()
                 .stream()
