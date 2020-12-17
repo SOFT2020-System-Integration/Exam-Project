@@ -6,21 +6,27 @@ SET "condition=true"
 if EXIST "%MY_PATH%" (
     SET "condition=true"
 ) else (
- 	echo Folder named "Kafka" doesn't exist under %MY_PATH%
-	@pause
-    exit
+    @echo --------------------------------------------------------------------
+    @echo Kafka not found under %MY_PATH%
+    @echo Running Kafka Setup, please wait, this might take a few minutes...
+    @echo WARNING: Do not close the program while it's running setup
+    @echo --------------------------------------------------------------------
+    START "runas /user:administrator" /WAIT _unzip.bat
+    SET "condition=true"
 )
 
+
 :PROMPT
-set /P c="Do you want to clear kafka and zookeeper data before continuing? [Y/N] : "
+set /P c="Do you want to clear kafka and zookeeper data before running the service? [Y/N] : "
+
 if /I "%c%" EQU "Y" goto :run-with-log-clear
 if /I "%c%" EQU "N" goto :run-without-log-clear
+
 goto :choice
 
 :run-with-log-clear
     echo Clearing Data...
-    rmdir /s /q "%MY_PATH%\data\"
-    timeout /t 2 /nobreak
+    START /WAIT _clear-data.bat
     echo Starting Zookeeper...
         START "runas /user:administrator" cmd /K "cd "%MY_PATH%\bin\windows" & zookeeper-server-start.bat ../../config/zookeeper.properties"
     timeout /t 5 /nobreak
