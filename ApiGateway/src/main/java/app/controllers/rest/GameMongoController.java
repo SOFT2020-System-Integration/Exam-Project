@@ -22,7 +22,7 @@ public class GameMongoController {
 
     @GetMapping("")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Collection<Game> retrieveAllOrders()
+    public Collection<Game> retrieveAllGames()
     {
         List<Game> collect = client.gameCollection()
                 .stream()
@@ -32,7 +32,7 @@ public class GameMongoController {
 
     @GetMapping("/id/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Game retrieveOrder(@PathVariable String id)
+    public Game retrieveGame(@PathVariable String id)
     {
         List<Game> collect = client.gameCollection()
                 .stream()
