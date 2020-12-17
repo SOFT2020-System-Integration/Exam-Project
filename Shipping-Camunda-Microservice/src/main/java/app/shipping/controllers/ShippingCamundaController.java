@@ -5,6 +5,7 @@ import app.shipping.models.CamundaDataDefiner;
 import app.shipping.models.CamundaDataObject;
 import app.shipping.models.CamundaDataVariables;
 import app.shipping.models.game.Game;
+import app.shipping.models.orderline.Order;
 import app.shipping.models.orderline.OrderLine;
 import com.google.gson.Gson;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -94,20 +95,24 @@ public class ShippingCamundaController {
     }
 */
     @PostMapping("/create-order")
-    public String createOrder(@RequestBody OrderLine orderline) {
+    public String createOrder(@RequestBody Order order) {
 
-        try {
-            CloseableHttpResponse call = makeCamundaCreateProcessRequestGame(orderline);
-            if (call != null) {
-                createMails(orderline);
-                LOGGER.log(Level.INFO, "[LOGGER] ::: SHIPMENT ::: createProcess");
-                return "Successfully sent object to Camunda.";
+        for(OrderLine orderline: order.getOrderLines())
+        {
+            orderline.setOrderId(order.getId());
+            try {
+                CloseableHttpResponse call = makeCamundaCreateProcessRequestGame(orderline);
+                if (call != null) {
+                    createMails(orderline);
+                    LOGGER.log(Level.INFO, "[LOGGER] ::: SHIPMENT ::: createProcess");
+
+                }
+            } catch (Exception e) {
+                LOGGER.log(Level.SEVERE, "[LOGGER] ::: Error occur in createProcess ::: ", e.getMessage());
+                return "Error, something went wrong, check the console.";
             }
-            return "Something went wrong.";
-        } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "[LOGGER] ::: Error occur in createProcess ::: ", e.getMessage());
-            return "Error, something went wrong, check the console.";
         }
+        return "Successfully sent object to Camunda.";
     }
 
     public CloseableHttpResponse makeCamundaCreateProcessRequestGame(OrderLine orderline) {
@@ -144,9 +149,10 @@ public class ShippingCamundaController {
     }
 
     public void createMails(OrderLine orderLine) throws SAXException, ParserConfigurationException, IOException, ParseException {
-        String message = getEmailTemplate();
-        message = message.replace("{title}", orderLine.getGame().getTitle());
-        message = message.replace("{id}", orderLine.getId());
+        //String message = getEmailTemplate();
+        //message = message.replace("{title}", orderLine.getGame().getTitle());
+        //message = message.replace("{id}", orderLine.getId());
+        String message = orderLine.toString();
         sendMessage(message);
     }
 
@@ -162,7 +168,7 @@ public class ShippingCamundaController {
     }
 
     @Autowired
-    // Ignore the compiler's warning
+    //Ignore this warning
     private KafkaTemplate<String, String> template;
 
     public void sendMessage(String message) {

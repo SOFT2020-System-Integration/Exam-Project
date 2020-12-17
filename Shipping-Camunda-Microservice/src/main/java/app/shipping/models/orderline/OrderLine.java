@@ -15,6 +15,7 @@ public class OrderLine implements Serializable {
     private Game game;
     private int amount;
     private String status;
+    private String orderId;
 
     public OrderLine() {
     }
@@ -64,13 +65,22 @@ public class OrderLine implements Serializable {
         this.status = status;
     }
 
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
     @Override
     public String toString() {
-        return "OrderLine{" +
+        return "{" +
                 "id='" + id + '\'' +
                 ", game=" + game +
                 ", amount=" + amount +
-                ", status=" + status +
+                ", status='" + status + '\'' +
+                ", orderId='" + orderId + '\'' +
                 '}';
     }
 }
