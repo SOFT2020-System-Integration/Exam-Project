@@ -1,7 +1,12 @@
 package app.services.mailservice.service;
 
+import app.models.order.Status;
+import app.repositories.MongoClient;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +20,10 @@ public class MailService {
     private final List<String> messages = new ArrayList<>();
 
 
+    private final MongoClient client;
+    public MailService(MongoClient client){
+        this.client = client;
+    }
     // get logger for my class
     private static final Logger logger = LoggerFactory.getLogger(MailService.class);
 
@@ -23,7 +32,13 @@ public class MailService {
     public void listenToMessages(String message) throws IOException {
         synchronized (messages) {
             messages.add(message);
+            JsonObject convertedObject = new Gson().fromJson(message, JsonObject.class);
+            String orderLineId = convertedObject.get("id").getAsString();
+            String orderId = convertedObject.get("orderId").getAsString();
+
+            client.orderLineUpdateStatusPut(orderId, orderLineId, Status.COMPLETED);
         }
+
         logger.info("&&& Message Consumed: [" + message + "]");
     }
 
