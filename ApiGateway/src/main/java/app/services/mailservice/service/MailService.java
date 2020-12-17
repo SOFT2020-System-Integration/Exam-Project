@@ -1,6 +1,9 @@
 package app.services.mailservice.service;
 
+import app.models.order.Status;
 import app.repositories.MongoClient;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +32,11 @@ public class MailService {
     public void listenToMessages(String message) throws IOException {
         synchronized (messages) {
             messages.add(message);
-            client.
+            JsonObject convertedObject = new Gson().fromJson(message, JsonObject.class);
+            String orderLineId = convertedObject.get("id").getAsString();
+            String orderId = convertedObject.get("orderId").getAsString();
+
+            client.orderLineUpdateStatusPut(orderId, orderLineId, Status.COMPLETED);
         }
 
         logger.info("&&& Message Consumed: [" + message + "]");

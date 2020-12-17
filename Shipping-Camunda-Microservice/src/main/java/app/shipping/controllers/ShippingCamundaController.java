@@ -152,6 +152,7 @@ public class ShippingCamundaController {
         //String message = getEmailTemplate();
         //message = message.replace("{title}", orderLine.getGame().getTitle());
         //message = message.replace("{id}", orderLine.getId());
+
         String message = orderLine.toString();
         sendMessage(message);
     }

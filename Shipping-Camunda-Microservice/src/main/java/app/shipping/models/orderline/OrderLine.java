@@ -76,11 +76,8 @@ public class OrderLine implements Serializable {
     @Override
     public String toString() {
         return "{" +
-                "id='" + id + '\'' +
-                ", game=" + game +
-                ", amount=" + amount +
-                ", status='" + status + '\'' +
-                ", orderId='" + orderId + '\'' +
+                "id='" + id +"'" +
+                ", orderId='" + orderId+ "'"+
                 '}';
     }
 }
