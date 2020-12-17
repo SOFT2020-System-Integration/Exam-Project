@@ -36,11 +36,11 @@ public interface MongoClient {
     @PostMapping("/orders/create")
     String orderPost(@RequestBody Order order);
 
-    @PutMapping("/orders/test/{test}")
-    String orderPutTest(@PathVariable String test);
-
     @PutMapping("/orders/id/{orderId}/orderlines/{orderlineId}/status/set/{status}")
     Order orderLineUpdateStatusPut(@PathVariable String orderId, @PathVariable String orderlineId, @PathVariable Status status);
+
+    @PutMapping("/orders/id/{id}/status/set/{status}")
+    Order updateOrderStatus(@PathVariable String id, @PathVariable Status status);
 
     @DeleteMapping("/orders/delete/{id}")
     String orderDelete(@PathVariable String id);

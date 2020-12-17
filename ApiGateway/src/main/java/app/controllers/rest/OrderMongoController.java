@@ -67,11 +67,25 @@ public class OrderMongoController {
         return "Deleted record of " + id;
     }
 
-    @PutMapping("/orders/test/{test}")
-    @CrossOrigin(origins = "*") // allow request from any client
-    public String putTest(@PathVariable String test) {
-        return client.orderPutTest(test);
+
+    @PutMapping("/id/{id}/status/set/{status}")
+    public Order updateOrderStatus(@PathVariable String id, @PathVariable Status status) throws RuntimeException {
+        Optional<Order> _orderOpt;
+        try {
+            _orderOpt = Optional.of(retrieveOrderById(id));
+            if(status.equals(Status.IN_PROGRESS) || status.equals(Status.COMPLETED)) {
+                _orderOpt.get().setStatus(status);
+                client.updateOrderStatus(id, status);
+                return _orderOpt.get();
+            } else {
+                throw new RuntimeException("Something went wrong.");
+            }
+        } catch (Exception ex) {
+            throw new RuntimeException( ex.getMessage());
+        }
     }
+
+
 
     @PutMapping("/id/{orderId}/orderlines/{orderlineId}/status/set/{status}")
     @CrossOrigin(origins = "*")
