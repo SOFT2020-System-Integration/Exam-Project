@@ -1,12 +1,14 @@
 package app.services.mailservice.service;
 
+import app.controllers.rest.OrderMongoController;
+import app.models.order.Order;
+import app.models.order.OrderLine;
 import app.models.order.Status;
 import app.repositories.MongoClient;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +21,10 @@ import java.util.List;
 public class MailService {
     private final List<String> messages = new ArrayList<>();
 
-
+    private final OrderMongoController controller;
     private final MongoClient client;
-    public MailService(MongoClient client){
+    public MailService(OrderMongoController controller, MongoClient client){
+        this.controller = controller;
         this.client = client;
     }
     // get logger for my class
@@ -37,6 +40,20 @@ public class MailService {
             String orderId = convertedObject.get("orderId").getAsString();
 
             client.orderLineUpdateStatusPut(orderId, orderLineId, Status.COMPLETED);
+            Order order = controller.retrieveOrderById(orderId);
+            boolean inProgress = false;
+            for(OrderLine ol = order.getOrderLines())
+            {
+                if(ol.getStatus() == Status.IN_PROGRESS)
+                {
+                    inProgress = true;
+                }
+            }
+            if(!inProgress)
+            {
+                order.setStatus(Status.COMPLETED);
+                client.orderPost(order);
+            }
         }
 
         logger.info("&&& Message Consumed: [" + message + "]");
