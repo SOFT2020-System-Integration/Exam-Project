@@ -1,8 +1,6 @@
 package app.controllers.rest;
 
 import app.exceptions.NotFoundException;
-import app.helpers.Encrypt;
-import app.models.customer.Customer;
 import app.models.order.Order;
 import app.models.order.OrderLine;
 import app.models.order.Status;
@@ -19,8 +17,11 @@ import java.util.stream.Collectors;
 @RequestMapping("/orders")
 public class OrderMongoController {
     private final MongoClient client;
-    public OrderMongoController(MongoClient client) {
+    private final ShippingCamundaController shippingCamundaController;
+
+    public OrderMongoController(MongoClient client, ShippingCamundaController shippingCamundaController) {
         this.client = client;
+        this.shippingCamundaController = shippingCamundaController;
     }
 
     @GetMapping("")
@@ -75,7 +76,8 @@ public class OrderMongoController {
 
     @DeleteMapping("/delete/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public String deleteOrder(@PathVariable String id) {
+    public String deleteOrder(@PathVariable String id) throws NotFoundException
+    {
         try {
             client.orderCollectionDelete(id);
             return "Deleted Order of id: " + id;
@@ -103,7 +105,8 @@ public class OrderMongoController {
 
     @PutMapping("/id/{orderId}/orderlines/{orderlineId}/status/set/{status}")
     @CrossOrigin(origins = "*")
-    public Order updateOrderLineStatusByOrderAndOrderLineId(@PathVariable String orderId, @PathVariable String orderlineId, @PathVariable Status status) {
+    public Order updateOrderLineStatusByOrderAndOrderLineId(@PathVariable String orderId, @PathVariable String orderlineId, @PathVariable Status status) throws NotFoundException
+    {
         Optional<Order> _orderOpt;
         OrderLine orderLineToUpdate;
 

@@ -23,10 +23,8 @@ public class MailService {
     private final List<String> messages = new ArrayList<>();
 
     private final OrderMongoController controller;
-    private final MongoClient client;
     public MailService(OrderMongoController controller, MongoClient client){
         this.controller = controller;
-        this.client = client;
     }
 
     @KafkaListener(topics = "order-broker", groupId = "my-group")
@@ -37,7 +35,7 @@ public class MailService {
             String orderLineId = convertedObject.get("orderlineId").getAsString();
             String orderId = convertedObject.get("orderId").getAsString();
 
-            client.orderLineUpdateStatusPut(orderId, orderLineId, Status.COMPLETED);
+            controller.updateOrderLineStatusByOrderAndOrderLineId(orderId, orderLineId, Status.COMPLETED);
             Order order = controller.retrieveOrderById(orderId);
             boolean inProgress = false;
             for(OrderLine ol : order.getOrderLines())

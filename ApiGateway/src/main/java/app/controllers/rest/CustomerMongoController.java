@@ -37,7 +37,7 @@ public class CustomerMongoController {
 
     @GetMapping("/id/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Customer retrieveCustomerById(@PathVariable String id)
+    public Customer retrieveCustomerById(@PathVariable String id) throws NotFoundException
     {
         List<Customer> collect = client.customerCollection()
                 .stream()
@@ -52,7 +52,7 @@ public class CustomerMongoController {
 
     @GetMapping("/mail/{mail}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Customer retrieveCustomerByMail(@PathVariable String mail)
+    public Customer retrieveCustomerByMail(@PathVariable String mail) throws NotFoundException
     {
         List<Customer> collect = client.customerCollection()
                 .stream()
@@ -67,7 +67,7 @@ public class CustomerMongoController {
 
     @PostMapping("/login/{mail}/{password}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Customer loginCustomer(@PathVariable String mail, @PathVariable String password)
+    public Customer loginCustomer(@PathVariable String mail, @PathVariable String password) throws NotFoundException
     {
         Customer customer;
         try {

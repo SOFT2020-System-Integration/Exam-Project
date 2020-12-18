@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient("shipping-camunda")
 @RibbonClient(name = "shipping-camunda", configuration = RibbonConfig.class)
 public interface ShippingCamundaClient {
-    @PostMapping("/shipping/create-shipment")
-    String camundaPost(@RequestBody Order order);
+    @PostMapping("/shipping/create-process")
+    Order camundaPost(@RequestBody Order shipment);
 }
