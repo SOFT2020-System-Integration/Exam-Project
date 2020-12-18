@@ -19,7 +19,7 @@ import java.util.List;
 
 @Service
 public class MailService {
-    private static final Logger logger = LoggerFactory.getLogger(MailService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MailService.class);
     private final List<String> messages = new ArrayList<>();
 
     private final OrderMongoController controller;
@@ -34,7 +34,7 @@ public class MailService {
         synchronized (messages) {
             messages.add(message);
             JsonObject convertedObject = new Gson().fromJson(message, JsonObject.class);
-            String orderLineId = convertedObject.get("id").getAsString();
+            String orderLineId = convertedObject.get("orderlineId").getAsString();
             String orderId = convertedObject.get("orderId").getAsString();
 
             client.orderLineUpdateStatusPut(orderId, orderLineId, Status.COMPLETED);
@@ -53,7 +53,7 @@ public class MailService {
             }
         }
 
-        logger.info("&&& Message Consumed: [" + message + "]");
+        LOGGER.info("&&& Message Consumed: [" + message + "]");
     }
 
     public List<String> getMessages() {

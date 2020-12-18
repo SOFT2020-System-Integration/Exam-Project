@@ -4,19 +4,15 @@ package app.shipping.controllers;
 import app.shipping.models.CamundaDataDefiner;
 import app.shipping.models.CamundaDataObject;
 import app.shipping.models.CamundaDataVariables;
-import app.shipping.models.game.Game;
 import app.shipping.models.orderline.Order;
 import app.shipping.models.orderline.OrderLine;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.slf4j.LoggerFactory;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
@@ -25,21 +21,13 @@ import org.springframework.web.bind.annotation.*;
 
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.FileReader;
 import java.io.IOException;
 
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
@@ -68,16 +56,13 @@ public class ShippingCamundaController {
 
     @PostMapping("/create-shipment")
     public String createShipment(@RequestBody Order order) {
-
         for(OrderLine orderline: order.getOrderLines())
         {
             orderline.setOrderId(order.getId());
             try {
-                CloseableHttpResponse call = makeCamundaCreateProcessRequestGame(orderline);
+                CloseableHttpResponse call = makeCamundaCreateProcessRequestForOrder(orderline, order.getId());
                 if (call != null) {
-                    createMails(orderline);
                     LOGGER.log(Level.INFO, "[LOGGER] ::: SHIPMENT ::: createShipment");
-
                 }
             } catch (Exception e) {
                 LOGGER.log(Level.SEVERE, "[LOGGER] ::: Error occur in createProcess ::: ", e.getMessage());
@@ -87,7 +72,7 @@ public class ShippingCamundaController {
         return String.format("Successfully sent orderlines to Camunda", order.getOrderLines());
     }
 
-    public CloseableHttpResponse makeCamundaCreateProcessRequestGame(OrderLine orderline) {
+    public CloseableHttpResponse makeCamundaCreateProcessRequestForOrder(OrderLine orderline, String orderId) {
         CloseableHttpResponse response;
         CamundaDataDefiner camundDataGame;
         CamundaDataDefiner camundDataShipType;
@@ -95,12 +80,14 @@ public class ShippingCamundaController {
         CamundaDataObject camundObj;
         CamundaDataDefiner camundaDataStatus;
         CamundaDataDefiner camundaDataOrderLineId;
+        CamundaDataDefiner camundaDataOrderId;
         try {
             camundDataGame = new CamundaDataDefiner(orderline.getId(), "String");
             camundDataShipType = new CamundaDataDefiner(orderline.getGame().getType().getType().toString(), "String");
             camundaDataStatus = new CamundaDataDefiner(orderline.getStatus().toString(),"String");
             camundaDataOrderLineId = new CamundaDataDefiner(orderline.getId(),"String");
-            camundVars = new CamundaDataVariables(camundDataGame, camundDataShipType,camundaDataStatus,camundaDataOrderLineId);
+            camundaDataOrderId = new CamundaDataDefiner(orderId,"String");
+            camundVars = new CamundaDataVariables(camundDataGame, camundDataShipType,camundaDataStatus,camundaDataOrderLineId, camundaDataOrderId);
             camundObj = new CamundaDataObject(camundVars);
 
             CloseableHttpClient client = HttpClients.createDefault();
@@ -118,6 +105,13 @@ public class ShippingCamundaController {
             LOGGER.log(Level.SEVERE, "[LOGGER] ::: Error occur in createProcess ::: ", e.getMessage());
             return null;
         }
+    }
+
+    public void shipmentConfirmedSent(String orderId, String orderlineId) {
+        JsonObject json = new JsonObject();
+        json.addProperty("orderId", orderId);
+        json.addProperty("orderlineId", orderlineId);
+        sendMessage(json.toString());
     }
 
     public void createMails(OrderLine orderLine) throws SAXException, ParserConfigurationException, IOException, ParseException {
@@ -147,7 +141,7 @@ public class ShippingCamundaController {
     public void sendMessage(String message) {
         template.send(TOPIC, message);
         // logger.info(String.format("### -> Producer sends message -> %s", message));
-        LOGGER.log(Level.INFO,"### Producer sends message [{}]",message);
+        LOGGER.log(Level.INFO,"### Producer sends message: " + message);
         template.flush();
     }
 
