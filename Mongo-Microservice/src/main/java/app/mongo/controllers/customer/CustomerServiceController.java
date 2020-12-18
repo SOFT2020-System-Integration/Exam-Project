@@ -1,6 +1,7 @@
 package app.mongo.controllers.customer;
 
 import app.mongo.exceptions.NotFoundException;
+import app.mongo.helpers.Encrypt;
 import app.mongo.models.customer.Customer;
 import app.mongo.models.game.Game;
 import app.mongo.repositories.customer.CustomerService;
@@ -29,7 +30,7 @@ public class CustomerServiceController
         return repo.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public Optional<Customer> retrieveCustomerById(@PathVariable String id) throws NotFoundException, MongoException {
         try {
             return repo.findById(id);
@@ -38,12 +39,27 @@ public class CustomerServiceController
         }
     }
 
-    @GetMapping("/mail/{title}")
+    @GetMapping("/mail/{mail}")
     public Customer retrieveCustomerByMail(@PathVariable String mail) throws NotFoundException, MongoException {
         try {
             return repo.findByMail(mail);
         } catch (MongoException ex) {
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
+        }
+    }
+
+    @PostMapping("/login/{mail}/{password}")
+    public Customer loginCustomer(@PathVariable String mail, @PathVariable String password) throws NotFoundException, MongoException {
+        Customer customer;
+        try {
+            customer = retrieveCustomerByMail(mail);
+            if(Encrypt.checkPassword(password, customer.getPassword()) == true) {
+                return customer;
+            } else {
+                throw new NotFoundException("Customer with mail " + "'" + mail + "' & password " + "'" + password + "' not found...");
+            }
+        } catch (MongoException ex) {
+            throw new RuntimeException(ex.getCode() + "Something went wrong...");
         }
     }
 }

@@ -1,10 +1,11 @@
 package app.controllers.rest;
 
-import app.models.game.Game;
+import app.exceptions.NotFoundException;
+import app.helpers.Encrypt;
+import app.models.customer.Customer;
 import app.models.order.Order;
 import app.models.order.OrderLine;
 import app.models.order.Status;
-import app.models.shipment.CamundaGame;
 import app.repositories.MongoClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,30 +18,38 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/orders")
 public class OrderMongoController {
-    MongoClient client;
-
+    private final MongoClient client;
     public OrderMongoController(MongoClient client) {
         this.client = client;
     }
 
     @GetMapping("")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Collection<Order> myGame() {
+    public Collection<Order> retrieveAllOrders()
+    {
         List<Order> collect = client.orderCollection()
                 .stream()
                 .collect(Collectors.toList());
-        return collect;
+        if(!collect.isEmpty()) {
+            return collect;
+        } else {
+            throw new NotFoundException(String.format("Customers not found..."));
+        }
     }
-
 
     @GetMapping("/id/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Order retrieveOrderById(@PathVariable String id) {
+    public Order retrieveOrderById(@PathVariable String id)
+    {
         List<Order> collect = client.orderCollection()
                 .stream()
                 .filter(Order -> Order.getId().equals(id))
                 .collect(Collectors.toList());
-        return collect.get(0);
+        if(!collect.isEmpty()) {
+            return collect.get(0);
+        } else {
+            throw new NotFoundException(String.format("Customer with id '%s' not found...", id));
+        }
     }
 
     @GetMapping("/id/{id}/orderlines")
@@ -53,20 +62,18 @@ public class OrderMongoController {
         return collect.get(0).getOrderLines();
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    @PostMapping("/create")
     @CrossOrigin(origins = "*") // allow request from any client
-    public String orderPost(@RequestBody Order order) {
-        client.orderPost(order);
-        return "Created order with id: " + order.getId();
+    public Order createOrder(@RequestBody Order order) {
+        return client.orderCollectionPost(order);
     }
 
     @DeleteMapping("/delete/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public String orderDelete(@PathVariable String id) {
-        client.orderDelete(id);
-        return "Deleted record of " + id;
+    public String deleteOrder(@PathVariable String id) {
+        client.orderCollectionDelete(id);
+        return "Deleted Order of id: " + id;
     }
-
 
     @PutMapping("/id/{id}/status/set/{status}")
     public Order updateOrderStatus(@PathVariable String id, @PathVariable Status status) throws RuntimeException {
@@ -84,8 +91,6 @@ public class OrderMongoController {
             throw new RuntimeException( ex.getMessage());
         }
     }
-
-
 
     @PutMapping("/id/{orderId}/orderlines/{orderlineId}/status/set/{status}")
     @CrossOrigin(origins = "*")

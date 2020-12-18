@@ -1,10 +1,14 @@
 package app.models.customer;
 
+import app.helpers.Encrypt;
 import lombok.Data;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.data.annotation.Id;
 
+import java.io.Serializable;
+
 @Data
-public class Customer {
+public class Customer implements Serializable {
     @Id
     private String id;
     private String firstName;

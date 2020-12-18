@@ -1,6 +1,7 @@
 package app.models.order;
 
 import app.models.customer.Customer;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
@@ -10,7 +11,9 @@ import java.util.List;
 
 @Data
 public class Order implements Serializable {
+    @Id
     private String id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     private Date createdAt;
     private Status status;
     private Customer customer;

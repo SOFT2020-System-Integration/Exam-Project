@@ -19,6 +19,7 @@ import java.util.List;
 
 @Service
 public class MailService {
+    private static final Logger logger = LoggerFactory.getLogger(MailService.class);
     private final List<String> messages = new ArrayList<>();
 
     private final OrderMongoController controller;
@@ -27,9 +28,6 @@ public class MailService {
         this.controller = controller;
         this.client = client;
     }
-    // get logger for my class
-    private static final Logger logger = LoggerFactory.getLogger(MailService.class);
-
 
     @KafkaListener(topics = "order-broker", groupId = "my-group")
     public void listenToMessages(String message) throws IOException {

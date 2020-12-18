@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/shipping")
 public class ShippingCamundaController {
-    ShippingCamundaClient client;
-
+    private final ShippingCamundaClient client;
     public ShippingCamundaController(ShippingCamundaClient client) {
         this.client = client;
     }
