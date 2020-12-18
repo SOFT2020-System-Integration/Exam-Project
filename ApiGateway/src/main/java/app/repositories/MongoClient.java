@@ -23,7 +23,6 @@ public interface MongoClient {
     /* CUSTOMER */
     @GetMapping("/customers")
     Collection<Customer> customerCollection();
-
     @PostMapping("/customers/login/{mail}/{password}")
     Customer loginCustomer(@PathVariable String mail, @PathVariable String password);
 
@@ -42,5 +41,4 @@ public interface MongoClient {
     Order orderLineUpdateStatusPut(@PathVariable String orderId, @PathVariable String orderlineId, @PathVariable Status status);
     @PutMapping("/orders/id/{id}/status/set/{status}")
     Order updateOrderStatus(@PathVariable String id, @PathVariable Status status);
-
 }

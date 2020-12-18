@@ -25,7 +25,7 @@ public class OrderMongoController {
 
     @GetMapping("")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Collection<Order> retrieveAllOrders()
+    public Collection<Order> retrieveAllOrders() throws NotFoundException
     {
         List<Order> collect = client.orderCollection()
                 .stream()
@@ -39,7 +39,7 @@ public class OrderMongoController {
 
     @GetMapping("/id/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Order retrieveOrderById(@PathVariable String id)
+    public Order retrieveOrderById(@PathVariable String id) throws NotFoundException
     {
         List<Order> collect = client.orderCollection()
                 .stream()
@@ -54,12 +54,17 @@ public class OrderMongoController {
 
     @GetMapping("/id/{id}/orderlines")
     @CrossOrigin(origins = "*") // allow request from any client
-    public List<OrderLine> retrieveOrderLinesByOrderId(@PathVariable String id) {
+    public List<OrderLine> retrieveOrderLinesByOrderId(@PathVariable String id) throws NotFoundException
+    {
         List<Order> collect = client.orderCollection()
                 .stream()
                 .filter(Order -> Order.getId().equals(id))
                 .collect(Collectors.toList());
-        return collect.get(0).getOrderLines();
+        if(!collect.isEmpty()) {
+            return collect.get(0).getOrderLines();
+        } else {
+            throw new NotFoundException(String.format("Couldn't find any orderlines for order with id: %s", id));
+        }
     }
 
     @PostMapping("/create")
@@ -71,8 +76,12 @@ public class OrderMongoController {
     @DeleteMapping("/delete/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
     public String deleteOrder(@PathVariable String id) {
-        client.orderCollectionDelete(id);
-        return "Deleted Order of id: " + id;
+        try {
+            client.orderCollectionDelete(id);
+            return "Deleted Order of id: " + id;
+        } catch (Exception ex) {
+            throw new NotFoundException("Order not found...");
+        }
     }
 
     @PutMapping("/id/{id}/status/set/{status}")
@@ -88,7 +97,7 @@ public class OrderMongoController {
                 throw new RuntimeException("Something went wrong.");
             }
         } catch (Exception ex) {
-            throw new RuntimeException( ex.getMessage());
+            throw new RuntimeException(ex.getMessage());
         }
     }
 

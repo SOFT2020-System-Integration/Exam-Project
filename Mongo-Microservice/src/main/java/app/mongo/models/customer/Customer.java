@@ -78,7 +78,7 @@ public class Customer implements Serializable {
     }
 
     @Override
-    public String toString() {z
+    public String toString() {
         return "Customer{" +
                 "id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +

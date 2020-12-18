@@ -7,7 +7,6 @@ import java.io.Serializable;
 @Data
 public class CamundaGame implements Serializable {
     private Variables variables;
-
     public CamundaGame() {}
     public Variables getVariables() {
         return variables;

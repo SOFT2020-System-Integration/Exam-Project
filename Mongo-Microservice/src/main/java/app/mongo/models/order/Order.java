@@ -18,7 +18,6 @@ import java.util.List;
 public class Order {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     private Date createdAt;
     private Status status;
     @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)

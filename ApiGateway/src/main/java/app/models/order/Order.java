@@ -13,7 +13,6 @@ import java.util.List;
 public class Order implements Serializable {
     @Id
     private String id;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     private Date createdAt;
     private Status status;
     private Customer customer;

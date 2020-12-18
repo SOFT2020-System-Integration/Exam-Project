@@ -66,36 +66,8 @@ public class ShippingCamundaController {
         return "Shipping Api!";
     }
 
-    @GetMapping("/yeet")
-    public String yeet() {
-        return "Shipping yeet!";
-    }
-
-    @PostMapping("/test")
-    public String test(@RequestBody String entity) {
-        LOGGER.log(Level.INFO, "[LOGGER] ::: TEST ::: STRING! " + entity);
-        return entity;
-    }
-/*
-    @PostMapping("/create-process")
-    public String createProcess2(@RequestBody Game game) {
-
-        try {
-            CloseableHttpResponse call = makeCamundaCreateProcessRequestGame(game);
-            if (call != null) {
-                createMails(game);
-                LOGGER.log(Level.INFO, "[LOGGER] ::: SHIPMENT ::: createProcess");
-                return "Successfully sent object to Camunda.";
-            }
-            return "Something went wrong.";
-        } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "[LOGGER] ::: Error occur in createProcess ::: ", e.getMessage());
-            return "Error, something went wrong, check the console.";
-        }
-    }
-*/
-    @PostMapping("/create-order")
-    public String createOrder(@RequestBody Order order) {
+    @PostMapping("/create-shipment")
+    public String createShipment(@RequestBody Order order) {
 
         for(OrderLine orderline: order.getOrderLines())
         {
@@ -104,7 +76,7 @@ public class ShippingCamundaController {
                 CloseableHttpResponse call = makeCamundaCreateProcessRequestGame(orderline);
                 if (call != null) {
                     createMails(orderline);
-                    LOGGER.log(Level.INFO, "[LOGGER] ::: SHIPMENT ::: createProcess");
+                    LOGGER.log(Level.INFO, "[LOGGER] ::: SHIPMENT ::: createShipment");
 
                 }
             } catch (Exception e) {
@@ -112,7 +84,7 @@ public class ShippingCamundaController {
                 return "Error, something went wrong, check the console.";
             }
         }
-        return "Successfully sent object to Camunda.";
+        return String.format("Successfully sent orderlines to Camunda", order.getOrderLines());
     }
 
     public CloseableHttpResponse makeCamundaCreateProcessRequestGame(OrderLine orderline) {

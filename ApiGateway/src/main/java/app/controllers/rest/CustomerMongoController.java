@@ -22,7 +22,7 @@ public class CustomerMongoController {
 
     @GetMapping("")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Collection<Customer> retrieveAllCustomers()
+    public Collection<Customer> retrieveAllCustomers() throws NotFoundException
     {
         List<Customer> collect = client.customerCollection()
                 .stream()
