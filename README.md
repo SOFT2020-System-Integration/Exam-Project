@@ -15,7 +15,7 @@ This buisness case is build around the idea of an online game shop. A shop has p
 
 
 
-## Architecture
+# Architecture
 ## Technologies
 ### Monolithic application (our shop)
     - what    
@@ -46,13 +46,15 @@ This buisness case is build around the idea of an online game shop. A shop has p
     - how
 
 ### Mail Service - Andreas
+<hr/>
+
 The service is used to send out automatic mails through gmails smtp service.
 We used gmail as it is free, fast and extremely easy to set up. We also had experience
 with it from earlier. 
-The mail service is running in the APIshop gateway as a consumer serivce. It listen to kafka for orders-broker topics that has been produced from our Shipping-Camunda-Microservice. When an order has been completed in Camunda, the mail service triggers automaticly and dynamicly finds the customers email and sents them a mail.
+The mail service is running in the APIshop gateway as a consumer serivce. It listen to kafka for orders-broker topics that has been produced from our Shipping-Camunda-Microservice. When an order has been completed in Camunda, the mail service triggers automaticly and dynamicly finds the customers email and sents them a mail. 
 
 From left to right: Camunda produce a message of an order and sents it to kafka, kafka stores the order data, mailservice cousumes the data and sents out the confirmation emails.
-![CKS-diagram](CKS-diagram.png)
+![CKS-diagram](/Misc/CKS-diagram.png)
 
 
 
@@ -76,7 +78,7 @@ From left to right: Camunda produce a message of an order and sents it to kafka,
     - how    
 
 ## Diagrams
-
+![asd](/Misc/System-Diagram.png)
 
 ### Interconnected diagram
 
