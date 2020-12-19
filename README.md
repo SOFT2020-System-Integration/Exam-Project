@@ -25,28 +25,18 @@ This buisness case is build around the idea of an online game shop. A shop has p
 | Technology                    | Usage                                                             |
 | ------------------------------|-------------------------------------------------------------------|
 | IntelliJ IDEA                 | Java development environment                                      |
-| [MongoDB](#MongoDB-&-NoSQL)   | NoSQL Database                                                    |
+| [MongoDB](#mongodb--nosqlL)   | NoSQL Database                                                    |
 | Compass                       | MongoDB Client                                                    |
 | Postman                       | Tool for verifying the API requests                               |
-| Docker                        | Used to run our MongoDB and Camunda virtually                     |
-| Camunda                       | Used to handle our shipment method (BPMN)                         |
-| Kafka                         | Used as our message broker to send messages between microservices |
+| [Docker](#docker)             | Used to run our MongoDB and Camunda virtually                     |
+| [Camunda](#camunda---jonatan) | Used to handle our shipment method (BPMN)                         |
+| [Kafka](#kafka---jonas)       | Used as our message broker to send messages between microservices |
 | [Netflix Eureka](#eureka)     | Used to register and discover our microservices                   |
-
-
-
-- IntelliJ IDEA - Java
-- MongoDB - NoSQL
-- Compass - MongoDB Client
-- Postman - API Requests
-- Docker - To run MongoDB & Camunda
-- Camunda - Business Process Model & Notation
-- Kafka - Message Broker
-- Netflix Eureka - Discovery & Microservices
-- Spring Cloud Ribbon - Load Balancer
-- Kubernetes - To Run the Microservices
-- Google SMTP Server - Sending Emails
-
+| [Spring Cloud Ribbon](#ribbon)| Used as a load balancer in our [Api Gateway](/ApiGateway)         |
+| [Kubernetes]                  | NaN                                                               |
+| [Google SMTP Server](##mail-service---andreas) | Used in our [Mail Service](/mailservice) to send emails when orders are completed |
+  
+  
 
 ### Monolithic application (our shop)
     - what    
