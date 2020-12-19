@@ -56,14 +56,13 @@ This, for example, made adding relations between a `Customer` and an `Order` inc
 All we had to do were to add a `List` of our `Customer Documents` into the `rder document`, save the data to the `Order Collection`, and voilá, we hvae a `many-to-one` relationship in the database.
 This is how our order and customer collections look like in Mongo Compass: 
 
-MongoDB - Order Collection      | MongoDB - Customer Table    
-:-------------------------:|:-------------------------: 
-![mongo](/Misc/mongo-order-table.png)  |  ![mongo](/Misc/mongo-customer-table.png)   
+MongoDB - Order Collection              | MongoDB - Customer Table    
+:--------------------------------------:|:-----------------------------------------: 
+![mongo](/Misc/mongo-order-table.png)   | ![mongo](/Misc/mongo-customer-table.png)   
 
 
-As you can see on the `Order-Collection` diagram, a customer is referenced directly by the `Customer-Collection`'s ObjectId which Mongo creates for us when we add a new customer to the database and a target, which in this case is `"customers"`, which is the name of our `customer-collection`.
-
-  
+As you can see on the `Order-Collection` diagram, a customer is referenced directly by the `Customer-Collection`'s ObjectId which Mongo creates for us when we add a new customer to the database and a target, which in this case is `"customers"`, which is the name of our `customer-collection`.  
+We use the same integration model to connect `orderLines` to the `Order-Collection` and to add `Games` to the `OrderLine-Collection`.   
 
 ### Mail Service - Andreas
 
