@@ -112,6 +112,8 @@ We will then be provided with this message in `POSTMAN`:
 And this message in the [Mongo-Microservice](/Mongo-Microservice)'s console:  
 ```java
 ERROR 23808 --- [io-25002-exec-2] GameServiceController : [LOGGER] ::: GAME CONTROLLER ::: Game Not found ::: fddc6abe3e22f01dc1cfc35sasdsad   
+RROR 23808 --- [io-25002-exec-2] dispatcherServlet : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is app.mongo.exceptions.NotFoundException: Game not found] with root cause   
+app.mongo.exceptions.NotFoundException: Game not found
 ```
 
 ## Diagrams
