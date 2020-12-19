@@ -9,12 +9,9 @@
 <br>
 
 ## Business Case - Game Shop
-<hr>
-
 This buisness case is build around the idea of an online game shop. A shop has physical stores around the country and a very basic online webshop, made just to browse the companies ware catalog. They want a more morden and dynamic web store. The company want more functionality integrated into their web shop.
 
 ## Requirements:
-<hr>
 
 1. Ware Catalog on a noSQL database.
 2. DataBase with All Customers and emails
@@ -26,46 +23,31 @@ This buisness case is build around the idea of an online game shop. A shop has p
 
 
 # Architecture
-<br>
-
 ## Technologies
-<hr>
-
 ### Monolithic application (our shop)
-<hr>
-
     - what    
 
 ### Micro services - Andreas
-<hr>
-
     - what
     - why
     - how
 
 ### Camunda - Jonatan
-<hr>
-
     - what
     - why
     - how
 
 ### Kafka - Jonas
-<hr>
-
     - what
     - why
     - how
 
 ### Docker
-<hr>
-
     - what
     - why
     - how
 
 ### MongoDB
-<hr/>
 
 MongoDB is a dynamic, object oriented, and highly scalable NoSQL database.
 We chose to use MongoDB to store our data, mainly for its automatic scalability, which allows us to pass our application’s models directly into the database, which made it relatively easy for us to change our data structure on-the-fly.  
@@ -86,7 +68,6 @@ As you can see on the `Order-Collection` diagram, a customer is referenced direc
 <div style="margin-bottom: 30px"></div>
 
 ### Mail Service - Andreas
-<hr/>
 
 The service is used to send out automatic mails through gmails smtp service.
 We used gmail as it is free, fast and extremely easy to set up. We also had experience
