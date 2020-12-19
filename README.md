@@ -47,7 +47,7 @@ This buisness case is build around the idea of an online game shop. A shop has p
     - why
     - how
 
-### MongoDB
+### MongoDB & NoSQL
 MongoDB is a dynamic, object-oriented, and highly scalable NoSQL database.
 We chose to use MongoDB to store our data, mainly for its automatic scalability, which allows us to pass our application’s models directly into the database. This made it relatively easy for us to change our data structure on-the-fly without complications.  
 
@@ -63,8 +63,9 @@ MongoDB - Order Collection      | MongoDB - Customer Table
 ![mongo](/Misc/mongo-order-table.png)  |  ![mongo](/Misc/mongo-customer-table.png)   
 
 
-As you can see on the `Order-Collection` diagram, a customer is referenced directly by the `Customer-Collection`'s ObjectId which Mongo creates for us whenever we add a new customer to the database.
-<div style="margin-bottom: 100px"></div>
+As you can see on the `Order-Collection` diagram, a customer is referenced directly by the `Customer-Collection`'s ObjectId which Mongo creates for us when we add a new customer to the database and a target, which in this case is `"customers"`, which is the name of our `customer-collection`.
+
+  
 
 ### Mail Service - Andreas
 
@@ -83,10 +84,12 @@ From left to right: Camunda produce a message of an order and sents it to kafka,
     - why
     - how
 
-### External API (Game api) 
-    - what
-    - why
-    - how
+### External API (Game Catalog api)
+Since our project resolves around selling video games, we chose to integrate an external api into our [Mongo-Microservice](/Mongo-Microservice) which provides us with information about various popular video games. 
+
+The external api is hosted by [rawg.io](https://rawg.io/apidocs) and it provides us with plentiful of information aobut all the most popular games, respected platform(s), rating and where to buy the game, however we chose to just generate a ***price range***, ***overall-rating*** and ***game type*** *(digital/physical)* since these were not directly provided.
+
+Our API Controller sorts through [rawg.io](https://rawg.io/apidocs)'s api and save the first 20 games provided into our own database, so that we can add the games to new orders.
 
 ### Eureka
     - what
@@ -98,7 +101,7 @@ From left to right: Camunda produce a message of an order and sents it to kafka,
     - how    
 
 ## Diagrams
-![asd](/Misc/System-Diagram.png)
+![system-diagram](/Misc/System-Diagram.png)
 
 ### Interconnected diagram
 
