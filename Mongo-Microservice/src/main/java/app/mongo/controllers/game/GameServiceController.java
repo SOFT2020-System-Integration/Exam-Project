@@ -22,7 +22,7 @@ import java.util.Optional;
 @RequestMapping("/games")
 public class GameServiceController
 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServiceController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameServiceController.class);
 
     @Autowired
     private GameService repo;
@@ -34,8 +34,15 @@ public class GameServiceController
 
     @GetMapping("/id/{id}")
     public Optional<Game> retrieveProductById(@PathVariable String id) throws NotFoundException, MongoException {
+        Optional<Game> game;
         try {
-            return repo.findById(id);
+            game = repo.findById(id);
+            if(game.isPresent()) {
+                return game;
+            } else {
+                LOGGER.error("[LOGGER] ::: GAME CONTROLLER ::: Game Not found ::: id: " + id);
+                throw new NotFoundException("Game not found");
+            }
         } catch (MongoException ex) {
             LOGGER.error("[LOGGER] ::: GAME CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
