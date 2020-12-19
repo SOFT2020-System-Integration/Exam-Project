@@ -43,18 +43,19 @@ This buisness case is build around the idea of an online game shop. A shop has p
 # Architecture
 
 ## Technologies
-| Technology                    | Usage                                                             |
-| ------------------------------|-------------------------------------------------------------------|
-| IntelliJ IDEA                 | Java development environment                                      |
-| [MongoDB](#mongodb--nosql)    | NoSQL Database                                                    |
-| Compass                       | MongoDB Client                                                    |
-| Postman                       | Tool for verifying the API requests                               |
-| [Docker](#docker)             | Used to run our MongoDB and Camunda virtually                     |
-| [Camunda](#camunda---jonatan) | Used to handle our shipment method (BPMN)                         |
-| [Kafka](#kafka---jonas)       | Used as our message broker to send messages between microservices |
-| [Netflix Eureka](#eureka)     | Used to register and discover our microservices (clients)         |
-| [Spring Cloud Ribbon](#ribbon)| Used as a load balancer in our [Api Gateway](/ApiGateway)         |
-| Kubernetes                    | NaN                                                               |
+| Technology                        | Usage                                                             |
+| ----------------------------------|-------------------------------------------------------------------|
+| IntelliJ IDEA                     | Java development environment                                      |
+| [MongoDB](#mongodb--nosql)        | NoSQL Database                                                    |
+| Compass                           | MongoDB Client                                                    |
+| Postman                           | Tool for verifying the API requests                               |
+| [Docker](#docker)                 | Used to run our MongoDB and Camunda virtually                     |
+| [Camunda](#camunda---jonatan)     | Used to handle our shipment method (BPMN)                         |
+| [Kafka](#kafka---jonas)           | Used as our message broker to send messages between microservices |
+| [Netflix Eureka](#eureka)         | Used to register and discover our microservices (clients)         |
+| [Netflix Eureka](#Netflix Ribbon) | Used for load balancing                                           |
+| [Spring Cloud Ribbon](#ribbon)    | Used as a load balancer in our [Api Gateway](/ApiGateway)         |
+| Kubernetes                        | NaN                                                               |
 | [Google SMTP Server](#mail-service---andreas) | Used in our [Mail Service](/mailservice) to send emails when orders are completed |
   
 
@@ -151,7 +152,7 @@ We can then connect to the microservice by either sending requests to [host.dock
 
 
 
-### Ribbon
+### Netflix Ribbon
     - what
     - why
     - how
