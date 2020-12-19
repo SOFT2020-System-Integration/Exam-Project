@@ -28,7 +28,7 @@ public class Customer implements Serializable {
 
     public Customer(String firstName, String lastName, String mail, String password) {
         String x = firstName.toLowerCase();
-        String y = firstName.toLowerCase();
+        String y = lastName.toLowerCase();
         this.firstName = StringUtils.capitalize(x);
         this.lastName = StringUtils.capitalize(y);
         this.mail = mail.toLowerCase();

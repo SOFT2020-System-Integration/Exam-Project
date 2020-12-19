@@ -86,4 +86,9 @@ public class Order implements Serializable {
                 ", orderLines=" + orderLines +
                 '}';
     }
+    /*
+    @Override
+    public String toString() {return "ORDER: " + "id: " + id + "\nCreation Date: " + createdAt +  "\nStatus: " + status +  "\nCustomer: " + customer +"\nItems:" + orderLines ;}
+
+ */
 }
