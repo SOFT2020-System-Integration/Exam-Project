@@ -1,4 +1,4 @@
-<h1>System Integration 2020 Exam Project.</h1>
+<h1 style="border-bottom: none">System Integration 2020 Exam Project.</h1>
 <hr/>
 <ul>
     <li><span>Andreas Jørgensen</span> - <a href="https://github.com/DDomino">Github</a></li>
