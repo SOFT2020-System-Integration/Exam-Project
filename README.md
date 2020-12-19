@@ -1,11 +1,9 @@
 # System Integration 2020 Exam Project
-<ul>
-    <li><span>Andreas Jørgensen</span> - <a href="https://github.com/DDomino">Github</a></li>
-    <li><span>Jonatan Bakke</span> - <a href="https://github.com/JonatanMagnusBakke">Github</a></li>
-    <li><span>Jonas Hein</span> - <a href="https://github.com/Zenzus">Github</a></li>
-    <li><span>Thomas Ebsen</span> - <a href="https://github.com/Srax">Github</a></li>
-    <li><span><a href="/Misc/ExamProjectRequirements.pdf">Exam Project Requirements</a></span></li>
-</ul>
+- Andeas Jørgensen - https://github.com/DDomino
+- Jonatan Bakke https://github.com/JonatanMagnusBakke
+- Jonas Hein - https://github.com/Zenzus
+- Thomas Ebsen - https://github.com/Srax 
+- Exam Project Requirements - [Link](/Misc/ExamProjectRequirements.pdf)
 <br>
 
 ## Business Case - Game Shop
