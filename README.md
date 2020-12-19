@@ -60,21 +60,28 @@ This buisness case is build around the idea of an online game shop. A shop has p
   
 
 
-### Monolithic application (our shop)
+### Monolithic application
 Our monolithic application is a fictional one, as we did not have one at hand at the moment. But we imagined that the original application we was asked to change and update for a more modern setting, was a webshop build in on big service application, with no decoupling, Choreography or orchestration of componenets. For our project we decided we would take this huge, monolithic application and decouple it into microservices, that helps with better maintaince and upgrading individual parts of the application. But alose helps greatly when it comes to scaling. Before going into the Microservice, we will precent an image that can represent what a monolithic application looks like:
-![Mono-app](/Misc/Monolithic.png)
+<img src="/Misc/Monolithic.PNG" width=200px>
 
-### Micro services - Andreas
+### Micro services 
+Microservices is an architecture style where you split your project into small atomic 
+pieces. Each piece is a service on its own, and have a small very specific job. 
+<img src="/Misc/Microservices.PNG" width=200px>
+
+We use this to help us seperate all our services into small services with as few functions as possible. So that we can make a more
+sacaleable product, and easier to update services atomicly. The big advantages of microserivces is how easy it is to load balance together with eureka.
+If one of the services has a highload, we can simply open a new service on a new port. And with the help of Eureka we can quickly add it to the overall system.
+
+We use microservice in the way that we have the API gatewway that runs our main entry point, MongoDB service, that handle all functionality for database calls. 
+A camunda service that handles our integration of camunda. For a more visually representaion [here](#Diagrams)
+
+### Camunda
     - what
     - why
     - how
 
-### Camunda - Jonatan
-    - what
-    - why
-    - how
-
-### Kafka - Jonas
+### Kafka
     - what
     - why
     - how
@@ -103,7 +110,7 @@ MongoDB - Order Collection              | MongoDB - Customer Table
 As you can see on the `Order-Collection` diagram, a customer is referenced directly by the `Customer-Collection`'s ObjectId which Mongo creates for us when we add a new customer to the database and a target, which in this case is `"customers"`, which is the name of our `customer-collection`.  
 We use the same integration model to connect `orderLines` to the `Order-Collection` and to add `Games` to the `OrderLine-Collection`.   
 
-### Mail Service - Andreas
+### Mail Service
 
 The service is used to send out automatic mails through gmails smtp service.
 We used gmail as it is free, fast and extremely easy to set up. We also had experience
@@ -113,12 +120,6 @@ The mail service is running in the APIshop gateway as a consumer serivce. It lis
 From left to right: Camunda produce a message of an order and sents it to kafka, kafka stores the order data, mailservice cousumes the data and sents out the confirmation emails.
 ![CKS-diagram](/Misc/CKS-diagram.png)
 
-
-
-### Kubenetis?????
-    - what
-    - why
-    - how
 
 ### External API (Game Catalog api)
 Since our project resolves around selling video games, we chose to integrate an external api into our [Mongo-Microservice](/Mongo-Microservice) which provides us with information about various popular video games. 
@@ -186,7 +187,7 @@ The main service "Shop(gateway)" Runs on the port 25001. This is where we presen
 
 It connects to all our other micro services through Eureka. Which helps it recognize the services. MongoDB Service handles everything concerning our data. It helps fetch data from the API and push it into the Database. Saves Customers in the data base. And returns data to the API gateway, through Eureak connection. Camunda microservice handles our connection to our camunda docker service, business model and rules. Every result produced form camunda is fed to our Kafka Service.
 
-The over all service we hope to have hosted on Kubenetes and docker at the exam. 
+
 
 
 ![system-diagram](/Misc/SystemDiagram.png)
