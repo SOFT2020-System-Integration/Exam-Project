@@ -53,7 +53,7 @@ It is also easier for us to create relations using the NoSQL language compared t
 We don’t have to define foreign keys or create conjunction tables, we simple have to add the object which we wish to refer to, into our models and mongo will handle the rest for us.  
 This, for example, made adding relations between a `Customer` and an `Order` incredibly straight forward.
 
-All we had to do were to add a `List` of our `Customer Documents` into the `rder document`, save the data to the `Order Collection`, and voilá, we hvae a `many-to-one` relationship in the database.
+All we had to do were to add a `List` of our `Customer-Documents` into the `Order-Document`, save the data to the `Order-Collection`, and voilá, we hvae a `many-to-one` relationship in the database.
 This is how our order and customer collections look like in Mongo Compass: 
 
 MongoDB - Order Collection              | MongoDB - Customer Table    
