@@ -52,7 +52,8 @@ We don’t have to define foreign keys or create conjunction tables, we simple h
 As an example, this is how our order and customer table looks in mongodb:    
 MongoDB - Order Table      | MongoDB - Customer Table    
 :-------------------------:|:-------------------------: 
-![mongo](/Misc/mongo-order-table.png)  |  ![mongo](/Misc/mongo-customer-table.png)  
+![mongo](/Misc/mongo-order-table.png)  |  ![mongo](/Misc/mongo-customer-table.png)   
+
 As you can see on the Order-Table diagram, a customer is referenced directly by the tables ObjectId 
 
 
