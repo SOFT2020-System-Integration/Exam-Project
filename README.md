@@ -1,21 +1,3 @@
-<style>
-    .page-section {
-        margin-bottom: 25px;
-    }
-
-    h1 {
-        border-bottom: 4px solid #e1e4e8;
-    }
-
-    h2 {
-        border-bottom: 4px solid #e1e4e8;
-    }
-
-    h3 {
-        border-bottom: 4px solid #e1e4e8;
-    }
-</style>
-
 <h1>System Integration 2020 Exam Project.</h1>
 <ul>
     <li><span>Andreas Jørgensen</span> - <a href="https://github.com/DDomino">Github</a></li>
