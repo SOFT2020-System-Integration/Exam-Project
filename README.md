@@ -139,7 +139,7 @@ This is what the applications console looks like when one of our microservices i
 Registered instance MONGO-SERVICE/host.docker.internal:mongo-service:25002 with status UP (replication=true)  
 ```  
 
-**URL**
+**URL** - [localhost:8761](http://localhost:8761/)
 ![Eureka](/Misc/eureka.png)
 
 As you can see, `MONGO-SERVICE`, which is the application name of our mongo microservice, is now registered in Eureka.  
