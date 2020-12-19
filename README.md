@@ -48,10 +48,9 @@ This buisness case is build around the idea of an online game shop. A shop has p
     - how
 
 ### MongoDB
+MongoDB is a dynamic, object-oriented, and highly scalable NoSQL database.
+We chose to use MongoDB to store our data, mainly for its automatic scalability, which allows us to pass our application’s models directly into the database. This made it relatively easy for us to change our data structure on-the-fly without complications.  
 
-MongoDB is a dynamic, object oriented, and highly scalable NoSQL database.
-We chose to use MongoDB to store our data, mainly for its automatic scalability, which allows us to pass our application’s models directly into the database, which made it relatively easy for us to change our data structure on-the-fly.  
-  
 It is also easier for us to create relations using the NoSQL language compared to traditional SQL.  
 We don’t have to define foreign keys or create conjunction tables, we simple have to add the object which we wish to refer to, into our models and mongo will handle the rest for us.  
 This, for example, made adding relations between a `Customer` and an `Order` incredibly straight forward.
@@ -65,7 +64,7 @@ MongoDB - Order Collection      | MongoDB - Customer Table
 
 
 As you can see on the `Order-Collection` diagram, a customer is referenced directly by the `Customer-Collection`'s ObjectId which Mongo creates for us whenever we add a new customer to the database.
-<div style="margin-bottom: 30px"></div>
+<div style="margin-bottom: 100px"></div>
 
 ### Mail Service - Andreas
 
