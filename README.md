@@ -25,7 +25,7 @@ This buisness case is build around the idea of an online game shop. A shop has p
 | Technology                    | Usage                                                         |
 | ------------------------------|-------------------------------------------------------------------|
 | IntelliJ IDEA                 | Java development environment                                      |
-| [MongoDB](#mongodb-&-nosql)   | NoSQL Database                                                    |
+| [MongoDB](#mongodb & nosql)   | NoSQL Database                                                    |
 | Compass                       | MongoDB Client                                                    |
 | Postman                       | Tool for verifying the API requests                               |
 | Docker                        | Used to run our MongoDB and Camunda virtually                     |
