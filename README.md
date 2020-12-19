@@ -148,13 +148,9 @@ As you can see, `MONGO-SERVICE`, which is the application name of our mongo micr
 We can then connect to the microservice by either sending requests to [host.docker.internal:mongo-service:25002](host.docker.internal:mongo-service:25002) or by using `@FeignClient("mongo-service")` in the code, as we do in our [Api Gateway](/ApiGateway).
 
 
-
-
-
-### Netflix Ribbon
-    - what
-    - why
-    - how
+### Ribbon
+Netflix Ribbon is an Inter Process Communication (IPC) cloud library.
+It provides client-side load balancing 
 
 ### Logging and Errorhandling
 We have implemented error handling into every method that requires it.  
