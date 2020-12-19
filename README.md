@@ -1,18 +1,20 @@
-<link href="/Misk/markdown.css" rel="stylesheet"></link>
-<h1 style="border-bottom: none">System Integration 2020 Exam Project.</h1>
-<hr/>
+# System Integration 2020 Exam Project
 <ul>
     <li><span>Andreas Jørgensen</span> - <a href="https://github.com/DDomino">Github</a></li>
     <li><span>Jonatan Bakke</span> - <a href="https://github.com/JonatanMagnusBakke">Github</a></li>
     <li><span>Jonas Hein</span> - <a href="https://github.com/Zenzus">Github</a></li>
     <li><span>Thomas Ebsen</span> - <a href="https://github.com/Srax">Github</a></li>
+    <li><span><a href="/Misc/ExamProjectRequirements.pdf">Exam Project Requirements</a></span></li>
 </ul>
-
+<br>
 
 ## Business Case - Game Shop
+<hr>
+
 This buisness case is build around the idea of an online game shop. A shop has physical stores around the country and a very basic online webshop, made just to browse the companies ware catalog. They want a more morden and dynamic web store. The company want more functionality integrated into their web shop.
 
 ## Requirements:
+<hr>
 
 1. Ware Catalog on a noSQL database.
 2. DataBase with All Customers and emails
@@ -24,26 +26,40 @@ This buisness case is build around the idea of an online game shop. A shop has p
 
 
 # Architecture
+<br>
+
 ## Technologies
+<hr>
+
 ### Monolithic application (our shop)
+<hr>
+
     - what    
 
 ### Micro services - Andreas
+<hr>
+
     - what
     - why
     - how
 
 ### Camunda - Jonatan
+<hr>
+
     - what
     - why
     - how
 
 ### Kafka - Jonas
+<hr>
+
     - what
     - why
     - how
 
 ### Docker
+<hr>
+
     - what
     - why
     - how
