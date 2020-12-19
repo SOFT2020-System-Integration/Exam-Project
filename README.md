@@ -78,9 +78,25 @@ We use microservice in the way that we have the API gatewway that runs our main 
 A camunda service that handles our integration of camunda. For a more visually representaion [here](#Diagrams)
 
 ### Camunda
-    - what
-    - why
-    - how
+Camunda BPM is a lightweight, Java-based framework. It can be used as a standalone process engine server or embedded inside custom Java applications. It offers non-Java developers a REST API and dedicated client libraries to build applications connecting to a remote workflow engine.
+Camunda is an open-source decision and workflow automation platform. 
+The Camunda Modeler desktop application allows developers to create and edit BPMN process diagrams and DMN decision tables Created files are deployed in the Camunda Engines, which use a BPMN parser to transform BPMN 2.0 XML files, and DMN XML files, into Java Objects, and implements BPMN 2.0 constructs with a set of BPMN Behaviour implementations
+Typical use cases for the Camunda BPMN Workflow Engine can be microservices orchestration and human task management.
+The Camunda DMN Decision Engine executes business-driven decision tables. It is pre-integrated with the Workflow Engine but can be used as a stand-alone application via REST or inside Java applications
+
+Camunda’s additional web applications provide the following tools for developers and business users:
+- Cockpit: A tool for technical process operations enabling users to monitor. workflows and decisions in production, to analyse and solve technical problems.
+- Tasklist: Allows end users to work on assigned tasks and provides additional visibility when using the Camunda Workflow Engine for human task management.
+- Optimize: An analytics and reporting tool to identify errors and bottlenecks in workflow processes.
+- Admin: Allows users to manage Camunda web applications or REST API users. Existing user management can be integrated via LDAP.
+
+We have chosen to use Camunda BPM because it helps us quick and easily create an entire BPM model without having to make it ourselves. The only thing we need to do is to create a business model that has the workflow descried and using the External implementation we can then weave our on features and code into the model. And for further automation we can use their provide Rest API to create processes aka creating an order for a customer. 
+
+We are using Camunda web application for our handling of shipments of the orders that we receive. When an order comes and is confirmed, then the business process begins. The business process in this cause if to figure out if the game withing the order is a physical or digital game. If the game is physical, then an employee needs to take care of handling and creating the shipment to be sent to the customer. If the order is digital, then they will simply get an email with the game. 
+
+Below you can see the BPMN diagram that describes the workflow. 
+The way this works is that when an order enters then the list of games within are iterated through and are created as Shipment Request. The first step is to check if the type of the game is physical or digital, this is done using a decision table. If the is digital, then the order is sent directly to our external service. If is it physical, then it hits a use action. The user action can be confirmed or declined.
+
 
 ### Kafka
     - what
@@ -88,9 +104,13 @@ A camunda service that handles our integration of camunda. For a more visually r
     - how
 
 ### Docker
-    - what
-    - why
-    - how
+Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host. Docker also provides an additional layer of abstraction and automation of virtualization on Linux
+Docker automates the process of setting up and configuring development environments, building, testing, debugging and deployment. It works with any platform and any programming language, because of this Docker has become the most popular container implementation.
+We are using Docker not only because it is the most popular container implementation but because it is very simple to use. The fact that it is popular makes it a good thing to have on our resumes.  
+Since we are using Java with Maven all we need to do is to run ‘mvn package’ to build our jar file and add this DockerFile with contents to the root of code project:
+ 
+If you have docker install in global path write “docker build -t <name>:<version> .” in root and now the Java project Is on Docker.
+
 
 ### MongoDB & NoSQL
 MongoDB is a dynamic, object-oriented, and highly scalable NoSQL database.
