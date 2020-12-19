@@ -3,7 +3,7 @@
 - Jonatan Bakke https://github.com/JonatanMagnusBakke
 - Jonas Hein - https://github.com/Zenzus
 - Thomas Ebsen - https://github.com/Srax 
-- Exam Project Requirements - [Link](/Misc/ExamProjectRequirements.pdf)
+- Exam Project Requirements - ![Link](/Misc/ExamProjectRequirements.pdf)
 <br>
 
 ## Business Case - Game Shop
