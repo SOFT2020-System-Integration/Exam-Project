@@ -61,7 +61,8 @@ This buisness case is build around the idea of an online game shop. A shop has p
 
 
 ### Monolithic application (our shop)
-    - what    
+Our monolithic application is a fictional one, as we did not have one at hand at the moment. But we imagined that the original application we was asked to change and update for a more modern setting, was a webshop build in on big service application, with no decoupling, Choreography or orchestration of componenets. For our project we decided we would take this huge, monolithic application and decouple it into microservices, that helps with better maintaince and upgrading individual parts of the application. But alose helps greatly when it comes to scaling. Before going into the Microservice, we will precent an image that can represent what a monolithic application looks like:
+![Mono-app](/Misc/Monolithic.png)
 
 ### Micro services - Andreas
     - what
