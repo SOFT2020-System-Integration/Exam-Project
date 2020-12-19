@@ -6,7 +6,7 @@
 - Exam Project Requirements - [Link](/Misc/ExamProjectRequirements.pdf)
 
 
-# Table of Contents
+## Table of Contents
 - [System Integration 2020 Exam Project](#system-integration-2020-exam-project)
   * [Business Case - Game Shop](#business-case---game-shop)
   * [Requirements:](#requirements-)
@@ -52,7 +52,7 @@ This buisness case is build around the idea of an online game shop. A shop has p
 | [Docker](#docker)             | Used to run our MongoDB and Camunda virtually                     |
 | [Camunda](#camunda---jonatan) | Used to handle our shipment method (BPMN)                         |
 | [Kafka](#kafka---jonas)       | Used as our message broker to send messages between microservices |
-| [Netflix Eureka](#eureka)     | Used to register and discover our microservices                   |
+| [Netflix Eureka](#eureka)     | Used to register and discover our microservices (clients)         |
 | [Spring Cloud Ribbon](#ribbon)| Used as a load balancer in our [Api Gateway](/ApiGateway)         |
 | Kubernetes                    | NaN                                                               |
 | [Google SMTP Server](#mail-service---andreas) | Used in our [Mail Service](/mailservice) to send emails when orders are completed |
@@ -127,7 +127,7 @@ Our API Controller sorts through [rawg.io](https://rawg.io/apidocs)'s api and st
     
 ### Eureka
 Maintaining and connecting multiple microservices that are running on multiple URL's can be troublesome and hard to manage, therefor we chose to use Netflix Eureka.  
-Eureka is a tool provided by Netflix that we use to 
+Eureka is a tool provided by Netflix that we use to register and discover our microservices (clients) so that they can work together.
 
 ### Ribbon
     - what
