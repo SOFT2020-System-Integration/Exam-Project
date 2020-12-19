@@ -22,6 +22,26 @@ This buisness case is build around the idea of an online game shop. A shop has p
 
 # Architecture
 ## Technologies
+Technology              | Use 
+:----------------------:|:-----------------------------------------:
+IntelliJ IDEA           | Java
+MongoDB                 | NoSQL
+
+
+
+- IntelliJ IDEA - Java
+- MongoDB - NoSQL
+- Compass - MongoDB Client
+- Postman - API Requests
+- Docker - To run MongoDB & Camunda
+- Camunda - Business Process Model & Notation
+- Kafka - Message Broker
+- Netflix Eureka - Discovery & Microservices
+- Spring Cloud Ribbon - Load Balancer
+- Kubernetes - To Run the Microservices
+- Google SMTP Server - Sending Emails
+
+
 ### Monolithic application (our shop)
     - what    
 
@@ -89,6 +109,11 @@ The external api is hosted by [rawg.io](https://rawg.io/apidocs) and it provides
 Our API Controller sorts through [rawg.io](https://rawg.io/apidocs)'s api and store the first twenty games provided, into our own database, so that we can add the games to new orders.
 
 ### Eureka
+    - what
+    - why
+    - how
+
+### Ribbon
     - what
     - why
     - how
