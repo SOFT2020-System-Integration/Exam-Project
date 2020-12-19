@@ -68,7 +68,7 @@ Our monolithic application is a fictional one, as we did not have one at hand at
 Microservices is an architecture style where you split your project into small atomic 
 pieces. Each piece is a service on its own, and have a small very specific job. 
 
-<img src="/Misc/Microservices.PNG" width=100px>
+<img src="/Misc/Microservices.PNG" width=500px>
 
 We use this to help us seperate all our services into small services with as few functions as possible. So that we can make a more
 sacaleable product, and easier to update services atomicly. The big advantages of microserivces is how easy it is to load balance together with eureka.
