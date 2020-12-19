@@ -109,8 +109,9 @@ We will then be provided with this message in `POSTMAN`:
     "trace": "app.mongo.exceptions.NotFoundException:
 ```
 
-And this message in the [Mongo-Microservice](/Mongo-Microservice)'s console:
+And this message in the [Mongo-Microservice](/Mongo-Microservice)'s console:  
 ```java
+ERROR 23808 --- [io-25002-exec-2] GameServiceController : [LOGGER] ::: GAME CONTROLLER ::: Game Not found ::: fddc6abe3e22f01dc1cfc35sasdsad   
 ```
 
 ## Diagrams
