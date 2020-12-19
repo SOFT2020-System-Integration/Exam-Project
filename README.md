@@ -5,6 +5,7 @@
     <li><span>Jonas Hein</span> - <a href="https://github.com/Zenzus">Github</a></li>
     <li><span>Thomas Ebsen</span> - <a href="https://github.com/Srax">Github</a></li>
 </ul>
+<hr/>
 
 
 ## Business Case - Game Shop
