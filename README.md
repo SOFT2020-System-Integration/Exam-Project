@@ -44,16 +44,16 @@ This buisness case is build around the idea of an online game shop. A shop has p
 <hr/>
 
 MongoDB is a dynamic, object oriented, and highly scalable NoSQL database.
-We chose to use MongoDB as our datastore, mainly for its automatic scalability, which allows us to pass our application’s models directly into the database, which made it relatively easy for us to change how our data structure on the fly.
-
-It is also easier for us to create relations using the NoSQL language compared to traditional SQL.
+We chose to use MongoDB as our datastore, mainly for its automatic scalability, which allows us to pass our application’s models directly into the database, which made it relatively easy for us to change how our data structure on the fly.  
+  
+It is also easier for us to create relations using the NoSQL language compared to traditional SQL.  
 We don’t have to define foreign keys or create conjunction tables, we simple have to add the object which we wish to refer to into our models and mongo will handle the rest for us, which for example, made adding relations between a customer and an order incredibly straight forward.
  
 As an example, this is how our order and customer table looks in mongodb:    
 MongoDB - Order Table      | MongoDB - Customer Table    
 :-------------------------:|:-------------------------: 
 ![mongo](/Misc/mongo-order-table.png)  |  ![mongo](/Misc/mongo-customer-table.png)  
-
+As you can see on the Order-Table diagram, a customer is referenced directly by the table's ObjectId 
 
 ### Mail Service - Andreas
 The service is used to send out automatic mails through gmails smtp service.
