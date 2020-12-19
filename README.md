@@ -87,16 +87,31 @@ Since our project resolves around selling video games, we chose to integrate an 
 
 The external api is hosted by [rawg.io](https://rawg.io/apidocs) and it provides us with plentiful of information aobut all the most popular games, respected platform(s), rating and where to buy the game, however we chose to just generate a ***price range***, ***overall-rating*** and ***game type*** *(digital/physical)* since these were not directly provided.
 
-Our API Controller sorts through [rawg.io](https://rawg.io/apidocs)'s api and save the first 20 games provided into our own database, so that we can add the games to new orders.
+Our API Controller sorts through [rawg.io](https://rawg.io/apidocs)'s api and store the first twenty games provided, into our own database, so that we can add the games to new orders.
 
 ### Eureka
     - what
     - why
     - how
 
-### Logging and monitoring
-    - why
-    - how    
+### Logging and Errorhandling
+We have implemented error handling into every method that requires it.  
+If a method throws an error, the ***error code***, ***a readable error message*** and ***stack trace*** is then printed to the console as a `warning`.
+
+Let's say we use `POSTMAN` to do a `GET REQUEST` for a `java GAME` in our [Mongo-Microservice](/Mongo-Microservice) that will result in an error, because the `game` we are searching for does not exist in the database.
+
+We will then be provided with this message in `POSTMAN`:
+```java
+"timestamp": "2020-12-19T10:39:50.768+0000",
+    "status": 500,
+    "error": "Internal Server Error",
+    "message": "Game not found",
+    "trace": "app.mongo.exceptions.NotFoundException:
+```
+
+And this message in the [Mongo-Microservice](/Mongo-Microservice)'s console:
+```java
+```
 
 ## Diagrams
 ![system-diagram](/Misc/System-Diagram.png)
