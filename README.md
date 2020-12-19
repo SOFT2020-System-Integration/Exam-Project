@@ -22,10 +22,16 @@ This buisness case is build around the idea of an online game shop. A shop has p
 
 # Architecture
 ## Technologies
-Technology              | Use 
-:----------------------:|:-----------------------------------------:
-IntelliJ IDEA           | Java
-MongoDB                 | NoSQL
+| Technology                    | Usage                                                         |
+| ------------------------------|-------------------------------------------------------------------|
+| IntelliJ IDEA                 | Java development environment                                      |
+| MongoDB                       | NoSQL Database                                                    |
+| Compass                       | MongoDB Client                                                    |
+| Postman                       | Tool for verifying the API requests                               |
+| Docker                        | Used to run our MongoDB and Camunda virtually                     |
+| Camunda                       | Used to handle our shipment method (BPMN)                         |
+| Kafka                         | Used as our message broker to send messages between microservices |
+| [Netflix Eureka](#eureka)     | Used to register and discover our microservices                   |
 
 
 
