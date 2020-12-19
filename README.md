@@ -28,9 +28,10 @@
     + [Interconnected diagram](#interconnected-diagram)
 
 ## Business Case - Game Shop
+
 This buisness case is build around the idea of an online game shop. A shop has physical stores around the country and a very basic online webshop, made just to browse the companies ware catalog. They want a more morden and dynamic web store. The company want more functionality integrated into their web shop.
 
-## Requirements:
+## Requirements
 
 1. Ware Catalog on a noSQL database.
 2. DataBase with All Customers and emails
@@ -39,9 +40,8 @@ This buisness case is build around the idea of an online game shop. A shop has p
 5. Employeees should be able to sent out news/discount mails to their customers
 6. The system must be as atomic as possible.
 
-
-
 # Architecture
+
 ## Technologies
 | Technology                    | Usage                                                             |
 | ------------------------------|-------------------------------------------------------------------|
@@ -129,6 +129,27 @@ Our API Controller sorts through [rawg.io](https://rawg.io/apidocs)'s api and st
 Maintaining and connecting multiple microservices that are running on multiple URL's can be troublesome and hard to manage, therefor we chose to use Netflix Eureka.  
 Eureka is a tool provided by Netflix that we use to register and discover our microservices (clients) so that they can work together.
 
+We created a [Microservice Discovery App](/Microservice-Discovery-Application) that acts as our discovery client. Whenever one of our microservices goes online, they will be discovered by our app and then registered into Eureka.  
+We can then see which microservice has been discovered, either by going to our applications URL at [localhost:8761](http://localhost:8761/) or by looking at the log in 
+the console.
+
+This is what the applications console looks like when one of our microservices is discovered, in this example we ran the [Mongo-Microservice](/Mongo-Microservice):  
+**Console**
+```java
+Registered instance MONGO-SERVICE/host.docker.internal:mongo-service:25002 with status UP (replication=true)  
+```  
+
+**URL**
+![Eureka](/Misc/eureka.png)
+
+As you can see, `MONGO-SERVICE`, which is the application name of our mongo microservice, is now registered in Eureka.  
+
+We can then connect to the microservice by either sending requests to [ost.docker.internal:mongo-service:25002](ost.docker.internal:mongo-service:25002) or by using `@FeignClient("mongo-service")` in the code, as we do in our [Api Gateway](/ApiGateway).
+
+
+
+
+
 ### Ribbon
     - what
     - why
@@ -147,11 +168,11 @@ We will then be provided with this message in `POSTMAN`:
     "error": "Internal Server Error",
     "message": "Game not found",
     "trace": "app.mongo.exceptions.NotFoundException:
-```
+```  
 
 And this message in the [Mongo-Microservice](/Mongo-Microservice)'s console:  
 ```java
-ERROR 23808 --- [io-25002-exec-2] GameServiceController : [LOGGER] ::: GAME CONTROLLER ::: id: Game Not found ::: fddc6abe3e22f01dc1cfc35sasdsad   
+ERROR 23808 --- [io-25002-exec-2] GameServiceController : [LOGGER] ::: GAME CONTROLLER ::: id: Game Not found ::: id: fddc6abe3e22f01dc1cfc35sasdsad   
 ERROR 23808 --- [io-25002-exec-2] dispatcherServlet : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is app.mongo.exceptions.NotFoundException: Game not found] with root cause   
 app.mongo.exceptions.NotFoundException: Game not found
 ```
