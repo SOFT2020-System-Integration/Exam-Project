@@ -144,7 +144,7 @@ Registered instance MONGO-SERVICE/host.docker.internal:mongo-service:25002 with 
 
 As you can see, `MONGO-SERVICE`, which is the application name of our mongo microservice, is now registered in Eureka.  
 
-We can then connect to the microservice by either sending requests to [ost.docker.internal:mongo-service:25002](ost.docker.internal:mongo-service:25002) or by using `@FeignClient("mongo-service")` in the code, as we do in our [Api Gateway](/ApiGateway).
+We can then connect to the microservice by either sending requests to [host.docker.internal:mongo-service:25002](host.docker.internal:mongo-service:25002) or by using `@FeignClient("mongo-service")` in the code, as we do in our [Api Gateway](/ApiGateway).
 
 
 
