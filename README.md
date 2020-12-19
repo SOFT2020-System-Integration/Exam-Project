@@ -106,7 +106,7 @@ We use the same integration model to connect `orderLines` to the `Order-Collecti
 The service is used to send out automatic mails through gmails smtp service.
 We used gmail as it is free, fast and extremely easy to set up. We also had experience
 with it from earlier. 
-The mail service is running in the APIshop gateway as a consumer serivce. It listen to kafka for orders-broker topics that has been produced from our Shipping-Camunda-Microservice. When an order has been completed in Camunda, the mail service triggers automaticly and dynamicly finds the customers email and sents them a mail. 
+The mail service is running in the APIshop gateway as a consumer serivce. It listen to kafka for orders-broker topics that has been produced from our Shipping-Camunda-Microservice. When an order has been completed in Camunda, the mail service triggers automaticly and dynamicly finds the customers email and sents them a mail. The mail service is attached to the Api-gateway. 
 
 From left to right: Camunda produce a message of an order and sents it to kafka, kafka stores the order data, mailservice cousumes the data and sents out the confirmation emails.
 ![CKS-diagram](/Misc/CKS-diagram.png)
@@ -178,9 +178,17 @@ app.mongo.exceptions.NotFoundException: Game not found
 ```
 
 ## Diagrams
-![system-diagram](/Misc/System-Diagram.png)
 
-### Interconnected diagram
+From the diagram we can see how everything is connected, and what port they're running on.
+The main service "Shop(gateway)" Runs on the port 25001. This is where we present the data for the customer and future web application. Both it, and the integrated mail service, listen to kafka for new information, to either update order status or send confirmation mails to the customer. 
+
+It connects to all our other micro services through Eureka. Which helps it recognize the services. MongoDB Service handles everything concerning our data. It helps fetch data from the API and push it into the Database. Saves Customers in the data base. And returns data to the API gateway, through Eureak connection. Camunda microservice handles our connection to our camunda docker service, business model and rules. Every result produced form camunda is fed to our Kafka Service.
+
+The over all service we hope to have hosted on Kubenetes and docker at the exam. 
+
+
+![system-diagram](/Misc/SystemDiagram.png)
+
 
 
 
