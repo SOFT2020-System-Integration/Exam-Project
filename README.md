@@ -50,7 +50,7 @@ It is also easier for us to create relations using the NoSQL language compared t
 We don’t have to define foreign keys or create conjunction tables, we simple have to add the object which we wish to refer to into our models and mongo will handle the rest for us, which made adding relations between a customer and an order incredibly straight forward.
  
 As an example, this is how our order and customer table looks in mongodb:    
-Test Class where Mock is called (verified)     |  .   
+MongoDB - Order Table      | MongoDB - Customer Table    
 :-------------------------:|:-------------------------: 
 ![mongo](/Misc/mongo-order-table.png)  |  ![mongo](/Misc/mongo-customer-table.png)  
 
