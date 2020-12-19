@@ -1,4 +1,10 @@
-# System Integration 2020 Exam Project.
+<h1>System Integration 2020 Exam Project.</h1>
+<ul>
+    <li><span>Andreas Jørgensen</span> - <a href="https://github.com/DDomino">Github</a></li>
+    <li><span>Jonatan Bakke</span> - <a href="https://github.com/JonatanMagnusBakke">Github</a></li>
+    <li><span>Jonas Hein</span> - <a href="https://github.com/Zenzus">Github</a></li>
+    <li><span>Thomas Ebsen</span> - <a href="https://github.com/Srax">Github</a></li>
+</ul>
 
 
 ## Business Case - Game Shop
@@ -44,18 +50,22 @@ This buisness case is build around the idea of an online game shop. A shop has p
 <hr/>
 
 MongoDB is a dynamic, object oriented, and highly scalable NoSQL database.
-We chose to use MongoDB as our datastore, mainly for its automatic scalability, which allows us to pass our application’s models directly into the database, which made it relatively easy for us to change how our data structure on the fly.  
+We chose to use MongoDB to store our data, mainly for its automatic scalability, which allows us to pass our application’s models directly into the database, which made it relatively easy for us to change our data structure on-the-fly.  
   
 It is also easier for us to create relations using the NoSQL language compared to traditional SQL.  
-We don’t have to define foreign keys or create conjunction tables, we simple have to add the object which we wish to refer to into our models and mongo will handle the rest for us, which for example, made adding relations between a customer and an order incredibly straight forward.
- 
-As an example, this is how our order and customer table looks in mongodb:    
-MongoDB - Order Table      | MongoDB - Customer Table    
+We don’t have to define foreign keys or create conjunction tables, we simple have to add the object which we wish to refer to, into our models and mongo will handle the rest for us.  
+This, for example, made adding relations between a `Customer` and an `Order` incredibly straight forward.
+
+All we had to do were to add a `List` of our `Customer Documents` into the `rder document`, save the data to the `Order Collection`, and voilá, we hvae a `many-to-one` relationship in the database.
+This is how our order and customer collections look like in Mongo Compass: 
+
+MongoDB - Order Collection      | MongoDB - Customer Table    
 :-------------------------:|:-------------------------: 
 ![mongo](/Misc/mongo-order-table.png)  |  ![mongo](/Misc/mongo-customer-table.png)   
 
-As you can see on the Order-Table diagram, a customer is referenced directly by the tables ObjectId 
 
+As you can see on the `Order-Collection` diagram, a customer is referenced directly by the `Customer-Collection`'s ObjectId which Mongo creates for us whenever we add a new customer to the database.
+<div style="margin-bottom: 30px"></div>
 
 ### Mail Service - Andreas
 <hr/>
