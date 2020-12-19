@@ -4,7 +4,28 @@
 - Jonas Hein - https://github.com/Zenzus
 - Thomas Ebsen - https://github.com/Srax 
 - Exam Project Requirements - [Link](/Misc/ExamProjectRequirements.pdf)
-<br>
+
+
+# Table of Contents
+- [System Integration 2020 Exam Project](#system-integration-2020-exam-project)
+  * [Business Case - Game Shop](#business-case---game-shop)
+  * [Requirements:](#requirements-)
+- [Architecture](#architecture)
+  * [Technologies](#technologies)
+    + [Monolithic application (our shop)](#monolithic-application--our-shop-)
+    + [Micro services - Andreas](#micro-services---andreas)
+    + [Camunda - Jonatan](#camunda---jonatan)
+    + [Kafka - Jonas](#kafka---jonas)
+    + [Docker](#docker)
+    + [MongoDB & NoSQL](#mongodb---nosql)
+    + [Mail Service - Andreas](#mail-service---andreas)
+    + [Kubenetis?????](#kubenetis-----)
+    + [External API (Game Catalog api)](#external-api--game-catalog-api-)
+    + [Eureka](#eureka)
+    + [Ribbon](#ribbon)
+    + [Logging and Errorhandling](#logging-and-errorhandling)
+  * [Diagrams](#diagrams)
+    + [Interconnected diagram](#interconnected-diagram)
 
 ## Business Case - Game Shop
 This buisness case is build around the idea of an online game shop. A shop has physical stores around the country and a very basic online webshop, made just to browse the companies ware catalog. They want a more morden and dynamic web store. The company want more functionality integrated into their web shop.
@@ -25,7 +46,7 @@ This buisness case is build around the idea of an online game shop. A shop has p
 | Technology                    | Usage                                                             |
 | ------------------------------|-------------------------------------------------------------------|
 | IntelliJ IDEA                 | Java development environment                                      |
-| [MongoDB](#mongodb--nosql)   | NoSQL Database                                                    |
+| [MongoDB](#mongodb--nosql)    | NoSQL Database                                                    |
 | Compass                       | MongoDB Client                                                    |
 | Postman                       | Tool for verifying the API requests                               |
 | [Docker](#docker)             | Used to run our MongoDB and Camunda virtually                     |
@@ -33,8 +54,8 @@ This buisness case is build around the idea of an online game shop. A shop has p
 | [Kafka](#kafka---jonas)       | Used as our message broker to send messages between microservices |
 | [Netflix Eureka](#eureka)     | Used to register and discover our microservices                   |
 | [Spring Cloud Ribbon](#ribbon)| Used as a load balancer in our [Api Gateway](/ApiGateway)         |
-| [Kubernetes]                  | NaN                                                               |
-| [Google SMTP Server](##mail-service---andreas) | Used in our [Mail Service](/mailservice) to send emails when orders are completed |
+| Kubernetes                    | NaN                                                               |
+| [Google SMTP Server](#mail-service---andreas) | Used in our [Mail Service](/mailservice) to send emails when orders are completed |
   
 
 
@@ -103,11 +124,10 @@ Since our project resolves around selling video games, we chose to integrate an 
 The external api is hosted by [rawg.io](https://rawg.io/apidocs) and it provides us with plentiful of information aobut all the most popular games, respected platform(s), rating and where to buy the game, however we chose to just generate a ***price range***, ***overall-rating*** and ***game type*** *(digital/physical)* since these were not directly provided.
 
 Our API Controller sorts through [rawg.io](https://rawg.io/apidocs)'s api and store the first twenty games provided, into our own database, so that we can add the games to new orders.
-
+    
 ### Eureka
-    - what
-    - why
-    - how
+Maintaining and connecting multiple microservices that are running on multiple URL's can be troublesome and hard to manage, therefor we chose to use Netflix Eureka.  
+Eureka is a tool provided by Netflix that we use to 
 
 ### Ribbon
     - what
