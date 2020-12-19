@@ -173,7 +173,10 @@ We can then connect to the microservice by either sending requests to [host.dock
 
 ### Ribbon
 Netflix Ribbon is an Inter Process Communication (IPC) cloud library.
-It provides client-side load balancing 
+Ribbon load balancer is built into the `@FeignClient`, which provides client-side load balacing when we combine all the microservices rest endpoints in the API Gateway.  
+An example of this can be seen in our [MongoClient.java](/ApiGateway/src/main/java/app/repositories/MongoClient.java) insde the API Gateway.  
+At the start of the class we provide `@FeignClient("mongo-service")` and `@RibbonClient(name = "mongo-service", configuration = RibbonConfig.class)` which automatically sets up load balancing depending on settings in our [RibbonConfig.class](/ApiGateway/src/main/java/app/config/RibbonClient.java).
+
 
 ### Logging and Errorhandling
 We have implemented error handling into every method that requires it.  
