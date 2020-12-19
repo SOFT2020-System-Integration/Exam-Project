@@ -1,11 +1,11 @@
 <h1>System Integration 2020 Exam Project.</h1>
+<hr/>
 <ul>
     <li><span>Andreas Jørgensen</span> - <a href="https://github.com/DDomino">Github</a></li>
     <li><span>Jonatan Bakke</span> - <a href="https://github.com/JonatanMagnusBakke">Github</a></li>
     <li><span>Jonas Hein</span> - <a href="https://github.com/Zenzus">Github</a></li>
     <li><span>Thomas Ebsen</span> - <a href="https://github.com/Srax">Github</a></li>
 </ul>
-<hr/>
 
 
 ## Business Case - Game Shop
