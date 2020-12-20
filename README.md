@@ -144,7 +144,8 @@ Docker automates the process of setting up and configuring development environme
 We are using Docker not only because it is the most popular container implementation but because it is very simple to use. The fact that it is popular makes it a good thing to have on our resumes.  
 Since we are using Java with Maven all we need to do is to run ‘mvn package’ to build our jar file and add this DockerFile with contents to the root of code project:  
 
-<img src="Misc/dokerfile.PNG" width=200> 
+<img src="Misc/dokerfile.PNG">   
+
 If you have docker install in global path write “docker build -t <name>:<version> .” in root and now the Java project Is on Docker.
 
 
