@@ -11,6 +11,8 @@
 
 ## Table of Contents
 - [System Integration 2020 Exam Project](#system-integration-2020-exam-project)
+- [LINK TO VIDEO](#link-to-video)
+  * [Table of Contents](#table-of-contents)
   * [Business Case - Game Shop](#business-case---game-shop)
   * [Requirements](#requirements)
 - [Architecture](#architecture)
@@ -27,6 +29,9 @@
     + [Ribbon](#ribbon)
     + [Logging and Errorhandling](#logging-and-errorhandling)
   * [Diagrams](#diagrams)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Business Case - Game Shop
 
