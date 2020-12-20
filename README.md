@@ -9,22 +9,21 @@
 ## Table of Contents
 - [System Integration 2020 Exam Project](#system-integration-2020-exam-project)
   * [Business Case - Game Shop](#business-case---game-shop)
-  * [Requirements:](#requirements-)
+  * [Requirements](#requirements)
 - [Architecture](#architecture)
   * [Technologies](#technologies)
-    + [Monolithic application](#monolithic-application--our-shop-)
-    + [Micro services](#micro-services---andreas)
-    + [Camunda](#camunda---jonatan)
-    + [Kafka](#kafka---jonas)
+    + [Monolithic application](#monolithic-application)
+    + [Micro services](#micro-services)
+    + [Camunda](#camunda)
+    + [Kafka](#kafka)
     + [Docker](#docker)
     + [MongoDB & NoSQL](#mongodb---nosql)
-    + [Mail Service](#mail-service---andreas) 
+    + [Mail Service](#mail-service)
     + [External API (Game Catalog api)](#external-api--game-catalog-api-)
     + [Eureka](#eureka)
     + [Ribbon](#ribbon)
     + [Logging and Errorhandling](#logging-and-errorhandling)
   * [Diagrams](#diagrams)
-    + [Interconnected diagram](#interconnected-diagram)
 
 ## Business Case - Game Shop
 
