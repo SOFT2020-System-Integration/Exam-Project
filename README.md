@@ -4,6 +4,7 @@
 - Jonas Hein - https://github.com/Zenzus
 - Thomas Ebsen - https://github.com/Srax 
 - Exam Project Requirements - [Link](/Misc/ExamProjectRequirements.pdf)
+- Video explaining the program - MISSING
 
 
 ## Table of Contents
