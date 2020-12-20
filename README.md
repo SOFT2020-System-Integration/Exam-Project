@@ -118,7 +118,7 @@ This is the response we get from Shipping-Camunda-Microservice when an order has
 ```
 
 This is the response we get from ApiGateway when it lisens to kafka, and notice an order is set as complete, and then sends a mail to the customer.
-```
+```java
 2020-12-19 16:38:06.696  INFO 15780 --- [ntainer#0-0-C-1] a.s.mailservice.service.KafkaSetvice     : &&& Message Consumed: [{"orderId":"5fde1d1877d888342c61332d","orderlineId":"5fde1d1877d888342c61332c"}]
 ```   
 
