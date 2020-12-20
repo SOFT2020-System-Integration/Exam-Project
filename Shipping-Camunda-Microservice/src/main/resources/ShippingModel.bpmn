@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1wc59m3" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.3.0">
   <bpmn:process id="GameShipment" name="GameCheckoutSystem" isExecutable="true">
-    <bpmn:startEvent id="StartEvent_1" name="Purcahes Request Recieved" camunda:asyncAfter="true" camunda:formKey="orderid">
+    <bpmn:startEvent id="StartEvent_1" name="Shipment Request Recieved" camunda:asyncAfter="true" camunda:formKey="orderid">
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="game" label="item" type="string" />
@@ -27,7 +27,7 @@
     <bpmn:sequenceFlow id="Flow_0p51r61" name="Game is physcial" sourceRef="ExclusiveGateway_0d3fcl9" targetRef="Activity_0fj56mz">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${validated}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:userTask id="Activity_0fj56mz" name="Confirmed shipped&#10;&#10;" camunda:asyncBefore="true" camunda:asyncAfter="true" camunda:candidateUsers="demo">
+    <bpmn:userTask id="Activity_0fj56mz" name="Handle shipment&#10;&#10;" camunda:asyncBefore="true" camunda:asyncAfter="true" camunda:candidateUsers="demo">
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="shipped" label="shipped" type="boolean" />
@@ -44,17 +44,17 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${!validated}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_10u8tgo" sourceRef="Gateway_1p8px3s" targetRef="Activity_0d5prla" />
-    <bpmn:endEvent id="Event_1szikb4" name="purchase-completed">
+    <bpmn:endEvent id="Event_1szikb4" name="shipment-completed">
       <bpmn:incoming>Flow_0k3pru7</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_0k3pru7" sourceRef="Activity_0d5prla" targetRef="Event_1szikb4" />
-    <bpmn:serviceTask id="Activity_0d5prla" name="money withdrawn&#10;&#10;" camunda:type="external" camunda:topic="payment-checker">
+    <bpmn:serviceTask id="Activity_0d5prla" name="Shipment Checker" camunda:type="external" camunda:topic="payment-checker">
       <bpmn:incoming>Flow_10u8tgo</bpmn:incoming>
       <bpmn:incoming>Flow_034inz3</bpmn:incoming>
       <bpmn:outgoing>Flow_0k3pru7</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_17rmpje" sourceRef="Activity_0fj56mz" targetRef="Gateway_1kl49gi" />
-    <bpmn:endEvent id="Event_1wvoi3k" name="purchase-rejected&#10;&#10;">
+    <bpmn:endEvent id="Event_1wvoi3k" name="shipment-rejected&#10;&#10;">
       <bpmn:incoming>Flow_141538c</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:exclusiveGateway id="Gateway_1kl49gi" camunda:asyncBefore="true" camunda:asyncAfter="true">
@@ -124,7 +124,7 @@
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="179" y="349" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="153" y="392" width="90" height="27" />
+          <dc:Bounds x="154" y="392" width="90" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0b1fkro_di" bpmnElement="Operation_1">
@@ -148,7 +148,7 @@
       <bpmndi:BPMNShape id="Event_1szikb4_di" bpmnElement="Event_1szikb4">
         <dc:Bounds x="792" y="482" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="785" y="525" width="51" height="27" />
+          <dc:Bounds x="786" y="525" width="51" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0vpk8ez_di" bpmnElement="Activity_0d5prla">
@@ -157,7 +157,7 @@
       <bpmndi:BPMNShape id="Event_1wvoi3k_di" bpmnElement="Event_1wvoi3k">
         <dc:Bounds x="672" y="112" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="646" y="82" width="89" height="40" />
+          <dc:Bounds x="647" y="82" width="88" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1kl49gi_di" bpmnElement="Gateway_1kl49gi" isMarkerVisible="true">
