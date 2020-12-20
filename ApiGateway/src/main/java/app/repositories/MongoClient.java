@@ -1,6 +1,7 @@
 package app.repositories;
 
 import app.config.RibbonConfig;
+import app.models.customer.Customer;
 import app.models.game.Game;
 import app.models.order.Order;
 import app.models.order.OrderLine;
@@ -19,6 +20,12 @@ import java.util.Optional;
 @FeignClient("mongo-service")
 @RibbonClient(name = "mongo-service", configuration = RibbonConfig.class)
 public interface MongoClient {
+    /* CUSTOMER */
+    @GetMapping("/customers")
+    Collection<Customer> customerCollection();
+    @PostMapping("/customers/login/{mail}/{password}")
+    Customer loginCustomer(@PathVariable String mail, @PathVariable String password);
+
     /* GAMES */
     @GetMapping("/games")
     Collection<Game> gameCollection();
@@ -26,24 +33,12 @@ public interface MongoClient {
     /* ORDERS */
     @GetMapping("/orders")
     Collection<Order> orderCollection();
-
-    @GetMapping("/orders")
-    Collection<OrderLine> orderLines();
-
-    @GetMapping("/orders")
-    OrderLine orderLine();
-
     @PostMapping("/orders/create")
-    String orderPost(@RequestBody Order order);
-
+    Order orderCollectionPost(@RequestBody Order order);
+    @DeleteMapping("/orders/delete/{id}")
+    String orderCollectionDelete(@PathVariable String id);
     @PutMapping("/orders/id/{orderId}/orderlines/{orderlineId}/status/set/{status}")
     Order orderLineUpdateStatusPut(@PathVariable String orderId, @PathVariable String orderlineId, @PathVariable Status status);
-
     @PutMapping("/orders/id/{id}/status/set/{status}")
     Order updateOrderStatus(@PathVariable String id, @PathVariable Status status);
-
-    @DeleteMapping("/orders/delete/{id}")
-    String orderDelete(@PathVariable String id);
-
-    /* CUSTOMER */
 }

@@ -1,6 +1,7 @@
 package app.models.order;
 
 import app.models.customer.Customer;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
@@ -10,6 +11,7 @@ import java.util.List;
 
 @Data
 public class Order implements Serializable {
+    @Id
     private String id;
     private Date createdAt;
     private Status status;
@@ -84,4 +86,9 @@ public class Order implements Serializable {
                 ", orderLines=" + orderLines +
                 '}';
     }
+    /*
+    @Override
+    public String toString() {return "ORDER: " + "id: " + id + "\nCreation Date: " + createdAt +  "\nStatus: " + status +  "\nCustomer: " + customer +"\nItems:" + orderLines ;}
+
+ */
 }

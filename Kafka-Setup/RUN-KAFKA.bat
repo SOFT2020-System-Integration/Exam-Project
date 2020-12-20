@@ -17,7 +17,7 @@ if EXIST "%MY_PATH%" (
 
 
 :PROMPT
-set /P c="Do you want to clear kafka and zookeeper data before running the service? [Y/N] : "
+set /P c="Do you wish to clear kafka and zookeeper data before running the service? (Y recomended) [Y/N] : "
 
 if /I "%c%" EQU "Y" goto :run-with-log-clear
 if /I "%c%" EQU "N" goto :run-without-log-clear
@@ -27,21 +27,10 @@ goto :choice
 :run-with-log-clear
     echo Clearing Data...
     START /WAIT _clear-data.bat
-    echo Starting Zookeeper...
-        START "runas /user:administrator" cmd /K "cd "%MY_PATH%\bin\windows" & zookeeper-server-start.bat ../../config/zookeeper.properties"
-    timeout /t 5 /nobreak
-    echo Starting Kafka...
-	    START "runas /user:administrator" cmd /K "cd "%MY_PATH%\bin\windows" & kafka-server-start.bat ../../config/server.properties"
-    timeout /t 5 /nobreak
+    START _start.bat
     exit
 
 
 :run-without-log-clear
-    echo Starting Zookeeper...
-        START "runas /user:administrator" cmd /K "cd "%MY_PATH%\bin\windows" & zookeeper-server-start.bat ../../config/zookeeper.properties"
-    timeout /t 5 /nobreak
-    echo Starting Kafka...
-	    START "runas /user:administrator" cmd /K "cd "%MY_PATH%\bin\windows" & kafka-server-start.bat ../../config/server.properties"
-    timeout /t 5 /nobreak
+    START _start.bat
     exit
-

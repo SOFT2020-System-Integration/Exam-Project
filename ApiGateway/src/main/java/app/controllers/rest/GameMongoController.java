@@ -1,5 +1,6 @@
 package app.controllers.rest;
 
+import app.exceptions.NotFoundException;
 import app.models.game.Game;
 import app.models.order.OrderLine;
 import app.models.shipment.CamundaGame;
@@ -22,22 +23,30 @@ public class GameMongoController {
 
     @GetMapping("")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Collection<Game> retrieveAllGames()
+    public Collection<Game> retrieveAllGames() throws NotFoundException
     {
         List<Game> collect = client.gameCollection()
                 .stream()
                 .collect(Collectors.toList());
-        return collect;
+        if(!collect.isEmpty()) {
+            return collect;
+        } else {
+            throw new NotFoundException(String.format("Games not found..."));
+        }
     }
 
     @GetMapping("/id/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Game retrieveGame(@PathVariable String id)
+    public Game retrieveGame(@PathVariable String id) throws NotFoundException
     {
         List<Game> collect = client.gameCollection()
                 .stream()
                 .filter(Game -> Game.getId().equals(id))
                 .collect(Collectors.toList());
-        return collect.get(0);
+        if(!collect.isEmpty()) {
+            return collect.get(0);
+        } else {
+            throw new NotFoundException(String.format("Game with id '%s' not found...", id));
+        }
     }
 }

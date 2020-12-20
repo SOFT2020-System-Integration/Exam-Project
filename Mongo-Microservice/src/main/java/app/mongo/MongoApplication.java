@@ -74,15 +74,15 @@ public class MongoApplication implements CommandLineRunner {
         Customer cust1 = customerRepo.findByMail("john@doe.com");
         Customer cust2 = customerRepo.findByMail("jane@doe.com");
         Customer cust3 = customerRepo.findByMail("thomas@doe.com");
-        Order order = new Order(new Date(), Status.IN_PROGRESS, cust1, orderLines);
-        Order order2 = new Order(new Date(), Status.IN_PROGRESS, cust2, orderLines2);
-        Order order3 = new Order(new Date(), Status.IN_PROGRESS, cust3, orderLines3);
+        Order order = new Order(Status.IN_PROGRESS, cust1, orderLines);
+        Order order2 = new Order(Status.IN_PROGRESS, cust2, orderLines2);
+        Order order3 = new Order(Status.IN_PROGRESS, cust3, orderLines3);
         orderRepo.save(order);
         orderRepo.save(order2);
         orderRepo.save(order3);
 
         for (Customer c : customerRepo.findAll()) {
-            LOGGER.log(Level.INFO, "[LOGGER] ::: SAVED CUSTOMERS ::: " + c);
+            LOGGER.log(Level.INFO, "[LOGGER] ::: SAVED CUSTOMER ::: " + c);
         }
 
         for (Order o: orderRepo.findAll()) {

@@ -1,5 +1,6 @@
 package app.mongo.controllers.order;
 
+import app.mongo.controllers.customer.CustomerServiceController;
 import app.mongo.exceptions.NotFoundException;
 import app.mongo.models.order.Order;
 import app.mongo.models.order.OrderLine;
@@ -7,6 +8,8 @@ import app.mongo.models.order.Status;
 import app.mongo.repositories.order.OrderLineService;
 import app.mongo.repositories.order.OrderService;
 import com.mongodb.MongoException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +26,9 @@ import java.util.stream.Stream;
 @RequestMapping("/orders")
 public class OrderServiceController
 {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServiceController.class);
+
     @Autowired
     private OrderService orderRepo;
     private OrderLineService orderLineRepo;
@@ -37,6 +43,7 @@ public class OrderServiceController
         try {
             return orderRepo.findById(id);
         } catch (MongoException ex) {
+            LOGGER.error("[LOGGER] ::: ORDER CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
@@ -47,7 +54,8 @@ public class OrderServiceController
             Optional<Order> _orderOpt = orderRepo.findById(id);
             return _orderOpt.get().getOrderLines();
         } catch (MongoException ex) {
-            throw new RuntimeException("Not found");
+            LOGGER.error("[LOGGER] ::: ORDER CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
+            throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
 
@@ -56,7 +64,8 @@ public class OrderServiceController
         try {
             return orderRepo.save(order);
         } catch (MongoException ex) {
-            throw ex;
+            LOGGER.error("[LOGGER] ::: ORDER CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
+            throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
 
@@ -71,6 +80,7 @@ public class OrderServiceController
                 throw new MongoException("Something went wrong.");
             }
         } catch (MongoException ex) {
+            LOGGER.error("[LOGGER] ::: ORDER CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     } 
@@ -94,6 +104,7 @@ public class OrderServiceController
                 throw new MongoException("Something went wrong.");
             }
         } catch (MongoException ex) {
+            LOGGER.error("[LOGGER] ::: ORDER CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
@@ -104,7 +115,8 @@ public class OrderServiceController
             orderRepo.deleteById(id);
             return "Deleted record of " + id;
         } catch (MongoException ex) {
-            throw ex;
+            LOGGER.error("[LOGGER] ::: ORDER CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
+            throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
 }

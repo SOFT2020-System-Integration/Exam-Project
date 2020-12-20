@@ -1,10 +1,9 @@
 package app.controllers.rest;
 
-import app.models.game.Game;
+import app.exceptions.NotFoundException;
 import app.models.order.Order;
 import app.models.order.OrderLine;
 import app.models.order.Status;
-import app.models.shipment.CamundaGame;
 import app.repositories.MongoClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,56 +16,75 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/orders")
 public class OrderMongoController {
-    MongoClient client;
+    private final MongoClient client;
+    private final ShippingCamundaController shippingCamundaController;
 
-    public OrderMongoController(MongoClient client) {
+    public OrderMongoController(MongoClient client, ShippingCamundaController shippingCamundaController) {
         this.client = client;
+        this.shippingCamundaController = shippingCamundaController;
     }
 
     @GetMapping("")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Collection<Order> myGame() {
+    public Collection<Order> retrieveAllOrders() throws NotFoundException
+    {
         List<Order> collect = client.orderCollection()
                 .stream()
                 .collect(Collectors.toList());
-        return collect;
+        if(!collect.isEmpty()) {
+            return collect;
+        } else {
+            throw new NotFoundException(String.format("Customers not found..."));
+        }
     }
-
 
     @GetMapping("/id/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public Order retrieveOrderById(@PathVariable String id) {
+    public Order retrieveOrderById(@PathVariable String id) throws NotFoundException
+    {
         List<Order> collect = client.orderCollection()
                 .stream()
                 .filter(Order -> Order.getId().equals(id))
                 .collect(Collectors.toList());
-        return collect.get(0);
+        if(!collect.isEmpty()) {
+            return collect.get(0);
+        } else {
+            throw new NotFoundException(String.format("Customer with id '%s' not found...", id));
+        }
     }
 
     @GetMapping("/id/{id}/orderlines")
     @CrossOrigin(origins = "*") // allow request from any client
-    public List<OrderLine> retrieveOrderLinesByOrderId(@PathVariable String id) {
+    public List<OrderLine> retrieveOrderLinesByOrderId(@PathVariable String id) throws NotFoundException
+    {
         List<Order> collect = client.orderCollection()
                 .stream()
                 .filter(Order -> Order.getId().equals(id))
                 .collect(Collectors.toList());
-        return collect.get(0).getOrderLines();
+        if(!collect.isEmpty()) {
+            return collect.get(0).getOrderLines();
+        } else {
+            throw new NotFoundException(String.format("Couldn't find any orderlines for order with id: %s", id));
+        }
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    @PostMapping("/create")
     @CrossOrigin(origins = "*") // allow request from any client
-    public String orderPost(@RequestBody Order order) {
-        client.orderPost(order);
-        return "Created order with id: " + order.getId();
+    public Order createOrder(@RequestBody Order order) {
+        return client.orderCollectionPost(order);
     }
 
     @DeleteMapping("/delete/{id}")
     @CrossOrigin(origins = "*") // allow request from any client
-    public String orderDelete(@PathVariable String id) {
-        client.orderDelete(id);
-        return "Deleted record of " + id;
+    public String deleteOrder(@PathVariable String id) throws NotFoundException
+    {
+        try {
+            client.orderCollectionDelete(id);
+            return "Deleted Order of id: " + id;
+        } catch (Exception ex) {
+            throw new NotFoundException("Order not found...");
+        }
     }
-
 
     @PutMapping("/id/{id}/status/set/{status}")
     public Order updateOrderStatus(@PathVariable String id, @PathVariable Status status) throws RuntimeException {
@@ -81,15 +99,14 @@ public class OrderMongoController {
                 throw new RuntimeException("Something went wrong.");
             }
         } catch (Exception ex) {
-            throw new RuntimeException( ex.getMessage());
+            throw new RuntimeException(ex.getMessage());
         }
     }
 
-
-
     @PutMapping("/id/{orderId}/orderlines/{orderlineId}/status/set/{status}")
     @CrossOrigin(origins = "*")
-    public Order updateOrderLineStatusByOrderAndOrderLineId(@PathVariable String orderId, @PathVariable String orderlineId, @PathVariable Status status) {
+    public Order updateOrderLineStatusByOrderAndOrderLineId(@PathVariable String orderId, @PathVariable String orderlineId, @PathVariable Status status) throws NotFoundException
+    {
         Optional<Order> _orderOpt;
         OrderLine orderLineToUpdate;
 

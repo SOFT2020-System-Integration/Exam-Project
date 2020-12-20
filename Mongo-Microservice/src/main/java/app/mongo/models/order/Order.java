@@ -2,6 +2,7 @@ package app.mongo.models.order;
 
 import app.mongo.models.customer.Customer;
 import app.mongo.models.game.Game;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.github.kaiso.relmongo.annotation.*;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -19,7 +20,7 @@ public class Order {
     private String id;
     private Date createdAt;
     private Status status;
-    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @ManyToOne(fetch= FetchType.EAGER)
     @JoinProperty(name = "customers")
     private Customer customer;
     @OneToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
@@ -29,16 +30,16 @@ public class Order {
     public Order() {
     }
 
-    public Order(String id, Date createdAt, Status status, Customer customer, List<OrderLine> orderLines) {
+    public Order(String id, Status status, Customer customer, List<OrderLine> orderLines) {
         this.id = id;
-        this.createdAt = createdAt;
+        this.createdAt = new Date();
         this.status = status;
         this.customer = customer;
         this.orderLines = orderLines;
     }
 
-    public Order(Date createdAt, Status status, Customer customer, List<OrderLine> orderLines) {
-        this.createdAt = createdAt;
+    public Order(Status status, Customer customer, List<OrderLine> orderLines) {
+        this.createdAt = new Date();
         this.status = status;
         this.customer = customer;
         this.orderLines = orderLines;

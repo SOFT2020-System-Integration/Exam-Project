@@ -1,9 +1,12 @@
 package app.mongo.controllers.game;
 
+import app.mongo.controllers.customer.CustomerServiceController;
 import app.mongo.exceptions.NotFoundException;
 import app.mongo.models.game.Game;
 import app.mongo.repositories.game.GameService;
 import com.mongodb.MongoException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.webmvc.RepositoryRestController;
@@ -19,6 +22,8 @@ import java.util.Optional;
 @RequestMapping("/games")
 public class GameServiceController
 {
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameServiceController.class);
+
     @Autowired
     private GameService repo;
 
@@ -29,9 +34,17 @@ public class GameServiceController
 
     @GetMapping("/id/{id}")
     public Optional<Game> retrieveProductById(@PathVariable String id) throws NotFoundException, MongoException {
+        Optional<Game> game;
         try {
-            return repo.findById(id);
+            game = repo.findById(id);
+            if(game.isPresent()) {
+                return game;
+            } else {
+                LOGGER.error("[LOGGER] ::: GAME CONTROLLER ::: Game Not found ::: id: " + id);
+                throw new NotFoundException("Game not found");
+            }
         } catch (MongoException ex) {
+            LOGGER.error("[LOGGER] ::: GAME CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
@@ -41,6 +54,7 @@ public class GameServiceController
         try {
             return repo.findByTitle(title);
         } catch (MongoException ex) {
+            LOGGER.error("[LOGGER] ::: GAME CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
@@ -50,7 +64,8 @@ public class GameServiceController
         try {
             return repo.save(game);
         } catch (MongoException ex) {
-            throw ex;
+            LOGGER.error("[LOGGER] ::: GAME CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
+            throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
 
@@ -60,7 +75,8 @@ public class GameServiceController
             repo.deleteById(id);
             return "Deleted record of " + id;
         } catch (MongoException ex) {
-            throw ex;
+            LOGGER.error("[LOGGER] ::: GAME CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
+            throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
 }

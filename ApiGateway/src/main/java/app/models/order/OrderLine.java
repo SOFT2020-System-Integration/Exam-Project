@@ -69,4 +69,11 @@ public class OrderLine implements Serializable {
                 ", status=" + status +
                 '}';
     }
+    /*
+    @Override
+    public String toString() {
+      return "Game: " + game.getTitle() +", Amount: " + amount + ", Status: " + status + "\n";
+    }
+
+ */
 }

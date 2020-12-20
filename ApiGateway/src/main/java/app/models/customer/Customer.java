@@ -1,10 +1,14 @@
 package app.models.customer;
 
+import app.helpers.Encrypt;
 import lombok.Data;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.data.annotation.Id;
 
+import java.io.Serializable;
+
 @Data
-public class Customer {
+public class Customer implements Serializable {
     @Id
     private String id;
     private String firstName;
@@ -69,6 +73,13 @@ public class Customer {
     public void setPassword(String password) {
         this.password = password;
     }
+ /*
+    @Override
+    public String toString() {
+       return "Customer: " + "id: " + id+"\n" + "Name: " + firstName + ", " + lastName;
+    }
+
+  */
 
     @Override
     public String toString() {
