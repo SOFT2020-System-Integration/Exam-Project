@@ -92,9 +92,11 @@ We have chosen to use Camunda BPM because it helps us quick and easily create an
 
 We are using Camunda web application for our handling of shipments of the orders that we receive. When an order comes and is confirmed, then the business process begins. The business process in this cause if to figure out if the game withing the order is a physical or digital game. If the game is physical, then an employee needs to take care of handling and creating the shipment to be sent to the customer. If the order is digital, then they will simply get an email with the game. 
 
-Below you can see the BPMN diagram that describes the workflow. 
+Below you can see the BPMN diagram that describes the workflow.  
+
 <img src="Misc/camundabpmn.PNG" width=500px>
-The way this works is that when an order enters then the list of games within are iterated through and are created as Shipment Request. The first step is to check if the type of the game is physical or digital, this is done using a decision table. If the is digital, then the order is sent directly to our external service. If is it physical, then it hits a use action. The user action can be confirmed or declined.
+The way this works is that when an order enters then the list of games within are iterated through and are created as Shipment Request. The first step is to check if the type of the game is physical or digital, this is done using a decision table. If the is digital, then the order is sent directly to our external service. If is it physical, then it hits a use action. The user action can be confirmed or declined.  
+
 <img src="Misc/dmnmodel.PNG" width=500px>
 
 
