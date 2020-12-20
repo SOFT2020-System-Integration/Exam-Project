@@ -28,7 +28,8 @@
 
 ## Business Case - Game Shop
 
-This buisness case is build around the idea of an online game shop. A shop has physical stores around the country and a very basic online webshop, made just to browse the companies ware catalog. They want a more morden and dynamic web store. The company want more functionality integrated into their web shop.
+This buisness case is build around the idea of an online game shop.  
+A shop has physical stores around the country and a very basic online webshop, made just to browse the companies ware catalog. They want a more morden and dynamic web store. The company want more functionality integrated into their web shop.
 
 ## Requirements
 
@@ -36,8 +37,7 @@ This buisness case is build around the idea of an online game shop. A shop has p
 2. DataBase with All Customers and emails
 3. Employees should be able to validate shipment of physical game sales.
 4. Digital GameSales should happen without validation.
-5. Employeees should be able to sent out news/discount mails to their customers
-6. The system must be as atomic as possible.
+6. The system must be as autimatic as possible.
 
 # Architecture
 
@@ -59,7 +59,12 @@ This buisness case is build around the idea of an online game shop. A shop has p
 
 
 ### Monolithic application
-Our monolithic application is a fictional one, as we did not have one at hand at the moment. But we imagined that the original application we was asked to change and update for a more modern setting, was a webshop build in on big service application, with no decoupling, Choreography or orchestration of componenets. For our project we decided we would take this huge, monolithic application and decouple it into microservices, that helps with better maintaince and upgrading individual parts of the application. But alose helps greatly when it comes to scaling. Before going into the Microservice, we will precent an image that can represent what a monolithic application looks like:
+Our monolithic application is a fictional one, as we did not have a real-life one at hand at start of the project.  
+
+We imagined that the original application, that we were asked to change and update for a more modern setting, were a webshop build in on big service application, with no decoupling, Choreography or orchestration of componenets.  
+
+For our project we decided we would take this huge, monolithic application and decouple it into microservices, that helps with better maintaince and upgrading individual parts of the application, which at the same time greatly helps when it comes to scaling the project in the future. Before going into the Microservice, we will precent an image that can represent what a monolithic application looks like:  
+
 <img src="/Misc/Monolithic.PNG" width=200px>
 
 ### Micro services 
