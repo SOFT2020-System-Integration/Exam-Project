@@ -97,9 +97,38 @@ The way this works is that when an order enters then the list of games within ar
 
 
 ### Kafka
-    - what
-    - why
-    - how
+Apache Kafka is an open-source, distributed streaming platform that allows for the development of real-time event-driven applications. What that boils down to is that kafka allows developers to make applications continuously produce and consume a stream of data. 
+
+The reasons we have chosen to use kafka. Is that kafka is developed in such a way, that it allows for handling large quantities of clients to use the application, at the same time without any loss of data or lagg in the system. Another reason that we have chosen to use kafka is because of how highly accurate Kafka is, in the way it stores the data it is providet, where it maintains the order of the occurrence of the replicated data this also makes Kafka really resilient and fault-tolerant.
+
+The way we have chosen to use Kafka in our project is that we have made a producer/Shipping-Camunda-Microservice and a consumer/ApiGateway. Where in when an order has been sent to camunda, and has been processed, the producer sends the message to Kafka, which contains the order id and the id of the orderliness that order has. Then our consumer has been set to lisens to Kafka and uses the data provided to set order as complete and sends a mail to the user that has made the order.
+
+
+Here you can see a picture of the data we send into Kafka from our Shipping-Camunda-Microservice It has the orderId aka the overall id for the whole order and it has the orderlineId which is the id for the individual.
+
+
+
+
+
+
+
+
+
+
+
+
+This is the response we get from Shipping-Camunda-Microservice when an order has been checked in Camunda, and sent back to Shipping-Camunda-Microservice where it sets them as completed.
+```java
+2020-12-19 16:38:04.044  INFO 14092 --- [criptionManager] c.s.c.ShippingCamundaController          : [LOGGER] ::: CALLING CLIENT PAYMENT CHECKER
+2020-12-19 16:38:04.044  INFO 14092 --- [criptionManager] c.s.c.ShippingCamundaController          : [LOGGER] ::: ! SUCCESS ! ::: DIGITAL ORDER READY FOR DOWNLOAD: 5fde1d1877d888342c61332c
+2020-12-19 16:38:04.096  INFO 14092 --- [criptionManager] c.s.c.ShippingCamundaController          : ### Producer sends message: {"orderId":"5fde1d1877d888342c61332d","orderlineId":"5fde1d1877d888342c61332c"}
+```
+
+This is the response we get from ApiGateway when it lisens to kafka, and notice an order is set as complete, and then sends a mail to the customer.
+```
+2020-12-19 16:38:06.696  INFO 15780 --- [ntainer#0-0-C-1] a.s.mailservice.service.KafkaSetvice     : &&& Message Consumed: [{"orderId":"5fde1d1877d888342c61332d","orderlineId":"5fde1d1877d888342c61332c"}]
+```
+
 
 ### Docker
 Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host. Docker also provides an additional layer of abstraction and automation of virtualization on Linux
