@@ -103,10 +103,15 @@ Apache Kafka is an open-source, distributed streaming platform that allows for t
 The reasons we have chosen to use kafka. Is that kafka is developed in such a way, that it allows for handling large quantities of clients to use the application, at the same time without any loss of data or lagg in the system. Another reason that we have chosen to use kafka is because of how highly accurate Kafka is, in the way it stores the data it is providet, where it maintains the order of the occurrence of the replicated data this also makes Kafka really resilient and fault-tolerant.  
 
 
-The way we have chosen to use Kafka in our project is that we have made a producer/Shipping-Camunda-Microservice and a consumer/ApiGateway. Where in when an order has been sent to camunda, and has been processed, the producer sends the message to Kafka, which contains the order id and the id of the orderliness that order has. Then our consumer has been set to lisens to Kafka and uses the data provided to set order as complete and sends a mail to the user that has made the order.  
+The way we have chosen to use Kafka in our project is that we have made a producer/Shipping-Camunda-Microservice and a consumer/ApiGateway.  
+
+The APIGateway sends an order into camunda, and when it's finished being processed, the Shipping-Microservice then sends a message to Kafka, which contains the order id and the id of the orderlines that order has.  
+
+Then our consumer has been set to lisens to Kafka and uses the data provided to set order as complete and sends a mail to the user that has made the order.  
 
 
 Here you can see a picture of the data we send into Kafka from our Shipping-Camunda-Microservice It has the orderId aka the overall id for the whole order and it has the orderlineId which is the id for the individual.  
+
 ![kafka](/Misc/kafka.png)
 
 
