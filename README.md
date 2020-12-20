@@ -65,7 +65,7 @@ We imagined that the original application, that we were asked to change and upda
 
 For our project we decided we would take this huge, monolithic application and decouple it into microservices, that helps with better maintaince and upgrading individual parts of the application, which at the same time greatly helps when it comes to scaling the project in the future. Before going into the Microservice, we will precent an image that can represent what a monolithic application looks like:  
 
-<img src="/Misc/Monolithic.PNG" width=200px>
+<img src="/Misc/Monolithic.PNG" width=200px align="left">
 
 ### Micro services 
 Microservices is an architecture style where you split your project into small atomic 
