@@ -55,7 +55,6 @@ This buisness case is build around the idea of an online game shop. A shop has p
 | [Netflix Eureka](#eureka)         | Used to register and discover our microservices (clients)         |
 | [Netflix Eureka](#Netflix Ribbon) | Used for load balancing                                           |
 | [Spring Cloud Ribbon](#ribbon)    | Used as a load balancer in our [Api Gateway](/ApiGateway)         |
-| Kubernetes                        | NaN                                                               |
 | [Google SMTP Server](#mail-service---andreas) | Used in our [Mail Service](/mailservice) to send emails when orders are completed |
   
 
