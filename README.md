@@ -137,8 +137,9 @@ This is the response we get from ApiGateway when it lisens to kafka, and notice 
 Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host. Docker also provides an additional layer of abstraction and automation of virtualization on Linux
 Docker automates the process of setting up and configuring development environments, building, testing, debugging and deployment. It works with any platform and any programming language, because of this Docker has become the most popular container implementation.
 We are using Docker not only because it is the most popular container implementation but because it is very simple to use. The fact that it is popular makes it a good thing to have on our resumes.  
-Since we are using Java with Maven all we need to do is to run ‘mvn package’ to build our jar file and add this DockerFile with contents to the root of code project:
- 
+Since we are using Java with Maven all we need to do is to run ‘mvn package’ to build our jar file and add this DockerFile with contents to the root of code project:  
+
+<mg src="Misc/dokerfile.PNG" width=200> 
 If you have docker install in global path write “docker build -t <name>:<version> .” in root and now the Java project Is on Docker.
 
 
