@@ -62,6 +62,7 @@ public class OrderServiceController
     @PostMapping("/create")
     public Order createOrder(@RequestBody Order order) {
         try {
+            LOGGER.info("[LOGGER] ::: ORDER CONTROLLER ::: ORDER ::: " + order);
             return orderRepo.save(order);
         } catch (MongoException ex) {
             LOGGER.error("[LOGGER] ::: ORDER CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
@@ -112,6 +113,7 @@ public class OrderServiceController
     @DeleteMapping("/delete/{id}")
     public String deleteOrder(@PathVariable String id) {
         try {
+            LOGGER.info("[LOGGER] ::: ORDER CONTROLLER ::: ORDER ::: " + id);
             orderRepo.deleteById(id);
             return "Deleted record of " + id;
         } catch (MongoException ex) {

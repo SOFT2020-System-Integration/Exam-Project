@@ -37,7 +37,7 @@ public class MailService {
                     Message.RecipientType.TO,
                     InternetAddress.parse(order.getCustomer().getMail())
             );
-            message.setSubject("Testing Gmail SSL");
+            message.setSubject("Confrimation mail for your order" + order.getId());
             message.setText(temp);
 
             Transport.send(message);

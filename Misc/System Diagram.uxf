@@ -220,17 +220,6 @@ PORT:8080</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>308</x>
-      <y>0</y>
-      <w>1120</w>
-      <h>616</h>
-    </coordinates>
-    <panel_attributes>Kubenetis</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>322</x>
       <y>56</y>
       <w>308</w>

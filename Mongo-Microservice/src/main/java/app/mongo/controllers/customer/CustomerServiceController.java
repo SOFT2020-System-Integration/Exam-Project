@@ -79,4 +79,15 @@ public class CustomerServiceController
             throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
         }
     }
+    @PostMapping("/create")
+    public Customer createOrder(@RequestBody Customer customer) {
+        try {
+            LOGGER.info("[LOGGER] ::: CUSTOMER CONTROLLER ::: CREATED CUSTOMER ::: " + customer);
+            return repo.save(customer);
+        } catch (MongoException ex) {
+            LOGGER.error("[LOGGER] ::: CUSTOMER CONTROLLER ::: " + ex.getCode() + " ::: " + ex.getMessage());
+
+            throw new NotFoundException(ex.getCode() + " : " + ex.getMessage());
+        }
+    }
 }
