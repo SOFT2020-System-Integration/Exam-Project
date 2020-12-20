@@ -1,3 +1,6 @@
+#LINK TO VIDEO
+[Video Presentation](https://www.youtube.com/watch?v=zS_VNNXwQbU&feature=youtu.be)
+
 # System Integration 2020 Exam Project
 - Andeas Jørgensen - https://github.com/DDomino
 - Jonatan Bakke https://github.com/JonatanMagnusBakke
