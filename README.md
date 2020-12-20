@@ -1,6 +1,3 @@
-# LINK TO VIDEO
-[Video Presentation](https://www.youtube.com/watch?v=zS_VNNXwQbU&feature=youtu.be)
-
 # System Integration 2020 Exam Project
 - Andeas Jørgensen - https://github.com/DDomino
 - Jonatan Bakke https://github.com/JonatanMagnusBakke
@@ -9,6 +6,8 @@
 - Exam Project Requirements - [Link](/Misc/ExamProjectRequirements.pdf)
 - Video explaining the program - https://www.youtube.com/watch?v=zS_VNNXwQbU
 
+# LINK TO VIDEO
+[Video Presentation](https://www.youtube.com/watch?v=zS_VNNXwQbU&feature=youtu.be)
 
 ## Table of Contents
 - [System Integration 2020 Exam Project](#system-integration-2020-exam-project)
